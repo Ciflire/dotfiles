@@ -140,11 +140,11 @@ alias jadx-gui='/usr/bin/jadx/bin/jadx-gui'
 alias visual='/usr/local/bin/visual/VisUAL.sh &'
 alias ll='ls -la'
 #change default cat to bat
-alias cat=bat
+alias cat="bat"
 #change default ls to exa
-alias ls=exa
+alias ls="exa"
 #change default vim to nvim
-alias vim=nvim
+alias vim="nvim"
 
 function activate() {
 	if [[ -d .venv ]]
