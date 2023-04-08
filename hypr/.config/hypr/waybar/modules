@@ -112,7 +112,7 @@
   "custom/power": {
     "format": "  ",
     "tooltip": false,
-    "on-click": "exit",
+    "on-click": "wlogout",
   },
 
   "disk": {
@@ -160,7 +160,6 @@
     "tooltip-format": "Change wallpaper",
   },
 
-  "pulseaudio": {
     /* "format": "{icon} {volume}% {format_source}", */
     "format": "{icon} {volume}",
     "format-muted": "󰖁 Mute",
