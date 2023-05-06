@@ -3,7 +3,7 @@ format = '$username - \[$directory\] $git_branch$git_commit$git_state$git_metric
 
 # Symbol to display before the commands
 [character]
-success_symbol = "[λ >](bold green)"
+success_symbol = "[\uf303 >](bold green)"
 error_symbol = "[✘ >](bold red)"
 
 # Username display

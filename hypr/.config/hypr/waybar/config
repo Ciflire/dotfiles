@@ -1,5 +1,5 @@
 {
-  "include": "~/.config/hypr/waybar/modules",
+  "include": "/etc/xdg/waybar/modules",
   "layer": "top",
   //"mode": "dock",
   "exclusive": true,
@@ -12,5 +12,6 @@
   "margin-right": 0,
 
   "modules-left": ["cpu", "memory", "disk"],
-  "modules-right": ["pulseaudio","battery", "network", "clock","custom/power"],
+  "modules-center": ["wlr/workspaces"],
+  "modules-right": ["pulseaudio","battery","backlight", "network", "clock","custom/power"],
 }

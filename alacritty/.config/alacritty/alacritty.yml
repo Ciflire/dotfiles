@@ -50,7 +50,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -92,9 +92,9 @@ scrolling:
   multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #size: 15
+  size: 12
   #normal:
     # Font family
     #
@@ -195,7 +195,7 @@ draw_bold_text_with_bright_colors: false
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-save_to_clipboard: false
+save_to_clipboard: true
 
 # Allow terminal applications to change Alacritty's window title.
 window.dynamic_title: true
@@ -207,7 +207,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Block
+  style: Underline
 
   # Vi mode cursor style
   #
@@ -215,7 +215,7 @@ cursor:
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style: None
+  vi_mode_style: None
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -239,10 +239,10 @@ live_config_reload: true
 #   - (Windows) powershell
 shell:
   program: /usr/bin/zsh
-  # args:
-    # - --login
-    # - -c
-    #  - "tmux attach || tmux"
+  args:
+    - -l
+    - -c
+    - zellij attach --index 0 || zellij --layout /home/ciflire/.config/zellij/layout.kdl
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
@@ -449,8 +449,7 @@ mouse:
 #    the mode is *not* active, e.g. `~Alt`.
 #
 # Bindings are always filled by default, but will be replaced when a new
-# binding with the same triggers is defined. To unset a default binding, it can
-# be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
+# binding with the same triggers is defined. To unset a default binding, it can be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
@@ -491,18 +490,18 @@ key_bindings:
 colors:
   # Default colors
   primary:
-    background: '#2d2b40'
-    foreground: '#e2e1ea'
+    background: '#232d38'
+    foreground: '#e5ded6'
 
   # Normal colors
   normal:
     black:   '#201a28'
-    red:     '#d08092'
-    green:   '#99c7ab'
-    yellow:  '#dacd8b'
-    blue:    '#98aedd'
-    magenta: '#b08cc5'
-    cyan:    '#80bfd1'
+    red:     '#d32c5d'
+    green:   '#57a331'
+    yellow:  '#dcb659'
+    blue:    '#1e758d'
+    magenta: '#dc59c0'
+    cyan:    '#59dcd8'
     white:   '#e2e1ea'
 
   # Bright colors
