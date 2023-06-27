@@ -4,7 +4,7 @@
     "align": 0,
     "rotate": 0,
       "format": "<span font='10' rise='1500'>{icon}</span> {percent}",
-      "format-icons": ["", "", "", ""],
+      "format-icons": ["\udb81\udee9", "\udb86\ude4e", "\udb86\ude4f", "\udb86\ude50","\udb86\ude51","\udb86\ude52","\udb86\ude53","\udb86\ude54","\udb86\ude55","\udb86\ude56","\udb81\udee8"],
       "on-scroll-up": "~/.config/hypr/scripts/brightness --inc",
       "on-scroll-down": "~/.config/hypr/scripts/brightness --dec",
       "smooth-scrolling-threshold": 1,
@@ -32,10 +32,10 @@
     },
     "format": "<span font='11' rise='1000'>{icon}</span> {capacity}",
     "format-charging": "<span font='11' rise='1000'> </span>{capacity}",
-    "format-plugged": "<span font='10' rise='1300'></span> {capacity}",
+    "format-plugged": "<span font='10' rise='1300'> </span> {capacity}",
     "format-full": "<span font='11' rise='500'>{icon}</span>",
     "format-alt": "<span font='11' rise='1000'>{icon}</span> {time}",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [" ", " ", " ", " ", " "],
     "format-time": "{H}h {M}min",
     "tooltip": true,
     "on-click-middle": "~/.config/hypr/scripts/swallowToggle"
@@ -64,15 +64,15 @@
   },
 
   "custom/power": {
-    "format": "<span font='15' rise='1000'>襤</span>",
+    "format": "<span font='15' rise='1000'> \u23fb </span>",
     "tooltip": false,
     "on-click": "wlogout",
   },
 
   "disk": {
     "interval": 30,
-    "format": "<span font='11'></span> {percentage_used}%",
-    "format-alt": "<span font='11'></span> {free}",
+    "format": "<span font='11'> </span> {percentage_used}%",
+    "format-alt": "<span font='11'> </span> {free}",
   },
 
   "memory": {
@@ -83,13 +83,13 @@
 
   "network": {
     "interval": 5,
-    "format-wifi": "<span font='10' rise='2000'></span> {signalStrength}%",
+    "format-wifi": "<span font='10' rise='2000'> </span> {signalStrength}%",
     "format-ethernet": "<span font='11' rise='1000'></span> {ipaddr}/{cidr}",
     "format-linked": "<span font='11' rise='1000'></span> {ifname} (No IP)",
     "format-disconnected": "<span font='11' rise='1000'>睊</span> Disconnected",
     "format-disabled": "<span font='11' rise='1000'>睊</span> Disabled",
     "format-alt": "<span font='11' rise='1000'></span> {bandwidthUpBits} | <span font='13' rise='1000'></span> {bandwidthDownBits}",
-    "tooltip-format": "<span font='11' rise='1000'></span> {ifname} {essid} via {gwaddr}",
+    "tooltip-format": "<span font='11' rise='1000'> </span> {ifname} {essid} via {gwaddr}",
     "on-click-right": "~/.local/bin/mmuvpn up cbj",
   },
 

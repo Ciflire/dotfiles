@@ -1,0 +1,8 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "ebdd0499551765e6a7aba220cc8ae4e0cdb6be69" },
+  "neoconf.nvim": { "branch": "main", "commit": "279c27f418f35397fe5b913d9d61d529cc038493" },
+  "neodev.nvim": { "branch": "main", "commit": "da3e9e05c60250984f1bf069d517d9fca5315453" },
+  "nvim-tree.lua": { "branch": "master", "commit": "e2a4c9d09d205ebe5f071264f43f73a0077c43a3" },
+  "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
+  "which-key.nvim": { "branch": "main", "commit": "e271c28118998c93a14d189af3395812a1aa646c" }
+}
