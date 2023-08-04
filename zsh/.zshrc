@@ -74,3 +74,11 @@ case "${TERM}" in
     bindkey '^[[1;5D' backward-word       # ctrl left
     ;;
 esac
+
+# pnpm
+export PNPM_HOME="/home/ciflire/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

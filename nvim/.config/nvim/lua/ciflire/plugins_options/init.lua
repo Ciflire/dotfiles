@@ -1,0 +1,6 @@
+require "ciflire.plugins_options.nvim-tree"
+require "ciflire.plugins_options.cmp"
+require "ciflire.plugins_options.lsp"
+require "ciflire.plugins_options.lualine"
+require "ciflire.plugins_options.bufferline"
+require "ciflire.plugins_options.copilot"

@@ -1,23 +1,22 @@
--- General configuration
-require("user.config.options")
-require("user.config.keymaps")
-require("user.config.plugins")
--- Plugins configuration
-require("user.plugin.adoc_pdf_live")
-require("user.plugin.autopairs")
-require("user.plugin.bufferline")
-require("user.plugin.cmp")
-require("user.plugin.colorscheme")
-require("user.plugin.copilot")
-require("user.plugin.comment")
-require("user.plugin.gitsigns")
-require("user.plugin.lualine")
-require("user.plugin.nvimtree")
-require("user.plugin.telescope")
-require("user.plugin.toggleterm")
-require("user.plugin.treesitter")
-require("user.plugin.webdevicons")
--- LSP configuration
-require("user.lsp")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
-vim.wo.relativenumber = true
+-- vim.notify = require("notify")
+
+-- Main Options
+require("ciflire.options")
+
+-- Plugin options
+require("ciflire.plugins_options")
+
+vim.api.nvim_command("set wrap")
