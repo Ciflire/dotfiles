@@ -1,3 +1,20 @@
+-- BUFFERLINE CONFIG vim.opt.termguicolors = true
+require("bufferline").setup{
+	options = {
+		separator_style = "slant",
+		offsets = {
+                {
+                    filetype = "NvimTree",
+                    text = "File Explorer", -- | function ,
+                    text_align = "left", -- | "center" | "right"
+                    separator = true,
+                }
+            },
+	}
+}
+
+
+-- LUALINE CONFIG
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -8,6 +25,7 @@ require('lualine').setup {
       statusline = {},
       winbar = {},
       "NvimTree",
+      "neo-tree",
     },
     ignore_focus = {},
     always_divide_middle = true,
@@ -39,3 +57,15 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+-- NVIM-TREE CONFIG
+
+
+-- setup with some options
+
+-- NOTIFY CONFIG
+
+vim.notify = require("notify")
+
+-- TOGGLETERM CONFIG
+

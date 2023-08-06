@@ -7,7 +7,7 @@ local keymap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
+
 vim.g.maplocalleader = " "
 
 -- Modes
@@ -76,8 +76,8 @@ keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("i", "<C-s>", "<ESC>:w<CR>a", opts)
 
--- Toggle the NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- Toggle the Neotree
+keymap("n", "<leader>e", ":Neotree<cr>", opts)
 
 -- Toggle the fine cmd line
 keymap('n', ':', '<cmd>FineCmdline<CR>', opts)
@@ -85,9 +85,10 @@ keymap('n', ':', '<cmd>FineCmdline<CR>', opts)
 -- Toggleterm
 keymap("n", "<C-t>", ":ToggleTerm<CR>", opts)
 keymap("t", "<C-t>", "<C-\\><C-n>:ToggleTerm<CR>", opts)
+keymap("n", "<esc>", "<C-\\><C-n>", term_opts)
 
 -- Lazygit
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 
 -- Lazy
-keymap("n", "<leader>ll", ":Lazy<CR>",opts)
+keymap("n", "<leader>ll", ":Lazy<CR>", opts)

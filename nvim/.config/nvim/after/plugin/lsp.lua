@@ -1,3 +1,65 @@
+-- MASON CONFIGURATION con
+
+require("mason").setup()
+
+
+
+
+
+
+-- LSP CONFIGURATIONS
+
+  -- LUA LSP
+require'lspconfig'.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
+  -- PYTHON LSP
+require'lspconfig'.pylsp.setup{
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
+
+-- NULL-LS CONFIGUATION
+local null_ls = require("null-ls")
+  -- LUACHECK
+local sources = { null_ls.builtins.diagnostics.luacheck }
+
+
+
+
+null_ls.setup(sources)
+
+
+
+-- TREE-SITTER CONFIGURATION
 require'nvim-treesitter.configs'.setup {
   modules = {},
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -39,4 +101,4 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-}
+}-- TREESITTER CONFIGURATION
