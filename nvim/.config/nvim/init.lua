@@ -14,24 +14,23 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 local signs = {
-    Error = " ",
-    Warn = " ",
-    Hint = " ",
-    Information = " "
+  Error = " ",
+  Warn = " ",
+  Hint = " ",
+  Information = " "
 }
 
 for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
-
 
 require("ciflire")
 
+
 require("lazy").setup("plugins")
 
-
-local colorscheme = "monokai-pro-octagon"
+local colorscheme = "catppuccin"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

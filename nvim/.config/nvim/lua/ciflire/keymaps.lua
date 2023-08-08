@@ -34,6 +34,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>bf", ":lua vim.lsp.buf.format()<cr>")
 
 -- Move text up and down
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
@@ -73,11 +74,11 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 
 -- Save
-keymap("n", "<C-s>", ":w<CR>", opts)
-keymap("i", "<C-s>", "<ESC>:w<CR>a", opts)
+keymap("n", "<C-s>", ":lua vim.lsp.buf.format()<CR>:w<CR>", opts)
+keymap("i", "<C-s>", "<ESC>:lua vim.lsp.buf.format()<CR>:w<CR>a", opts)
 
 -- Toggle the Neotree
-keymap("n", "<leader>e", ":Neotree<cr>", opts)
+keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
 -- Toggle the fine cmd line
 keymap('n', ':', '<cmd>FineCmdline<CR>', opts)

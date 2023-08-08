@@ -4,12 +4,11 @@ return {
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
+    opts = function(_, opts)
+      opts.open_files_do_not_replace_types = opts.open_files_do_not_replace_types
+          or { "terminal", "Trouble", "qf", "Outline" }
+      table.insert(opts.open_files_do_not_replace_types, "edgy")
+    end,
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -19,6 +18,11 @@ return {
   {
     "MunifTanjim/nui.nvim",
     dependencies = "VonHeikemen/fine-cmdline.nvim",
+  },
+  {
+    "akinsho/bufferline.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    after = "catppuccin",
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -34,12 +38,12 @@ return {
     config = true
   },
   {
- "folke/trouble.nvim",
- dependencies = { "nvim-tree/nvim-web-devicons" },
- opts = {
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  -- refer to the configuration section below
- },
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
   }
 }

@@ -9,8 +9,8 @@ require("mason").setup()
 
 -- LSP CONFIGURATIONS
 
-  -- LUA LSP
-require'lspconfig'.lua_ls.setup {
+-- LUA LSP
+require 'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
@@ -19,11 +19,12 @@ require'lspconfig'.lua_ls.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
       },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {
@@ -33,13 +34,13 @@ require'lspconfig'.lua_ls.setup {
   },
 }
 
-  -- PYTHON LSP
-require'lspconfig'.pylsp.setup{
+-- PYTHON LSP
+require 'lspconfig'.pylsp.setup {
   settings = {
     pylsp = {
       plugins = {
         pycodestyle = {
-          ignore = {'W391'},
+          ignore = { 'W391' },
           maxLineLength = 100
         }
       }
@@ -47,20 +48,70 @@ require'lspconfig'.pylsp.setup{
   }
 }
 
+-- TYPST LSP
+require 'lspconfig'.typst_lsp.setup {
+  settings = {
+    exportPdf = "onType" -- Choose onType, onSave or never.
+    -- serverPath = "" -- Normally, there is no need to uncomment it.
+  }
+}
+
+-- MAKE LSP
+require 'lspconfig'.cmake.setup {}
+
+-- BASH LSP
+require 'lspconfig'.bashls.setup {}
+
+
+
+
+
 -- NULL-LS CONFIGUATION
 local null_ls = require("null-ls")
-  -- LUACHECK
-local sources = { null_ls.builtins.diagnostics.luacheck }
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+require("null-ls").setup({
+  -- you can reuse a shared lspconfig on_attach callback here
+  on_attach = function(client, bufnr)
+    if client.supports_method("textDocument/formatting") then
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+          -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
+          vim.lsp.buf.format({ async = false })
+        end,
+      })
+    end
+  end,
+})
+-- LUACHECK
+require("null-ls").setup({
+  debug = false,
+  sources = {
+    -- FORMATTING
+    formatting.stylua,
+    formatting.prettier,
+    -- formatting.cmakelang,
+
+    -- DIAGNOSTICS
+    -- diagnostics.lua_luacheck,
+    -- diagnostics.python_pylint,
+    -- diagnostics.cmakelang,
+  }
+})
 
 
 
-
-null_ls.setup(sources)
 
 
 
 -- TREE-SITTER CONFIGURATION
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   modules = {},
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "make", "bash", },
@@ -88,11 +139,11 @@ require'nvim-treesitter.configs'.setup {
     -- disable = { "c", "rust" },
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     -- disable = function(lang, buf)
-        -- local max_filesize = 100 * 1024 -- 100 KB
-        -- local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        -- if ok and stats and stats.size > max_filesize then
-            -- return true
-        -- end
+    -- local max_filesize = 100 * 1024 -- 100 KB
+    -- local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+    -- if ok and stats and stats.size > max_filesize then
+    -- return true
+    -- end
     -- end,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
@@ -101,4 +152,4 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-}-- TREESITTER CONFIGURATION
+} -- TREESITTER CONFIGURATION
