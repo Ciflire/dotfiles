@@ -25,6 +25,7 @@ alias matlab='prime-run /home/ciflire/matlab_install/bin/glnxa64/MATLAB'
 #vpn univ lorraine
 alias vpn="""sudo openconnect -u vesse1u@etu --authgroup='Universite-de-Lorraine' vpn.univ-lorraine.fr"""
 
+alias open="xdg-open"
 # oh my zsh plugins
 plugins=(zsh-autosuggestions)
 
@@ -34,7 +35,7 @@ export CLASSPATH=$CLASSPATH:/home/ciflire/gitrepo/java/lab1-vesse1u/app/build/cl
 export CLASSPATH=$CLASSPATH:/home/ciflire/gitrepo/java/lab1-vesse1u/app/build/classes/java/test;
 export CLASSPATH=$CLASSPATH:/home/ciflire/gitrepo/java/lab2-vesse1u/app/build/classes/java/main;
 export CLASSPATH=$CLASSPATH:/home/ciflire/gitrepo/java/lab2-vesse1u/app/build/classes/java/test;
-export PATH=$PATH:/home/ciflire/.local/bin
+export PATH=$PATH:/home/ciflire/.local/bin:/home/ciflire/.cargo/bin
 
 case "${TERM}" in
   cons25*|linux) # plain BSD/Linux console
@@ -81,4 +82,5 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
+
+neofetch

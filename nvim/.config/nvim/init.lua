@@ -28,6 +28,7 @@ end
 require("ciflire")
 
 
+
 require("lazy").setup("plugins")
 
 local colorscheme = "catppuccin"

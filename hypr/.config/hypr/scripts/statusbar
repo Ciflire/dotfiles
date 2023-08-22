@@ -1,8 +1,0 @@
-#!/bin/bash
-
-CONFIG="$HOME/dotfiles/hypr/.config/hypr/waybar/config"
-STYLE="$HOME/dotfiles/hypr/.config/hypr/waybar/style.css"
-
-if [[ ! $(pidof waybar) ]]; then
-	waybar --bar main-bar --log-level error --config ${CONFIG} --style ${STYLE}
-fi
