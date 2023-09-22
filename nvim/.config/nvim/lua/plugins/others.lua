@@ -5,4 +5,6 @@ return {
     lazy = false
   },
   'wakatime/vim-wakatime',
+
+  "iamcco/markdown-preview.nvim",
 }

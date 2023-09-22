@@ -51,7 +51,7 @@ require 'lspconfig'.pylsp.setup {
 -- TYPST LSP
 require 'lspconfig'.typst_lsp.setup {
   settings = {
-    exportPdf = "onType" -- Choose onType, onSave or never.
+    exportPdf = "onType", -- Choose onType, onSave or never.
     -- serverPath = "" -- Normally, there is no need to uncomment it.
   }
 }
@@ -62,8 +62,8 @@ require 'lspconfig'.cmake.setup {}
 -- BASH LSP
 require 'lspconfig'.bashls.setup {}
 
-
-
+-- NIX LSP
+require'lspconfig'.rnix.setup{}
 
 
 -- NULL-LS CONFIGUATION

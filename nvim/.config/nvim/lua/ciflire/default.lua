@@ -49,7 +49,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODOq: this doesn't seem to work
-vim.cmd "autocmd BufWritePost *.typ !typstfmt %a"
+vim.cmd "autocmd BufWritePost *.typ !typst-fmt %a"
 
 
 
