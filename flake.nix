@@ -3,6 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprlock.url = "github:hyprwm/hyprlock";
+    hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+    hypridle.url = "github:hyprwm/hypridle";
+    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
+    hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
+    hyprsunset.url = "github:hyprwm/hyprsunset";
+
 
     sops-nix.url = "github:Mic92/sops-nix";
 

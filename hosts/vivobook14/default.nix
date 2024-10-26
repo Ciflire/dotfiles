@@ -20,7 +20,7 @@
       "hosts/common/core"
 
       #################### Host-specific Optional Configs ####################
-      
+      "hosts/common/optionnal/hyprland.nix"
 
       #################### Desktop ####################
     ])
