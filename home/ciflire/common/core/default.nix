@@ -7,8 +7,9 @@
   ...
 }:
 {
-  imports = (configLib.scanPaths ./.) ++ (builtins.attrValues outputs.homeManagerModules);
-
+  imports = [
+    ./zsh
+  ];
   services.ssh-agent.enable = true;
 
   home = {
