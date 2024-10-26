@@ -17,6 +17,7 @@
       neovim
     #  thunderbird
     ];
+    shell = pkgs.zsh;
   };
 
 }
