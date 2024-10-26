@@ -6,5 +6,6 @@
 
     common/optionnal/hyprland
     common/optionnal/tools
+    common/optionnal/browser.nix
   ];
 }
