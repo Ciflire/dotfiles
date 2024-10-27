@@ -7,5 +7,6 @@
     common/optionnal/hyprland
     common/optionnal/tools
     common/optionnal/browser.nix
+    common/optionnal/vesktop.nix
   ];
 }
