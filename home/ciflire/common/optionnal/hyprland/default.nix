@@ -57,10 +57,10 @@ in
       "$menu" = "walker";
       "exec-once" = [
         "hyprpanel &"
-        "systemctl --user start hyprpolkitagent"
+        "systemctl --user start hyprpolkitagent&"
+        "walker --gapplication-service&"
         "wl-paste --type text --watch cliphist store #Stores only text data&"
         "wl-paste --type image --watch cliphist store #Stores only image data &"
-        "rog-control-center &"
       ];
       source = [
         "./monitors.conf"
