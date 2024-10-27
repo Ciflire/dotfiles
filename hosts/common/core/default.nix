@@ -29,6 +29,9 @@ in
     Defaults env_keep+=SSH_AUTH_SOCK
   '';
 
+  # Hopefully ssh will work now
+  services.ssh-agent.enable = true;
+
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;
   };
