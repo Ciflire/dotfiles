@@ -7,11 +7,15 @@ services.hyprpaper = {
       ipc = "on";
       splash = true;
       splash_offset = 2.0;
-      preload = [ "/home/ciflire/nixFlake/home/hyprland/wallpapers/landscapes/forrest.png" ];
+      preload = [ "~/.config/hypr/wallpapers/forrest.png" ];
       # preload = [ "/home/ciflire/nixFlake/home/hyprland/wallpapers/2825710.gif" ];
 
-      wallpaper = [ ",/home/ciflire/nixFlake/home/hyprland/wallpapers/landscapes/forrest.png" ];
+      wallpaper = [ ",~/.config/hypr/wallpapers/forrest.png" ];
 
     };
   };
+  home.file.".config/hypr/wallpapers" = {
+      source = ./wallpapers;
+      recursive = true;
+    };
   }

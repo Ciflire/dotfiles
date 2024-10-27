@@ -6,9 +6,9 @@ in
   
   imports = [
     ./hyprpaper.nix
-    #./hypridle.nix
-    #./hyprpaper.nix
-    
+    ./hypridle.nix
+    ./hyprpaper.nix
+    ./hyprlock.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -157,6 +157,12 @@ in
       layerrule = [ "blur, top-bar" ];
     };
   };
+
+  home.packages = with pkgs; [
+    inputs.hyprsunset.packages.${pkgs.system}.default
+    inputs.hyprsysteminfo.packages.${pkgs.system}.default
+    inputs.hyprpolkitagent.packages.${pkgs.system}.default
+  ];
 }
 
 
