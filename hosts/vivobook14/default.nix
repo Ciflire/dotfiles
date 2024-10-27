@@ -22,6 +22,7 @@
 
         #################### Host-specific Optional Configs ####################
         "hosts/common/optionnal/hyprland.nix"
+        "hosts/common/optionnal/steam.nix"
 
         #################### Desktop ####################
       ])
