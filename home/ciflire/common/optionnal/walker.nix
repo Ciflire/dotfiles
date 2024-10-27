@@ -1,9 +1,9 @@
-{ inputs,pkgs,... }:
+{ inputs, pkgs, ... }:
 {
   programs.walker = {
     enable = true;
     package = inputs.walker.packages.${pkgs.system}.default;
-   # runAsService = true;
+    # runAsService = true;
 
     # All options from the config.json can be used here.
     config = {

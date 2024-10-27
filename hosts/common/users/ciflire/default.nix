@@ -6,7 +6,7 @@
   fonts.fontDir.enable = true;
 
   fonts.packages = [
-    (pkgs.callPackage ../../../../pkgs/monolisa.nix {})
+    (pkgs.callPackage ../../../../pkgs/monolisa.nix { })
   ];
 
   users.users.ciflire = {
