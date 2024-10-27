@@ -1,7 +1,7 @@
-{pkgs,config, configVars,configLib, ...}: {
+{ pkgs, config, configVars, configLib, ... }: {
   home-manager.users.${configVars.username} = import (
-      configLib.relativeToRoot "home/${configVars.username}/${config.networking.hostName}.nix"
-    );
+    configLib.relativeToRoot "home/${configVars.username}/${config.networking.hostName}.nix"
+  );
 
   users.users.ciflire = {
     isNormalUser = true;
@@ -15,7 +15,7 @@
       kitty
       discord
       neovim
-    #  thunderbird
+      #  thunderbird
     ];
     shell = pkgs.zsh;
   };

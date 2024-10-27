@@ -1,9 +1,9 @@
-{inputs, pkgs, config, ...}:
+{ inputs, pkgs, osConfig, ... }:
 let
   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
 in
 {
-    services.hypridle = {
+  services.hypridle = {
     enable = true;
     package = inputs.hypridle.packages.${pkgs.system}.hypridle;
     settings = {
@@ -19,8 +19,8 @@ in
         }
         {
           timeout = 120;
-          on-timeout = 
-            if config.networking.hostName == "g713" then "${pkgs.brightnessctl}/bin/brightnessctl -sd asus::kbd_backlight set 0" else "";
+          on-timeout =
+            if osConfig.networking.hostName == "g713" then "${pkgs.brightnessctl}/bin/brightnessctl -sd asus::kbd_backlight set 0" else "";
           on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd asus::kbd_backlight";
         }
         {
@@ -35,4 +35,4 @@ in
       ];
     };
   };
-  }
+}

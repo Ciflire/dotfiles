@@ -6,9 +6,10 @@
 
 {
   imports = lib.flatten
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      
+
       # Hardware
       inputs.hardware.nixosModules.common-pc-laptop
       inputs.hardware.nixosModules.common-pc-ssd
@@ -16,14 +17,14 @@
       inputs.hardware.nixosModules.common-cpu-amd
 
       (map configLib.relativeToRoot [
-      #################### Required Configs ####################
-      "hosts/common/core"
+        #################### Required Configs ####################
+        "hosts/common/core"
 
-      #################### Host-specific Optional Configs ####################
-      "hosts/common/optionnal/hyprland.nix"
+        #################### Host-specific Optional Configs ####################
+        "hosts/common/optionnal/hyprland.nix"
 
-      #################### Desktop ####################
-    ])
+        #################### Desktop ####################
+      ])
 
 
 
@@ -35,7 +36,7 @@
 
   networking.hostName = "vivobook14"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -104,8 +105,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

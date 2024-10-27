@@ -1,6 +1,6 @@
-{inputs, pkgs, ...}:{
+{ inputs, pkgs, ... }: {
 
-services.hyprpaper = {
+  services.hyprpaper = {
     enable = true;
     package = inputs.hyprpaper.packages.${pkgs.system}.hyprpaper;
     settings = {
@@ -15,7 +15,7 @@ services.hyprpaper = {
     };
   };
   home.file.".config/hypr/wallpapers" = {
-      source = ./wallpapers;
-      recursive = true;
-    };
-  }
+    source = ./wallpapers;
+    recursive = true;
+  };
+}

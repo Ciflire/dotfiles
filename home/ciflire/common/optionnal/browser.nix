@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
-    programs.librewolf.enable = true;
-  }
+  programs.librewolf.enable = true;
+}

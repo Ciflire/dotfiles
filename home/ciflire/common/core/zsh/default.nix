@@ -3,7 +3,7 @@
   programs.zsh = {
     enable = true;
 
-# relative to ~
+    # relative to ~
     dotDir = ".config/zsh";
     enableCompletion = true;
     syntaxHighlighting.enable = true;
@@ -12,7 +12,7 @@
     history.size = 10000;
     history.share = true;
 
-    plugins = [ 
+    plugins = [
       {
         name = "powerlevel10k-config";
         src = ./p10k;
@@ -23,7 +23,7 @@
         src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
         file = "powerlevel10k.zsh-theme";
       }
-    
+
     ];
 
     initExtraFirst = ''

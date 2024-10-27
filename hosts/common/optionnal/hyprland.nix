@@ -1,4 +1,4 @@
-{inputs, pkgs, ...}:
+{ inputs, pkgs, ... }:
 {
-    programs.hyprland.enable = true;
-  }
+  programs.hyprland.enable = true;
+}
