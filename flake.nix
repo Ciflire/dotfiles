@@ -22,6 +22,8 @@
     };
 
     hardware.url = "github:nixos/nixos-hardware";
+
+    walker.url = "github:abenz1267/walker";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -43,6 +45,7 @@
     in
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
+      packages.${system} = let pkgs = nixpkgs.legacyPackages.${system}; in import ./pkgs { inherit pkgs; };
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
       overlays = import ./overlays { inherit inputs outputs; };

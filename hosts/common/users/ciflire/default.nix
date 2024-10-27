@@ -3,6 +3,12 @@
     configLib.relativeToRoot "home/${configVars.username}/${config.networking.hostName}.nix"
   );
 
+  fonts.fontDir.enable = true;
+
+  fonts.packages = [
+    (pkgs.callPackage ../../../../pkgs/monolisa.nix {})
+  ];
+
   users.users.ciflire = {
     isNormalUser = true;
     description = "Léo VESSE";
