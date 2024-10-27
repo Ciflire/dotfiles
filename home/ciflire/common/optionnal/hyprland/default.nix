@@ -9,6 +9,7 @@ in
     ./hypridle.nix
     ./hyprpaper.nix
     ./hyprlock.nix
+    ./hyprcursor.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -162,6 +163,7 @@ in
     inputs.hyprsunset.packages.${pkgs.system}.default
     inputs.hyprsysteminfo.packages.${pkgs.system}.default
     inputs.hyprpolkitagent.packages.${pkgs.system}.default
+    nwg-displays
   ];
 }
 

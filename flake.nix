@@ -12,6 +12,7 @@
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprsunset.url = "github:hyprwm/hyprsunset";
+    hyprcursor.url = "github:hyprwm/hyprcursor";
 
 
     sops-nix.url = "github:Mic92/sops-nix";
