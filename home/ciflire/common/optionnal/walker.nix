@@ -27,4 +27,7 @@
     };
 
   };
+  home.packages = with pkgs; [
+    inputs.walker.packages.${pkgs.system}.default
+  ];
 }
