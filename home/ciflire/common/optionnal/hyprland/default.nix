@@ -57,7 +57,7 @@ in
       "$menu" = "walker";
       "exec-once" = [
         "hyprpanel &"
-        "/nix/store/$(ls -la /nix/store | grep 'mate-polkit' | grep '4096' | awk '{print $9}' | sed -n '$p')/libexec/polkit-mate-authentication-agent-1 & "
+        "systemctl --user start hyprpolkitagent"
         "wl-paste --type text --watch cliphist store #Stores only text data&"
         "wl-paste --type image --watch cliphist store #Stores only image data &"
         "rog-control-center &"
