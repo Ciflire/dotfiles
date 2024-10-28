@@ -10,5 +10,6 @@
     common/optionnal/browser.nix
     common/optionnal/vesktop.nix
     common/optionnal/walker.nix
+    common/optionnal/kitty.nix
   ];
 }
