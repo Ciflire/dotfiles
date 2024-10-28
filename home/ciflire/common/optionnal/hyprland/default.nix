@@ -10,6 +10,7 @@ in
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hyprcursor.nix
+    ./wlogout.nix
   ];
 
   wayland.windowManager.hyprland = {
