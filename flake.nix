@@ -14,6 +14,7 @@
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprcursor.url = "github:hyprwm/hyprcursor";
 
+stylix.url = "github:danth/stylix";
 
     sops-nix.url = "github:Mic92/sops-nix";
 
@@ -56,6 +57,7 @@
           system = "x86_64-linux";
           modules = [
             inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.homeManagerModules.stylix
             { home-manager.extraSpecialArgs = specialArgs; }
             ./hosts/vivobook14
           ];
