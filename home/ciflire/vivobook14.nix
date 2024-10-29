@@ -11,5 +11,6 @@
     common/optionnal/vesktop.nix
     common/optionnal/walker.nix
     common/optionnal/kitty.nix
+    common/optionnal/helix.nix
   ];
 }
