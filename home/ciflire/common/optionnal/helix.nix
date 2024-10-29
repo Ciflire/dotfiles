@@ -70,10 +70,12 @@
         {
           name = "python";
           language-servers = [
-            "ruff"
             "pylyzer"
+            "ruff"
           ];
           auto-format = true;
+          formatter.command = "{pkgs.ruff}/bin/ruff";
+          formatter.args = ["format" "-"];
         }
       ];
     };
