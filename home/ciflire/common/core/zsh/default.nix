@@ -64,6 +64,7 @@
       plugins = [
         "git"
         "sudo" # press Esc twice to get the previous command prefixed with sudo https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
+        "direnv"
       ];
       extraConfig = ''
         # Display red dots whilst waiting for completion.
