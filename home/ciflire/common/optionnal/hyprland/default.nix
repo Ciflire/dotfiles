@@ -167,5 +167,3 @@ in
     nwg-displays
   ];
 }
-
-

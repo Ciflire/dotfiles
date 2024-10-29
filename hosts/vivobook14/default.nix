@@ -2,35 +2,38 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ configLib, pkgs, inputs, lib, ... }:
+{
+  configLib,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
-  imports = lib.flatten
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  imports = lib.flatten [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
 
-      # Hardware
-      inputs.hardware.nixosModules.common-pc-laptop
-      inputs.hardware.nixosModules.common-pc-ssd
-      inputs.hardware.nixosModules.common-cpu-amd-raphael-igpu
-      inputs.hardware.nixosModules.common-cpu-amd
+    # Hardware
+    inputs.hardware.nixosModules.common-pc-laptop
+    inputs.hardware.nixosModules.common-pc-ssd
+    inputs.hardware.nixosModules.common-cpu-amd-raphael-igpu
+    inputs.hardware.nixosModules.common-cpu-amd
 
-      (map configLib.relativeToRoot [
-        #################### Required Configs ####################
-        "hosts/common/core"
+    (map configLib.relativeToRoot [
+      #################### Required Configs ####################
+      "hosts/common/core"
 
-        #################### Host-specific Optional Configs ####################
-        "hosts/common/optionnal/hyprland.nix"
-        "hosts/common/optionnal/steam.nix"
-        "hosts/common/optionnal/stylix"
+      #################### Host-specific Optional Configs ####################
+      "hosts/common/optionnal/hyprland.nix"
+      "hosts/common/optionnal/steam.nix"
+      "hosts/common/optionnal/stylix"
 
-        #################### Desktop ####################
-      ])
+      #################### Desktop ####################
+    ])
 
-
-
-    ];
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -38,7 +41,10 @@
 
   networking.hostName = "vivobook14"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";

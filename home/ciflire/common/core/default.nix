@@ -1,9 +1,10 @@
-{ config
-, lib
-, pkgs
-, outputs
-, configLib
-, ...
+{
+  config,
+  lib,
+  pkgs,
+  outputs,
+  configLib,
+  ...
 }:
 {
   imports = [
@@ -59,34 +60,34 @@
     inherit (pkgs)
 
       # Packages that don't have custom configs go here
-      btop# resource monitor
-      copyq# clipboard manager
-      coreutils# basic gnu utils
+      btop # resource monitor
+      copyq # clipboard manager
+      coreutils # basic gnu utils
       # curl
-      eza# ls replacement
-      dust# disk usage
-      fd# tree style ls
-      findutils# find
-      fzf# fuzzy search
-      jq# JSON pretty printer and manipulator
-      nix-tree# nix package tree viewer
-      neofetch# fancier system info than pfetch
-      ncdu# TUI disk usage
+      eza # ls replacement
+      dust # disk usage
+      fd # tree style ls
+      findutils # find
+      fzf # fuzzy search
+      jq # JSON pretty printer and manipulator
+      nix-tree # nix package tree viewer
+      neofetch # fancier system info than pfetch
+      ncdu # TUI disk usage
       pciutils
-      pfetch# system info
-      pre-commit# git hooks
-      p7zip# compression & encryption
-      ripgrep# better grep
-      steam-run# for running non-NixOS-packaged binaries on Nix
+      pfetch # system info
+      pre-commit # git hooks
+      p7zip # compression & encryption
+      ripgrep # better grep
+      steam-run # for running non-NixOS-packaged binaries on Nix
       usbutils
-      tree# cli dir tree viewer
-      unzip# zip extraction
-      unrar# rar extraction
-      xdg-utils# provide cli tools such as `xdg-mime` and `xdg-open`
+      tree # cli dir tree viewer
+      unzip # zip extraction
+      unrar # rar extraction
+      xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
       xdg-user-dirs
-      wev# show wayland events. also handy for detecting keypress codes
-      wget# downloader
-      zip# zip compression
+      wev # show wayland events. also handy for detecting keypress codes
+      wget # downloader
+      zip # zip compression
       ;
   };
 

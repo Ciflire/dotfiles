@@ -16,7 +16,7 @@
 
     helix.url = "github:helix-editor/helix";
 
-stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix";
 
     sops-nix.url = "github:Mic92/sops-nix";
 
@@ -30,7 +30,8 @@ stylix.url = "github:danth/stylix";
     walker.url = "github:abenz1267/walker";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       inherit (self) outputs;
       system = "x86_64-linux";
@@ -48,8 +49,12 @@ stylix.url = "github:danth/stylix";
       };
     in
     {
-      formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
-      packages.${system} = let pkgs = nixpkgs.legacyPackages.${system}; in import ./pkgs { inherit pkgs; };
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
+      packages.${system} =
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        import ./pkgs { inherit pkgs; };
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
       overlays = import ./overlays { inherit inputs outputs; };
@@ -72,6 +77,7 @@ stylix.url = "github:danth/stylix";
         pkgs.mkShell {
           packages = with pkgs; [
             nixd
+            nixfmt-rfc-style
           ];
         };
     };

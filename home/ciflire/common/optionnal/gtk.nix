@@ -1,8 +1,9 @@
-{pkgs, ...}: {
-    gtk = {
-        iconTheme = {
-            name = "kora";
-            package = pkgs.kora-icon-theme;
-          };
-      };
-  }
+{ pkgs, ... }:
+{
+  gtk = {
+    iconTheme = {
+      name = "kora";
+      package = pkgs.kora-icon-theme;
+    };
+  };
+}

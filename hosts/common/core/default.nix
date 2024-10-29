@@ -1,10 +1,11 @@
-{ pkgs
-, lib
-, inputs
-, outputs
-, configLib
-, configVars
-, ...
+{
+  pkgs,
+  lib,
+  inputs,
+  outputs,
+  configLib,
+  configVars,
+  ...
 }:
 let
 

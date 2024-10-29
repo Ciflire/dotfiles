@@ -1,4 +1,9 @@
-{ lib, stdenvNoCC, requireFile, pkgs }:
+{
+  lib,
+  stdenvNoCC,
+  requireFile,
+  pkgs,
+}:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "monolisa";
