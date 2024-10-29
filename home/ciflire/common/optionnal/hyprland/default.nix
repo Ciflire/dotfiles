@@ -153,7 +153,7 @@ in
         "float, class:^(xdg-desktop-portal)"
         "idleinhibit, class:(steam_app)"
         "float, class:^(satty)$"
-        "float, title:^.*Bitwarden.*$"
+        "float, size 500 700 ,title:^.*Bitwarden.*$"
         "opacity 0.9 override 0.8 override 0.95 override,class:^(kitty)$"
       ];
       layerrule = [ "blur, top-bar" ];

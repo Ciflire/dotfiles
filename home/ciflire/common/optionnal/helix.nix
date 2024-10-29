@@ -15,12 +15,12 @@
           command = "${pkgs.tinymist}/bin/tinymist/";
         };
         ruff.command = "${pkgs.ruff}/bin/ruff";
-        ruff.args = ["server"]
+        ruff.args = ["server"];
         ruff.config = {
         settings.lineLength = 80;
         settings.format.preview = true;
-        pylyzer.command = "${pkgs.pylyzer}/bin/pylyzer"
-        pylyzer.args = ["--server"]
+        pylyzer.command = "${pkgs.pylyzer}/bin/pylyzer";
+        pylyzer.args = ["--server"];
         };
         # typst-lsp = {
         #   command = "${pkgs.typst-lsp}/bin/typst-lsp";
@@ -75,7 +75,7 @@
       ];
     };
     settings = lib.mkForce {
-      theme = "test";
+      theme = "stylix";
 
       editor = {
         lsp = {

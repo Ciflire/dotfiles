@@ -57,7 +57,7 @@ stylix.url = "github:danth/stylix";
           system = "x86_64-linux";
           modules = [
             inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.homeManagerModules.stylix
+            inputs.stylix.nixosModules.stylix
             { home-manager.extraSpecialArgs = specialArgs; }
             ./hosts/vivobook14
           ];
