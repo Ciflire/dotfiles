@@ -112,4 +112,16 @@
       # just reference `$ alias` and use the defautls, they're good.
     };
   };
+
+  # Terminal utilies
+  home.packages = with pkgs; [
+    bat
+    bat-extras.batman
+
+    direnv
+
+    pre-commit
+
+    zellij
+  ];
 }

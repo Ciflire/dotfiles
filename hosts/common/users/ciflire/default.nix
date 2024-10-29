@@ -24,14 +24,13 @@
       "wheel"
     ];
     packages = with pkgs; [
-      firefox
       git
       helix
       lazygit
       kitty
       discord
       neovim
-      #  thunderbird
+      thunderbird
     ];
     shell = pkgs.zsh;
   };

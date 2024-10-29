@@ -75,7 +75,10 @@
           ];
           auto-format = true;
           formatter.command = "{pkgs.ruff}/bin/ruff";
-          formatter.args = ["format" "-"];
+          formatter.args = [
+            "format"
+            "-"
+          ];
         }
       ];
     };
