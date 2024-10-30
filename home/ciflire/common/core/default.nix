@@ -73,6 +73,8 @@
       nix-tree # nix package tree viewer
       neofetch # fancier system info than pfetch
       ncdu # TUI disk usage
+      nixd
+      nixfmt-rfc-style
       pciutils
       pfetch # system info
       pre-commit # git hooks
