@@ -79,6 +79,7 @@
       pfetch # system info
       pre-commit # git hooks
       p7zip # compression & encryption
+      pulsemixer
       ripgrep # better grep
       steam-run # for running non-NixOS-packaged binaries on Nix
       usbutils
