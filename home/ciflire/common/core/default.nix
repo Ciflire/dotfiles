@@ -61,6 +61,8 @@
 
       # Packages that don't have custom configs go here
       btop # resource monitor
+      brightnessctl # brightness utility
+      cliphist # clipboard history
       copyq # clipboard manager
       coreutils # basic gnu utils
       # curl
@@ -69,18 +71,22 @@
       fd # tree style ls
       findutils # find
       fzf # fuzzy search
+      grimblast # Bash utility for hyprland screenshots
       jq # JSON pretty printer and manipulator
       nix-tree # nix package tree viewer
       neofetch # fancier system info than pfetch
       ncdu # TUI disk usage
-      nixd
-      nixfmt-rfc-style
-      pciutils
-      pfetch # system info
-      pre-commit # git hooks
+      nixd # nix lsp
+      nixfmt-rfc-style # nix formatter
       p7zip # compression & encryption
-      pulsemixer
+      pciutils 
+      pfetch # system info
+      playerctl # media player control
+      pre-commit # git hooks
+      pulsemixer # audio utility
       ripgrep # better grep
+      rofi
+      satty # screenshot editor
       steam-run # for running non-NixOS-packaged binaries on Nix
       usbutils
       tree # cli dir tree viewer
