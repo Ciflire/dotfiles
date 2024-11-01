@@ -11,6 +11,7 @@ in
     ./hyprlock.nix
     ./hyprcursor.nix
     ./wlogout.nix
+    ./xdg-desktop-portals.nix
   ];
 
   wayland.windowManager.hyprland = {
