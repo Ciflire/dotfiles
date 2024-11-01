@@ -1,5 +1,6 @@
-{inputs, pkgs, ...}:{
-xdg.portal = {
+{ inputs, pkgs, ... }:
+{
+  xdg.portal = {
     enable = true;
     configPackages = [ inputs.hyprland.packages.${pkgs.system}.hyprland ];
     extraPortals = with pkgs; [

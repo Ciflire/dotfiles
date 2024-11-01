@@ -32,7 +32,7 @@
       neovim
       thunderbird
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
 }

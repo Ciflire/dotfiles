@@ -8,7 +8,10 @@
 }:
 {
   imports = [
-    ./zsh
+    ./carapace.nix
+    ./direnv.nix
+    ./nushell.nix
+    ./starship.nix
   ];
   services.ssh-agent.enable = true;
 
@@ -21,12 +24,12 @@
       "$HOME/scripts/talon_scripts"
     ];
     sessionVariables = {
-      FLAKE = "$HOME/src/nix-config";
-      SHELL = "zsh";
+      FLAKE = "$HOME/dotfiles";
+      SHELL = "nu";
       TERM = "kitty";
       TERMINAL = "kitty";
-      VISUAL = "nvim";
-      EDITOR = "nvim";
+      VISUAL = "hx";
+      EDITOR = "hx";
       MANPAGER = "batman"; # see ./cli/bat.nix
       NIXOS_OZONE_WL = "1";
     };
@@ -80,7 +83,7 @@
       nixd # nix lsp
       nixfmt-rfc-style # nix formatter
       p7zip # compression & encryption
-      pciutils 
+      pciutils
       pfetch # system info
       playerctl # media player control
       pre-commit # git hooks
