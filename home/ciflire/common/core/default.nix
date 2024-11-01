@@ -14,6 +14,7 @@
     ./starship.nix
     ./yazi
     ./zellij
+    ./zoxide.nix
   ];
   services.ssh-agent.enable = true;
 
