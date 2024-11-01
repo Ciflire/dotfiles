@@ -31,6 +31,7 @@
       discord
       neovim
       thunderbird
+      wl-clipboard
     ];
     shell = pkgs.nushell;
   };
