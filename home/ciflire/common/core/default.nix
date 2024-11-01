@@ -12,6 +12,8 @@
     ./direnv.nix
     ./nushell.nix
     ./starship.nix
+    ./yazi
+    ./zellij
   ];
   services.ssh-agent.enable = true;
 

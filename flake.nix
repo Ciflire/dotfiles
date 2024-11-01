@@ -15,7 +15,6 @@
     hyprcursor.url = "github:hyprwm/hyprcursor";
 
     helix.url = "github:helix-editor/helix";
-
     stylix.url = "github:danth/stylix";
 
     sops-nix.url = "github:Mic92/sops-nix";
