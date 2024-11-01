@@ -30,6 +30,8 @@ in
     Defaults env_keep+=SSH_AUTH_SOCK
   '';
 
+  security.polkit.enable = true;
+
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;
   };
