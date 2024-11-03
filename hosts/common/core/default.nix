@@ -15,6 +15,7 @@ let
 in
 {
   imports = lib.flatten [
+    ./cachix.nix
     (configLib.scanPaths ./.)
     (configLib.relativeToRoot "hosts/common/users/${configVars.username}")
     inputs.home-manager.nixosModules.home-manager

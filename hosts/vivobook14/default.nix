@@ -14,7 +14,6 @@
   imports = lib.flatten [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../common/core/cachix.nix
 
     # Hardware
     inputs.hardware.nixosModules.common-pc-laptop
@@ -30,6 +29,7 @@
       "hosts/common/optionnal/hyprland.nix"
       "hosts/common/optionnal/steam.nix"
       "hosts/common/optionnal/stylix"
+      "hosts/common/optionnal/zsa.nix"
 
       #################### Desktop ####################
     ])
