@@ -3,5 +3,5 @@
   home.packages = with pkgs; [
     vesktop
   ];
-  services.arrpc.enable = true;
+  # services.arrpc.enable = true;
 }
