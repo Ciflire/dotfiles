@@ -5,15 +5,16 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
+    hyprcursor.url = "github:hyprwm/hyprcursor";
+    hypridle.url = "github:hyprwm/hypridle";
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
     hyprpicker.url = "github:hyprwm/hyprpicker";
-    hypridle.url = "github:hyprwm/hypridle";
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
-    hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprsunset.url = "github:hyprwm/hyprsunset";
-    hyprcursor.url = "github:hyprwm/hyprcursor";
+    hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
 
     helix.url = "github:helix-editor/helix";
     stylix.url = "github:danth/stylix";
@@ -67,6 +68,7 @@
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             { home-manager.extraSpecialArgs = specialArgs; }
+            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
             ./hosts/vivobook14
           ];
         };
