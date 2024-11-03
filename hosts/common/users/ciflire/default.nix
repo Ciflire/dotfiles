@@ -13,7 +13,7 @@
   fonts.fontDir.enable = true;
 
   fonts.packages = [
-    (pkgs.callPackage ../../../../pkgs/monolisa.nix { })
+    pkgs.monolisa
   ];
 
   users.users.ciflire = {

@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   src = requireFile {
     name = "MonoLisa-Complete-2.015.zip";
-    sha256 = "0yd3g52khp48yaq6z8ajwahc9x1cz4d0vvl61m919rd0a1zhnq4c";
+    sha256 = "0hr3khprpf1j3ywp7kzq7gsqwbrhqa8qa51bmdnfpyklspx21qqg";
     message = "";
   };
 
