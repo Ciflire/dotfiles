@@ -22,6 +22,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "plugdev"
     ];
     packages = with pkgs; [
       git
