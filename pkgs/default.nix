@@ -6,4 +6,6 @@
   #################### Packages with external source ####################
 
   monolisa = pkgs.callPackage ./monolisa.nix { };
+
+  ltex-ls-plus = pkgs.callPackage ./ltex-ls-plus.nix {};
 }
