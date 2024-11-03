@@ -12,7 +12,7 @@
     languages = {
       language-server = {
         tinymist = {
-          command = "${pkgs.tinymist}/bin/tinymist/";
+          command = "${pkgs.tinymist}/bin/tinymist";
         };
         ltex-ls-plus = {
           command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
@@ -50,7 +50,6 @@
             end = "*/";
           };
           language-servers = [
-            "typst-lsp"
             "tinymist"
             "ltex-ls-plus"
           ];
