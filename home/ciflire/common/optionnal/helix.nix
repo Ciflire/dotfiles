@@ -14,6 +14,9 @@
         tinymist = {
           command = "${pkgs.tinymist}/bin/tinymist/";
         };
+        ltex-ls-plus = {
+          command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
+        };
         ruff.command = "${pkgs.ruff}/bin/ruff";
         ruff.args = [ "server" ];
         ruff.config = {
@@ -49,6 +52,7 @@
           language-servers = [
             "typst-lsp"
             "tinymist"
+            "ltex-ls-plus"
           ];
           indent = {
             tab-width = 2;
