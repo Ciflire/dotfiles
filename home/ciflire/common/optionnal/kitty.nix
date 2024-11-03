@@ -4,7 +4,7 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     font = {
-      name = lib.mkForce "MonoLisa Variable";
+      name = lib.mkForce "MonoLisaVariable Nerd Font";
       size = lib.mkForce 13;
     };
   };
