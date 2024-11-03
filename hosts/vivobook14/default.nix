@@ -30,6 +30,7 @@
       "hosts/common/optionnal/steam.nix"
       "hosts/common/optionnal/stylix"
       "hosts/common/optionnal/zsa.nix"
+      "hosts/common/optionnal/upower.nix"
 
       #################### Desktop ####################
     ])
