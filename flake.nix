@@ -17,7 +17,7 @@
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
 
     helix.url = "github:helix-editor/helix";
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix?rev=762c07ee10b381bc8e085be5b6c2ec43139f13b0";
 
     sops-nix.url = "github:Mic92/sops-nix";
 
