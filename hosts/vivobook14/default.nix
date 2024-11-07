@@ -31,6 +31,7 @@
       "hosts/common/optionnal/stylix"
       "hosts/common/optionnal/zsa.nix"
       "hosts/common/optionnal/upower.nix"
+      "hosts/common/optionnal/docker.nix"
 
       #################### Desktop ####################
     ])
@@ -40,6 +41,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
 
   networking.hostName = "vivobook14"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
