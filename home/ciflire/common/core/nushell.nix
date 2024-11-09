@@ -20,7 +20,6 @@
     pre-commit
 
     ltex-ls-plus
-
   ];
 
 }

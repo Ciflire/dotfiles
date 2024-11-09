@@ -1,12 +1,18 @@
-{ lib, stdenvNoCC, fetchurl, makeBinaryWrapper, jre_headless }:
+{
+  lib,
+  stdenvNoCC,
+  fetchurl,
+  makeBinaryWrapper,
+  jre_headless,
+}:
 
 stdenvNoCC.mkDerivation rec {
   pname = "ltex-ls-plus";
-  version = "18.3.0-alpha.nightly.2024-11-03";
+  version = "18.2.0";
 
   src = fetchurl {
-    url = "https://github.com/ltex-plus/ltex-ls-plus/releases/download/nightly/ltex-ls-plus-${version}.tar.gz";
-    sha256 = "sha256-CC5cd1B4dQQ5/NiHFCgNt0OMpwWaU5okTgI7i9M8ITE=";
+    url = "https://github.com/valentjn/ltex-ls/releases/download/${version}/ltex-ls-${version}.tar.gz";
+    sha256 = "sha256-9tOSDE60JDJNsVq5JihiCJLz9o5zRTvVPsPQiFfQlQU=";
   };
 
   nativeBuildInputs = [ makeBinaryWrapper ];
