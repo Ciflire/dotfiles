@@ -64,6 +64,7 @@ in
         "walker --gapplication-service&"
         "wl-paste --type text --watch cliphist store #Stores only text data&"
         "wl-paste --type image --watch cliphist store #Stores only image data &"
+        "systemctl --user start hyprpolkitagent&"
       ];
       source = [
         "./monitors.conf"

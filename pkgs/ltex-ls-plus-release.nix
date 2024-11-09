@@ -11,8 +11,8 @@ stdenvNoCC.mkDerivation rec {
   version = "18.2.0";
 
   src = fetchurl {
-    url = "https://github.com/valentjn/ltex-ls/releases/download/${version}/ltex-ls-${version}.tar.gz";
-    sha256 = "sha256-9tOSDE60JDJNsVq5JihiCJLz9o5zRTvVPsPQiFfQlQU=";
+    url = "https://github.com/ltex-plus/ltex-ls-plus/releases/download/${version}/ltex-ls-plus-${version}.tar.gz";
+    sha256 = "sha256-8qxeaVGd2r3SLerCgHSpQWFbXhIngV2cdv/jWN7HHOE=";
   };
 
   nativeBuildInputs = [ makeBinaryWrapper ];
