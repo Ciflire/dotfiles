@@ -8,83 +8,8 @@
   stylix.targets.helix.enable = true;
   programs.helix = {
     package = inputs.helix.packages.${pkgs.system}.helix;
+    # package = pkgs.helix;
     enable = true;
-    languages = {
-      language-server = {
-        tinymist = {
-          command = "${pkgs.tinymist}/bin/tinymist";
-        };
-        ltex-ls-plus = {
-          command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
-        };
-        ruff.command = "${pkgs.ruff}/bin/ruff";
-        ruff.args = [ "server" ];
-        ruff.config = {
-          settings.lineLength = 80;
-          settings.format.preview = true;
-        };
-        pylyzer.command = "${pkgs.pylyzer}/bin/pylyzer";
-        pylyzer.args = [ "--server" ];
-        # typst-lsp = {
-        #   command = "${pkgs.typst-lsp}/bin/typst-lsp";
-        # };
-      };
-      languages = [
-        {
-          name = "nix";
-          auto-format = true;
-          formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
-        }
-        {
-          name = "typst";
-
-          scope = "source.typst";
-          injection-regex = "typ(st)?";
-          file-types = [
-            "typst"
-            "typ"
-          ];
-          comment-token = "//";
-          block-comment-tokens = {
-            start = "/*";
-            end = "*/";
-          };
-          language-servers = [
-            "tinymist"
-            "ltex-ls-plus"
-          ];
-          indent = {
-            tab-width = 2;
-            unit = "  ";
-          };
-          auto-format = true;
-          formatter.command = "${pkgs.typstyle}/bin/typstyle";
-        }
-        {
-          name = "markdown";
-          auto-format = true;
-          formatter.command = "dprint";
-          formatter.args = [
-            "fmt"
-            "--stdin"
-            "md"
-          ];
-        }
-        {
-          name = "python";
-          language-servers = [
-            "pylyzer"
-            "ruff"
-          ];
-          auto-format = true;
-          formatter.command = "{pkgs.ruff}/bin/ruff";
-          formatter.args = [
-            "format"
-            "-"
-          ];
-        }
-      ];
-    };
     settings = lib.mkForce {
       theme = "stylix";
 
