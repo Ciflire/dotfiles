@@ -10,6 +10,9 @@
     configLib.relativeToRoot "home/${configVars.username}/${config.networking.hostName}.nix"
   );
 
+  sops.secrets.ciflire_password.neededForUsers = true;
+  users.mutableUsers = false;
+
   fonts.fontDir.enable = true;
 
   fonts.packages = [
@@ -18,6 +21,7 @@
 
   users.users.ciflire = {
     isNormalUser = true;
+    hashedPasswordFile = config.sops.secrets.ciflire_password.path;
     description = "Léo VESSE";
     extraGroups = [
       "networkmanager"

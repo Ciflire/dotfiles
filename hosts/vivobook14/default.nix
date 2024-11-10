@@ -44,7 +44,7 @@
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
-
+  programs.ssh.startAgent = true;
 
   networking.hostName = "vivobook14"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -115,7 +115,6 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
-    sops
     cachix
   ];
 

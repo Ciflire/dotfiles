@@ -12,5 +12,7 @@
     common/optionnal/walker.nix
     common/optionnal/kitty.nix
     common/optionnal/helix.nix
+    common/optionnal/sops.nix
+    common/optionnal/ssh.nix
   ];
 }
