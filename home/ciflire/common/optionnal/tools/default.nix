@@ -3,5 +3,7 @@
   home.packages = with pkgs; [
     #Music Player
     spotify
+
+    sioyek
   ];
 }

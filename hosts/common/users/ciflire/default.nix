@@ -20,7 +20,7 @@
     pkgs.font-awesome
     pkgs.roboto
     pkgs.source-sans-pro
-
+    pkgs.source-sans
   ];
 
   users.users.ciflire = {
