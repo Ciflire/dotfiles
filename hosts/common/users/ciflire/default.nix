@@ -17,6 +17,7 @@
 
   fonts.packages = [
     pkgs.monolisa
+    pkgs.font-font-awesome
   ];
 
   users.users.ciflire = {
