@@ -32,6 +32,7 @@
       "hosts/common/optionnal/zsa.nix"
       "hosts/common/optionnal/upower.nix"
       "hosts/common/optionnal/docker.nix"
+      "hosts/common/optionnal/power-profile.nix"
 
       #################### Desktop ####################
     ])
