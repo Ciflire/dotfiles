@@ -10,6 +10,7 @@
   imports = [
     ./carapace.nix
     ./direnv.nix
+    ./fonts.nix
     ./nushell.nix
     ./starship.nix
     ./yazi

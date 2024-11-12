@@ -13,16 +13,6 @@
   sops.secrets.ciflire_password.neededForUsers = true;
   users.mutableUsers = false;
 
-  fonts.fontDir.enable = true;
-
-  fonts.packages = [
-    pkgs.monolisa
-    pkgs.font-awesome
-    pkgs.roboto
-    pkgs.source-sans-pro
-    pkgs.source-sans
-  ];
-
   users.users.ciflire = {
     isNormalUser = true;
     hashedPasswordFile = config.sops.secrets.ciflire_password.path;
