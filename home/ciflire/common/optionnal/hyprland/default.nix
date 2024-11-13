@@ -4,6 +4,9 @@ let
 in
 {
 
+  # Import bitwarden fix script
+  xdg.dataFile."scripts/bitwarden.sh".source = (import ./scripts/bitwarden.nix pkgs);
+
   imports = [
     ./hyprpaper.nix
     ./hypridle.nix
@@ -65,6 +68,7 @@ in
         "wl-paste --type text --watch cliphist store #Stores only text data&"
         "wl-paste --type image --watch cliphist store #Stores only image data &"
         "systemctl --user start hyprpolkitagent&"
+        "$HOME/.local/share/scripts/bitwarden.sh"
       ];
       source = [
         "./monitors.conf"
@@ -155,7 +159,6 @@ in
         "float, class:^(xdg-desktop-portal)"
         "idleinhibit, class:(steam_app)"
         "float, class:^(satty)$"
-        "float, size 500 700 ,title:^.*Bitwarden.*$"
         "opacity 0.9 override 0.8 override 0.95 override,class:^(kitty)$"
       ];
       layerrule = [ "blur, top-bar" ];
@@ -168,5 +171,7 @@ in
     inputs.hyprpolkitagent.packages.${pkgs.system}.default
     inputs.hyprpanel.packages.${pkgs.system}.default
     nwg-displays
+    jq
+    socat
   ];
 }

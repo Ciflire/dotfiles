@@ -5,5 +5,6 @@
     spotify
 
     sioyek
+    vscode
   ];
 }
