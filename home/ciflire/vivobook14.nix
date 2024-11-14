@@ -9,6 +9,7 @@
     common/optionnal/helix.nix
     common/optionnal/hyprland
     common/optionnal/kitty.nix
+    common/optionnal/obs.nix
     common/optionnal/sops.nix
     common/optionnal/ssh.nix
     common/optionnal/tools
