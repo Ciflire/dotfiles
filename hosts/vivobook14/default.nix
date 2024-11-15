@@ -35,6 +35,7 @@
       "hosts/common/optionnal/docker.nix"
       "hosts/common/optionnal/power-profile.nix"
       "hosts/common/optionnal/pipewire.nix"
+      "hosts/common/optionnal/wacom.nix"
 
       #################### Desktop ####################
     ])
