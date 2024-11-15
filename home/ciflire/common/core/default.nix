@@ -64,49 +64,50 @@
     };
   };
 
-  home.packages = builtins.attrValues {
-    inherit (pkgs)
+  home.packages = with pkgs; [
 
-      # Packages that don't have custom configs go here
-      btop # resource monitor
-      brightnessctl # brightness utility
-      cliphist # clipboard history
-      copyq # clipboard manager
-      coreutils # basic gnu utils
-      # curl
-      eza # ls replacement
-      dust # disk usage
-      fd # tree style ls
-      findutils # find
-      fzf # fuzzy search
-      grimblast # Bash utility for hyprland screenshots
-      jq # JSON pretty printer and manipulator
-      nix-tree # nix package tree viewer
-      neofetch # fancier system info than pfetch
-      ncdu # TUI disk usage
-      nixd # nix lsp
-      nixfmt-rfc-style # nix formatter
-      p7zip # compression & encryption
-      pciutils
-      pfetch # system info
-      playerctl # media player control
-      pre-commit # git hooks
-      pulsemixer # audio utility
-      ripgrep # better grep
-      rofi
-      satty # screenshot editor
-      steam-run # for running non-NixOS-packaged binaries on Nix
-      usbutils
-      tree # cli dir tree viewer
-      unzip # zip extraction
-      unrar # rar extraction
-      xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
-      xdg-user-dirs
-      wev # show wayland events. also handy for detecting keypress codes
-      wget # downloader
-      zip # zip compression
-      ;
-  };
+    # Packages that don't have custom configs go here
+    btop # resource monitor
+    brightnessctl # brightness utility
+    cliphist # clipboard history
+    copyq # clipboard manager
+    coreutils # basic gnu utils
+    # curl
+    eza # ls replacement
+    dust # disk usage
+    fd # tree style ls
+    findutils # find
+    fzf # fuzzy search
+    grimblast # Bash utility for hyprland screenshots
+    jq # JSON pretty printer and manipulator
+    nix-tree # nix package tree viewer
+    neofetch # fancier system info than pfetch
+    ncdu # TUI disk usage
+    nixd # nix lsp
+    nixfmt-rfc-style # nix formatter
+    nodePackages_latest.bash-language-server
+    p7zip # compression & encryption
+    pciutils
+    pfetch # system info
+    playerctl # media player control
+    pre-commit # git hooks
+    pulsemixer # audio utility
+    ripgrep # better grep
+    rofi
+    satty # screenshot editor
+    shfmt
+    steam-run # for running non-NixOS-packaged binaries on Nix
+    usbutils
+    tree # cli dir tree viewer
+    unzip # zip extraction
+    unrar # rar extraction
+    xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
+    xdg-user-dirs
+    xournalpp
+    wev # show wayland events. also handy for detecting keypress codes
+    wget # downloader
+    zip # zip compression
+  ];
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
