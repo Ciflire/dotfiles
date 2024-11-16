@@ -72,7 +72,7 @@
     cliphist # clipboard history
     copyq # clipboard manager
     coreutils # basic gnu utils
-    # curl
+    docker-compose-language-service
     eza # ls replacement
     dust # disk usage
     fd # tree style ls
@@ -80,9 +80,11 @@
     fzf # fuzzy search
     grimblast # Bash utility for hyprland screenshots
     jq # JSON pretty printer and manipulator
+    mongodb-compass
     nix-tree # nix package tree viewer
     neofetch # fancier system info than pfetch
     ncdu # TUI disk usage
+    nheko
     nixd # nix lsp
     nixfmt-rfc-style # nix formatter
     nodePackages_latest.bash-language-server
