@@ -73,6 +73,7 @@
     copyq # clipboard manager
     coreutils # basic gnu utils
     docker-compose-language-service
+    dockerfile-language-server-nodejs
     eza # ls replacement
     dust # disk usage
     fd # tree style ls
@@ -84,7 +85,6 @@
     nix-tree # nix package tree viewer
     neofetch # fancier system info than pfetch
     ncdu # TUI disk usage
-    nheko
     nixd # nix lsp
     nixfmt-rfc-style # nix formatter
     nodePackages_latest.bash-language-server
