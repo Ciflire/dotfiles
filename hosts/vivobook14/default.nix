@@ -26,16 +26,16 @@
       "hosts/common/core"
 
       #################### Host-specific Optional Configs ####################
-      "hosts/common/optionnal/bluetooth.nix"
-      "hosts/common/optionnal/hyprland.nix"
-      "hosts/common/optionnal/steam.nix"
-      "hosts/common/optionnal/stylix"
-      "hosts/common/optionnal/zsa.nix"
-      "hosts/common/optionnal/upower.nix"
-      "hosts/common/optionnal/docker.nix"
-      "hosts/common/optionnal/power-profile.nix"
-      "hosts/common/optionnal/pipewire.nix"
-      "hosts/common/optionnal/wacom.nix"
+      "hosts/common/optional/bluetooth.nix"
+      "hosts/common/optional/hyprland.nix"
+      "hosts/common/optional/steam.nix"
+      "hosts/common/optional/stylix"
+      "hosts/common/optional/zsa.nix"
+      "hosts/common/optional/upower.nix"
+      "hosts/common/optional/docker.nix"
+      "hosts/common/optional/power-profile.nix"
+      "hosts/common/optional/pipewire.nix"
+      "hosts/common/optional/wacom.nix"
 
       #################### Desktop ####################
     ])

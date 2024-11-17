@@ -5,6 +5,6 @@
     HYPRCURSOR_SIZE = 24;
   };
   home.packages = with pkgs; [
-    catppuccin-cursors.mochaDark
+    inputs.nixpkgs-master.legacyPackages.${pkgs.system}.catppuccin-cursors.mochaDark
   ];
 }

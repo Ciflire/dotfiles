@@ -1,7 +1,8 @@
-{inputs, pkgs, ...}:{
+{ inputs, pkgs, ... }:
+{
   programs.yazi = {
-    enable = true;    
-    package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi;
+    enable = true;
+    package = pkgs.yazi;
   };
 
   xdg.configFile."yazelix/yazi" = {
@@ -9,4 +10,3 @@
     recursive = true;
   };
 }
-
