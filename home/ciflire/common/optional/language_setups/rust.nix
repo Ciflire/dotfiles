@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    rust
+    gcc
     rustc
     cargo
     rust-analyzer
