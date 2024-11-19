@@ -18,13 +18,21 @@
           "~/.ssh/gitlab"
         ];
       };
-      "gibon" = {
+      "gibson" = {
         host = "gibson.telecomnancy.univ-lorraine.fr";
         identitiesOnly = true;
         identityFile = [
           "~/.ssh/gibson"
         ];
       };
+      "tnnet" = {
+        host = "";
+        identitiesOnly = true;
+        identityFile = [
+          "~/.ssh/tnnet"
+        ];
+      };
+
     };
 
   };

@@ -78,6 +78,7 @@
     dust # disk usage
     fd # tree style ls
     findutils # find
+    framac
     fzf # fuzzy search
     grimblast # Bash utility for hyprland screenshots
     jq # JSON pretty printer and manipulator
