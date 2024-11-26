@@ -4,6 +4,7 @@
     gcc
     rustc
     cargo
+    clippy
     rust-analyzer
     rustfmt
   ];
