@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  zig_0_11,
+  zig_0_13,
 }:
 
 stdenv.mkDerivation {
@@ -13,19 +13,19 @@ stdenv.mkDerivation {
     owner = "freref";
     repo = "fancy-cat";
     rev = "bd751ae9f4a5169ed19723deb3778ffdccad97e6";
-    hash = "sha256-zyxjUFxg+VufEVycYGCQPdjERE3p5Vz5iIi2UDujEjI=";
+    hash = "sha256-yu0PSSdGQGnZLbFBpCjm54TEP0cC1sKimF39u+A7bOI=";
   };
 
   nativeBuildInputs = [
-    zig_0_11.hook
+    zig_0_13.hook
   ];
 
   meta = with lib; {
-    description = "Minisign reimplemented in Zig";
-    homepage = "https://github.com/jedisct1/zig-minisign";
-    license = licenses.isc;
+    description = "PDF viewer for terminals using the Kitty image protocol";
+    homepage = "https://github.com/freref/fancy-cat";
+    license = licenses.mit;
     maintainers = with maintainers; [ figsoda ];
-    mainProgram = "minizign";
+    mainProgram = "fancy-cat";
     inherit (zig_0_11.meta) platforms;
   };
 }
