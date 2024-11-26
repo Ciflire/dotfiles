@@ -21,7 +21,7 @@
         path = "/home/ciflire/.ssh/gibson";
       };
       "private_keys/tnnet" = {
-        path = "/home/ciflire/.ssh/gibson";
+        path = "/home/ciflire/.ssh/tnnet";
       };
     };
   };

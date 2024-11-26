@@ -26,7 +26,7 @@
         ];
       };
       "tnnet" = {
-        host = "";
+        host = "telecomnancy.net";
         identitiesOnly = true;
         identityFile = [
           "~/.ssh/tnnet"
