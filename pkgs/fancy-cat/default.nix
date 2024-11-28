@@ -1,24 +1,43 @@
 {
+  callPackage,
   lib,
   stdenv,
+  pkgs,
   fetchFromGitHub,
-  zig_0_13,
+  zig,
 }:
 
 stdenv.mkDerivation {
   pname = "fancy-cat";
-  version = "0.0.0";
+  version = "0.0.1";
 
   src = fetchFromGitHub {
-    owner = "freref";
+    owner = "ciflire";
     repo = "fancy-cat";
-    rev = "bd751ae9f4a5169ed19723deb3778ffdccad97e6";
-    hash = "sha256-yu0PSSdGQGnZLbFBpCjm54TEP0cC1sKimF39u+A7bOI=";
+    rev = "ed9bddc447fe42810005c41797b72aa85cea2d6a";
+    hash = "sha256-azIeL/91rs9LsEFA+uUWGph74UIFv6nzttSLzI8OH2o=";
   };
 
   nativeBuildInputs = [
-    zig_0_13.hook
+    zig.hook
   ];
+
+  buildInputs = with pkgs; [
+    zig
+    mupdf
+    libz
+    mujs
+    gumbo
+    openjpeg
+    freetype
+    harfbuzz
+    libjpeg
+    jbig2dec
+  ];
+
+  postPatch = ''
+    ln -s ${callPackage ./deps.nix { }} $ZIG_GLOBAL_CACHE_DIR/p
+  '';
 
   meta = with lib; {
     description = "PDF viewer for terminals using the Kitty image protocol";
@@ -26,6 +45,6 @@ stdenv.mkDerivation {
     license = licenses.mit;
     maintainers = with maintainers; [ figsoda ];
     mainProgram = "fancy-cat";
-    inherit (zig_0_11.meta) platforms;
+    inherit (zig.meta) platforms;
   };
 }
