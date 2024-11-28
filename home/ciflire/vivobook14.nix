@@ -21,5 +21,6 @@
     common/optional/language_setups/rust.nix
     common/optional/language_setups/typst.nix
     common/optional/language_setups/c.nix
+    common/optional/language_setups/markdown.nix
   ];
 }
