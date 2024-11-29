@@ -13,6 +13,17 @@
   sops.secrets.ciflire_password.neededForUsers = true;
   users.mutableUsers = false;
 
+  environment.sessionVariables = {
+    FLAKE = "$HOME/dotfiles";
+    SHELL = "nu";
+    TERM = "kitty";
+    TERMINAL = "kitty";
+    VISUAL = "hx";
+    EDITOR = "hx";
+    MANPAGER = "batman"; # see ./cli/bat.nix
+    NIXOS_OZONE_WL = "1";
+  };
+
   users.users.ciflire = {
     isNormalUser = true;
     hashedPasswordFile = config.sops.secrets.ciflire_password.path;
