@@ -8,6 +8,7 @@
     pkgs.roboto
     pkgs.source-sans-pro
     pkgs.source-sans
+    pkgs.libertine
   ];
 
 }
