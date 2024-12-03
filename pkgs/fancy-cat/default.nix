@@ -12,11 +12,13 @@ stdenv.mkDerivation {
   version = "0.0.1";
 
   src = fetchFromGitHub {
-    owner = "ciflire";
+    owner = "freref";
     repo = "fancy-cat";
-    rev = "ed9bddc447fe42810005c41797b72aa85cea2d6a";
-    hash = "sha256-azIeL/91rs9LsEFA+uUWGph74UIFv6nzttSLzI8OH2o=";
+    rev = "bd751ae9f4a5169ed19723deb3778ffdccad97e6";
+    hash = "sha256-yu0PSSdGQGnZLbFBpCjm54TEP0cC1sKimF39u+A7bOI=";
   };
+
+  patches = [ ./0001-changes.patch ];
 
   nativeBuildInputs = [
     zig.hook
@@ -43,7 +45,7 @@ stdenv.mkDerivation {
     description = "PDF viewer for terminals using the Kitty image protocol";
     homepage = "https://github.com/freref/fancy-cat";
     license = licenses.mit;
-    maintainers = with maintainers; [ figsoda ];
+    maintainers = with maintainers; [ ciflire ];
     mainProgram = "fancy-cat";
     inherit (zig.meta) platforms;
   };
