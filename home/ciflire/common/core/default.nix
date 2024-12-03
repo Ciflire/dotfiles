@@ -76,6 +76,7 @@
     dockerfile-language-server-nodejs
     eza # ls replacement
     dust # disk usage
+    fancy-cat
     fd # tree style ls
     findutils # find
     framac
