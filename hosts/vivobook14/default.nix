@@ -36,7 +36,10 @@
       "hosts/common/optional/power-profile.nix"
       "hosts/common/optional/pipewire.nix"
       "hosts/common/optional/printing.nix"
+      "hosts/common/optional/xbox.nix"
       # "hosts/common/optional/wacom.nix"
+      "hosts/common/optional/waydroid.nix"
+      "hosts/common/optional/heroic.nix"
 
       #################### Desktop ####################
     ])

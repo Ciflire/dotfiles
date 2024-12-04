@@ -15,7 +15,6 @@
     common/optional/tools
     common/optional/vesktop.nix
     common/optional/walker.nix
-    common/optional/waydroid.nix
 
     # Languages
     common/optional/language_setups/docker.nix
