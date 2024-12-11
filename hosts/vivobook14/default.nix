@@ -33,6 +33,7 @@
       "hosts/common/optional/zsa.nix"
       "hosts/common/optional/upower.nix"
       "hosts/common/optional/docker.nix"
+      "hosts/common/optional/mvsi.nix"
       "hosts/common/optional/power-profile.nix"
       "hosts/common/optional/pipewire.nix"
       "hosts/common/optional/printing.nix"
