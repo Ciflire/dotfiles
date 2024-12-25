@@ -10,6 +10,7 @@ in
   imports = [
     ./hyprpaper.nix
     ./hypridle.nix
+    ./hyprpanel.nix
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hyprcursor.nix
@@ -62,7 +63,6 @@ in
       "$mod" = "SUPER";
       "$menu" = "walker";
       "exec-once" = [
-        "hyprpanel &"
         "systemctl --user start hyprpolkitagent&"
         "walker --gapplication-service&"
         "wl-paste --type text --watch cliphist store #Stores only text data&"
@@ -170,6 +170,7 @@ in
     inputs.hyprsysteminfo.packages.${pkgs.system}.default
     inputs.hyprpolkitagent.packages.${pkgs.system}.default
     inputs.hyprpanel.packages.${pkgs.system}.default
+    inputs.hyprpaper.packages.${pkgs.system}.default
     nwg-displays
     jq
     socat

@@ -83,10 +83,12 @@
     fzf # fuzzy search
     grimblast # Bash utility for hyprland screenshots
     jq # JSON pretty printer and manipulator
+    libreoffice-qt6-fresh
     mongodb-compass
-    nix-tree # nix package tree viewer
-    neofetch # fancier system info than pfetch
     ncdu # TUI disk usage
+    nemo
+    neofetch # fancier system info than pfetch
+    nix-tree # nix package tree viewer
     nixd # nix lsp
     nixfmt-rfc-style # nix formatter
     nodePackages_latest.bash-language-server
