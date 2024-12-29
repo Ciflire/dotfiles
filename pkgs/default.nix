@@ -11,4 +11,6 @@
   ltex-ls-plus-release = pkgs.callPackage ./ltex-ls-plus-release.nix { };
 
   fancy-cat = pkgs.callPackage ./fancy-cat { };
+
+  awrit = pkgs.callPackage ./awrit.nix { };
 }
