@@ -10,13 +10,16 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpaper.url = "github:hyprwm/hyprpaper";
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
 
     helix.url = "github:helix-editor/helix";
+
+    ghostty.url = "github:ghostty-org/ghostty";
+
     stylix.url = "github:danth/stylix?rev=762c07ee10b381bc8e085be5b6c2ec43139f13b0";
 
     sops-nix.url = "github:Mic92/sops-nix";
