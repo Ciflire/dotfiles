@@ -1,4 +1,10 @@
-{ lib, stdenvNoCC, fetchurl, makeBinaryWrapper, jre_headless }:
+{
+  lib,
+  stdenvNoCC,
+  fetchurl,
+  makeBinaryWrapper,
+  jre_headless,
+}:
 
 stdenvNoCC.mkDerivation rec {
   pname = "ltex-ls-plus";
@@ -28,7 +34,7 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://ltex-plus.github.io/ltex-plus/";
     description = "LSP language server for LanguageTool";
     license = licenses.mpl20;
-    maintainers = with maintainers; [ vinnymeller ];
+    maintainers = with maintainers; [ ciflire ];
     platforms = jre_headless.meta.platforms;
   };
 }
