@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
   outputs,
@@ -82,6 +83,7 @@
     framac
     fzf # fuzzy search
     grimblast # Bash utility for hyprland screenshots
+    inputs.ghostty.packages.${pkgs.system}.default
     jq # JSON pretty printer and manipulator
     libreoffice-qt6-fresh
     mongodb-compass
