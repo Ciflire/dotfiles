@@ -6,6 +6,7 @@
     common/core # required
 
     common/optional/browser.nix
+    common/optional/gtk.nix
     common/optional/helix.nix
     common/optional/hyprland
     common/optional/kitty.nix
