@@ -23,7 +23,7 @@
     # Fix the overwrite issue with HyprPanel.
     # See below for more information.
     # Default: false
-    overwrite.enable = true;
+    # overwrite.enable = true;
 
     # Import a specific theme from './themes/*.json'.
     # Default: ""
@@ -32,47 +32,47 @@
     # Configure bar layouts for monitors.
     # See 'https://hyprpanel.com/configuration/panel.html'.
     # Default: null
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          left = [
-            "dashboard"
-            "workspaces"
-          ];
-          middle = [ "media" ];
-          right = [
-            "volume"
-            "systray"
-            "notifications"
-          ];
-        };
-      };
-    };
+    # layout = {
+    #   "bar.layouts" = {
+    #     "0" = {
+    #       left = [
+    #         "dashboard"
+    #         "workspaces"
+    #       ];
+    #       middle = [ "media" ];
+    #       right = [
+    #         "volume"
+    #         "systray"
+    #         "notifications"
+    #       ];
+    #     };
+    #   };
+    # };
 
     # Configure and theme *most* of the options from the GUI.
     # See './nix/module.nix:103'.
     # Default: <same as gui>
-    settings = {
-      bar.launcher.autoDetectIcon = true;
-      bar.workspaces.show_icons = true;
+    # settings = {
+    #   bar.launcher.autoDetectIcon = true;
+    #   bar.workspaces.show_icons = true;
 
-      menus.clock = {
-        time = {
-          military = true;
-          hideSeconds = true;
-        };
-        weather.unit = "metric";
-      };
+    #   menus.clock = {
+    #     time = {
+    #       military = true;
+    #       hideSeconds = true;
+    #     };
+    #     weather.unit = "metric";
+    #   };
 
-      menus.dashboard.directories.enabled = false;
-      menus.dashboard.stats.enable_gpu = true;
+    #   menus.dashboard.directories.enabled = false;
+    #   menus.dashboard.stats.enable_gpu = true;
 
-      theme.bar.transparent = true;
+    #   theme.bar.transparent = true;
 
-      theme.font = {
-        name = "MonoLisaVariable Nerd Font";
-        size = "16px";
-      };
-    };
+    #   theme.font = {
+    #     name = "MonoLisaVariable Nerd Font";
+    #     size = "16px";
+    #   };
+    # };
   };
 }
