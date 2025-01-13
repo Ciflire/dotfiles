@@ -37,9 +37,11 @@
       git
       helix
       lazygit
+      lsd
       kitty
       discord
       neovim
+      openconnect
       thunderbird
       wl-clipboard
     ];

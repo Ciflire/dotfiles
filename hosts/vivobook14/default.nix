@@ -27,12 +27,14 @@
 
       #################### Host-specific Optional Configs ####################
       "hosts/common/optional/bluetooth.nix"
+      "hosts/common/optional/gamemode.nix"
       "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/steam.nix"
       "hosts/common/optional/stylix"
       "hosts/common/optional/zsa.nix"
       "hosts/common/optional/upower.nix"
       "hosts/common/optional/docker.nix"
+      "hosts/common/optional/mangohud.nix"
       "hosts/common/optional/mvsi.nix"
       "hosts/common/optional/power-profile.nix"
       "hosts/common/optional/pipewire.nix"

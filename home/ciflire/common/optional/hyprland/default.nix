@@ -146,7 +146,7 @@ in
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPrev, exec, playerctl prev"
+        ", XF86AudioPrev, exec, playerctl previous"
       ];
       cursor = {
         no_hardware_cursors = true;

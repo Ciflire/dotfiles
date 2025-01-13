@@ -10,6 +10,12 @@
       vim = "hx";
       nano = "hx";
       cd = "z";
+      vpn = "sudo openconnect -u vesse1u@etu --authgroup='Universite-de-Lorraine' vpn.univ-lorraine.fr";
+      ls = "ls";
+      ll = "ls -l";
+      la = "ls -la";
+      # lr = "ls -lR";
+      cat = "bat";
     };
   };
 
