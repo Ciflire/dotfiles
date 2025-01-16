@@ -32,6 +32,7 @@
       "networkmanager"
       "wheel"
       "plugdev"
+      "gamemode"
     ];
     packages = with pkgs; [
       git
