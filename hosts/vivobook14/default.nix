@@ -27,17 +27,18 @@
 
       #################### Host-specific Optional Configs ####################
       "hosts/common/optional/bluetooth.nix"
-      "hosts/common/optional/gamemode.nix"
-      "hosts/common/optional/hyprland.nix"
-      "hosts/common/optional/steam.nix"
-      "hosts/common/optional/stylix"
-      "hosts/common/optional/zsa.nix"
-      "hosts/common/optional/upower.nix"
       "hosts/common/optional/docker.nix"
+      "hosts/common/optional/gamemode.nix"
+      "hosts/common/optional/gpg.nix"
+      "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/mangohud.nix"
       "hosts/common/optional/mvsi.nix"
-      "hosts/common/optional/power-profile.nix"
       "hosts/common/optional/pipewire.nix"
+      "hosts/common/optional/power-profile.nix"
+      "hosts/common/optional/steam.nix"
+      "hosts/common/optional/stylix"
+      "hosts/common/optional/upower.nix"
+      "hosts/common/optional/zsa.nix"
       # "hosts/common/optional/printing.nix"
       "hosts/common/optional/xbox.nix"
       # "hosts/common/optional/wacom.nix"
@@ -58,9 +59,9 @@
   networking.hostName = "vivobook14"; # Define your hostname.
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "fr";
-    xkbVariant = "azerty";
+    variant = "azerty";
   };
 
   # Configure console keymap
