@@ -35,6 +35,7 @@
       "hosts/common/optional/mvsi.nix"
       "hosts/common/optional/pipewire.nix"
       "hosts/common/optional/power-profile.nix"
+      "hosts/common/optional/scin.nix"
       "hosts/common/optional/steam.nix"
       "hosts/common/optional/stylix"
       "hosts/common/optional/upower.nix"
