@@ -5,6 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
+    # nixpkgs-review.url = "github:bjornfor/nixpkgs/quartus-add-missing-dep";
+
     hyprcursor.url = "github:hyprwm/hyprcursor";
     hypridle.url = "github:hyprwm/hypridle";
     hyprland.url = "github:hyprwm/Hyprland";
@@ -35,7 +37,12 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      # nixpkgs-review,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
       system = "x86_64-linux";
@@ -52,6 +59,12 @@
           ;
       };
     in
+    # unstableOverlay = final: prev: {
+    #    review = import nixpkgs-review {
+    #      system = "x86_64-linux";
+    #      config.allowUnfree = true;
+    #    };
+    #  };
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
       packages.${system} =
@@ -71,7 +84,12 @@
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             { home-manager.extraSpecialArgs = specialArgs; }
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            {
+              nixpkgs.overlays = [
+                inputs.hyprpanel.overlay
+                # unstableOverlay
+              ];
+            }
             ./hosts/vivobook14
           ];
         };
