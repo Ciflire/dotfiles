@@ -14,7 +14,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.initrd.availableKernelModules = [
     "nvme"
@@ -25,8 +25,10 @@
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
-
+  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
+  boot.extraModprobeConfig = ''
+    options bluetooth disable_ertm=Y
+  '';
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/ecb4c2df-e839-4896-8cca-9f0f28df83aa";
     fsType = "ext4";
