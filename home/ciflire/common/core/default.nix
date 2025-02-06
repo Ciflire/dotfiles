@@ -13,7 +13,7 @@
     ./direnv.nix
     ./fonts.nix
     ./nushell.nix
-    ./starship.nix
+    # ./starship.nix
     ./yazi
     ./zellij
     ./zoxide.nix
@@ -71,6 +71,7 @@
     btop # resource monitor
     brightnessctl # brightness utility
     cliphist # clipboard history
+    comma
     copyq # clipboard manager
     coreutils # basic gnu utils
     docker-compose-language-service

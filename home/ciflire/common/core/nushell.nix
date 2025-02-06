@@ -17,11 +17,19 @@
       # lr = "ls -lR";
       cat = "bat";
     };
+    configFile = {
+      text = ''
+        $env.config.show_banner = false
+        $env.config.edit_mode = 'vi'
+      '';
+    };
   };
 
   home.packages = with pkgs; [
     bat
     bat-extras.batman
+
+    nufmt
 
     pre-commit
 
