@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
+        source = "/home/ciflire/Downloads/logo_nix.png";
         padding = {
           right = 1;
         };
@@ -17,6 +17,7 @@
         separator = "  ";
       };
       modules = [
+        "Title"
         {
           type = "datetime";
           key = "Date";
@@ -27,6 +28,12 @@
           key = "Time";
           format = "{14}:{17}:{20}";
         }
+        "battery"
+        "DE"
+        "CPU"
+        "GPU"
+        "Kernel"
+        "OS"
         "break"
         "player"
         "media"
