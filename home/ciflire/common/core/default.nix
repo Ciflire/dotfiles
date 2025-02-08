@@ -99,6 +99,7 @@
     pciutils
     pfetch # system info
     playerctl # media player control
+    posting
     pre-commit # git hooks
     pulsemixer # audio utility
     ripgrep # better grep

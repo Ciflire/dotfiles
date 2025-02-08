@@ -12,5 +12,6 @@
   ltex-ls-plus-release = pkgs.callPackage ./ltex-ls-plus-release.nix { };
   monolisa = pkgs.callPackage ./monolisa.nix { };
   posting = pkgs.callPackage ./posting.nix { };
+  textual-autocomplete = pkgs.callPackage ./textual-autocomplete.nix { };
 
 }
