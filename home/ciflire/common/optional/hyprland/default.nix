@@ -173,7 +173,7 @@ in
     inputs.hyprpolkitagent.packages.${pkgs.system}.default
     inputs.hyprpanel.packages.${pkgs.system}.default
     inputs.hyprpaper.packages.${pkgs.system}.default
-    nwg-displays
+    # nwg-displays
     jq
     socat
   ];

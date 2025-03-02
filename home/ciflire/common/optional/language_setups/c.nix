@@ -4,6 +4,7 @@
     gnumake
     # rocmPackages.llvm.clang
     clang-tools
-    lldb_18
+    # TODO
+    # lldb_18
   ];
 }

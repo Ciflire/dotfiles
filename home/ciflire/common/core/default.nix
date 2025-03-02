@@ -99,8 +99,8 @@
     pciutils
     pfetch # system info
     playerctl # media player control
-    posting
     pre-commit # git hooks
+    prismlauncher
     pulsemixer # audio utility
     ripgrep # better grep
     rofi
@@ -111,6 +111,7 @@
     tree # cli dir tree viewer
     unzip # zip extraction
     unrar # rar extraction
+    uv
     xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
     xdg-user-dirs
     xournalpp

@@ -14,10 +14,18 @@
           binaryPrefix = "si";
         };
         color = "blue";
-        separator = "  ";
+        separator = " -> ";
       };
       modules = [
+        "Break"
+        "Break"
+        "Break"
         "Title"
+        {
+          type = "Separator";
+          string = "-";
+          length = 20;
+        }
         {
           type = "datetime";
           key = "Date";

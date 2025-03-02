@@ -1,9 +1,10 @@
 { pkgs, ... }:
 {
   gtk = {
-    iconTheme = {
-      name = "kora";
-      package = pkgs.kora-icon-theme;
-    };
+    # TODO
+    # iconTheme = {
+    # name = "kora";
+    # package = pkgs.kora-icon-theme;
+    # };
   };
 }
