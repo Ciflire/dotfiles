@@ -18,12 +18,10 @@
       };
       modules = [
         "Break"
-        "Break"
-        "Break"
         "Title"
         {
           type = "Separator";
-          string = "-";
+          string = "─";
           length = 20;
         }
         {
@@ -36,15 +34,28 @@
           key = "Time";
           format = "{14}:{17}:{20}";
         }
+        "break"
+        {
+          type = "Custom";
+          format = "────System Hardware────";
+        }
+        "Uptime"
         "battery"
-        "DE"
         "CPU"
         "GPU"
+        "Disk"
+        "Memory"
+        "break"
+        {
+          type = "Custom";
+          format = "────System Software────";
+        }
         "Kernel"
         "OS"
+        "WM"
+        "Shell"
+        "Terminal"
         "break"
-        "player"
-        "media"
       ];
     };
   };

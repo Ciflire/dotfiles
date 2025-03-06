@@ -12,6 +12,7 @@
     common/optional/hyprland
     common/optional/kitty.nix
     common/optional/obs.nix
+    common/optional/qt.nix
     common/optional/sops.nix
     common/optional/ssh.nix
     common/optional/tools
