@@ -9,16 +9,16 @@
 
 stdenv.mkDerivation {
   pname = "fancy-cat";
-  version = "0.0.1";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "freref";
     repo = "fancy-cat";
-    rev = "bd751ae9f4a5169ed19723deb3778ffdccad97e6";
-    hash = "sha256-yu0PSSdGQGnZLbFBpCjm54TEP0cC1sKimF39u+A7bOI=";
+    rev = "9b28f097322a0e90154f172318a504a89afcc828";
+    hash = "sha256-Wasxhsv4QhGscOEsGirabsq92963S8v1vOBWvAFuRoM=";
   };
 
-  patches = [ ./0001-changes.patch ];
+  # patches = [ ./0001-changes.patch ];
 
   nativeBuildInputs = [
     zig.hook

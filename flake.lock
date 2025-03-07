@@ -1602,15 +1602,31 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1740825742,
-        "narHash": "sha256-9696ztvgbZsfC1wvl3QPeDcwZMjp94ofMCYRqcX3D6s=",
+        "lastModified": 1741353640,
+        "narHash": "sha256-Nhf7Me1uBSC1PNGgQ38+aUYRj5dhj2NdP+TNSL9532A=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "4a32d8cda6d501697768b0dcc16580abed841107",
+        "rev": "6b31915a00417a5b2151b903f04fdd65ea4239d5",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-review": {
+      "locked": {
+        "lastModified": 1741253821,
+        "narHash": "sha256-K8nAjJN0pzxqfzCw0CxDt3uDvvR1fwJtowYXOYjIT/I=",
+        "owner": "RossComputerGuy",
+        "repo": "nixpkgs",
+        "rev": "1c82ff0d024ef366108c695fd11baad967fc9d90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RossComputerGuy",
+        "ref": "feat/zig-0.14",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -1912,6 +1928,7 @@
         "hyprsysteminfo": "hyprsysteminfo",
         "nixpkgs": "nixpkgs_12",
         "nixpkgs-master": "nixpkgs-master",
+        "nixpkgs-review": "nixpkgs-review",
         "sops-nix": "sops-nix",
         "stylix": "stylix",
         "walker": "walker"

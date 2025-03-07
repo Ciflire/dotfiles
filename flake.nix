@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
-    # nixpkgs-review.url = "github:bjornfor/nixpkgs/quartus-add-missing-dep";
+    nixpkgs-review.url = "github:RossComputerGuy/nixpkgs/feat/zig-0.14";
 
     hyprcursor.url = "github:hyprwm/hyprcursor";
     hypridle.url = "github:hyprwm/hypridle";
@@ -40,7 +40,8 @@
     {
       self,
       nixpkgs,
-      # nixpkgs-review,
+      nixpkgs-review,
+      nixpkgs-master,
       ...
     }@inputs:
     let
@@ -58,20 +59,21 @@
           nixpkgs
           ;
       };
+      unstableOverlay = final: prev: {
+        review = import nixpkgs-review {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+      };
     in
-    # unstableOverlay = final: prev: {
-    #    review = import nixpkgs-review {
-    #      system = "x86_64-linux";
-    #      config.allowUnfree = true;
-    #    };
-    #  };
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
       packages.${system} =
         let
           pkgs = nixpkgs.legacyPackages.${system};
+          master-pkgs = nixpkgs-master.legacyPackages.${system};
         in
-        import ./pkgs { inherit pkgs; };
+        import ./pkgs { inherit pkgs master-pkgs; };
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
       overlays = import ./overlays { inherit inputs outputs; };
@@ -87,7 +89,7 @@
             {
               nixpkgs.overlays = [
                 inputs.hyprpanel.overlay
-                # unstableOverlay
+                unstableOverlay
               ];
             }
             ./hosts/vivobook14

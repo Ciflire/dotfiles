@@ -11,38 +11,23 @@ linkFarm "zig-packages" [
     name = "12206695fbabe2c3f981ea79d97afe8d4fdb7790773a4153543c63ac7e0d11e564c7";
     path = fetchgit {
       url = "https://github.com/freref/fastb64z";
-      rev = "3bfba44545042f00cc908890a652da00dc3d7670";
-      hash = "sha256-XGgUphhI983eF8dBKOx4G3eR1uLVdLLd5ZfPqLhs4Kk=";
+      rev = "fa3f34a4528609a8778124641b080e90d93c357a";
+      hash = "sha256-yz1XRRsX0Uh7lmPBKSkzDJIxValM5VvbI5avpa530nE=";
     };
   }
   {
     name = "1220b0c4f4a5f3df2b1268a9da04bc901ede4f8bd2938e846ee1e88783ed57cee79a";
     path = fetchzip {
-      url = "https://github.com/freref/fzwatch/archive/refs/tags/v0.2.0.tar.gz";
-      hash = "sha256-U0MxoKnCBN6WCP6yqC3Qv9nnoQXtV+RcXtVEjCm7Puk=";
-    };
-  }
-  {
-    name = "1220dd654ef941fc76fd96f9ec6adadf83f69b9887a0d3f4ee5ac0a1a3e11be35cf5";
-    path = fetchgit {
-      url = "https://github.com/zigimg/zigimg";
-      rev = "3a667bdb3d7f0955a5a51c8468eac83210c1439e";
-      hash = "sha256-oLf3YH3yeg4ikVO/GahMCDRMTU31AHkfSnF4rt7xTKo=";
+      url = "https://github.com/freref/fzwatch/archive/refs/heads/master.tar.gz";
+      hash = "sha256-rBbCdwTaq0DVBiUMzq2q72jgtaTIdjqivMI8dq+BaPM=";
     };
   }
   {
     name = "1220feaa655e14cbb4baf59fe746f09a17fc6949be46ad64dd5044982f4fc1bb57c7";
     path = fetchgit {
       url = "https://github.com/rockorager/libvaxis";
-      rev = "1fd920a7aea1bb040c7c028f4bbf0af2ea58e1d1";
-      hash = "sha256-a9FWBDRn6/Wf1vekrzWBR+J3chySDEv++O8Iwewsdzs=";
-    };
-  }
-  {
-    name = "122055beff332830a391e9895c044d33b15ea21063779557024b46169fb1984c6e40";
-    path = fetchzip {
-      url = "https://codeberg.org/atman/zg/archive/v0.13.2.tar.gz";
-      hash = "sha256-4yLDdyQwPvglNzcRxlWbptjjOb0fsLv8jg/jFUp/uAU=";
+      rev = "d409f2f168192374aa7c625f61f6fe64fdb66818";
+      hash = "sha256-VqpfceAkx04/J4RJpcUTcNZZlJTepu6OQbEbneRGWBY=";
     };
   }
 ]
