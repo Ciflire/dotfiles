@@ -23,6 +23,9 @@
       "private_keys/tnnet" = {
         path = "/home/ciflire/.ssh/tnnet";
       };
+      "private_keys/agamotto" = {
+        path = "/home/ciflire/.ssh/agamotto";
+      };
     };
   };
 }

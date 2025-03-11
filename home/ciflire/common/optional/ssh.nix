@@ -18,6 +18,14 @@
           "~/.ssh/gitlab"
         ];
       };
+      "agamotto" = {
+        host = "agamotto.telecomnancy.univ-lorraine.fr";
+        identitiesOnly = true;
+        identityFile = [
+          "~/.ssh/agamotto"
+        ];
+      };
+
       "gibson" = {
         host = "gibson.telecomnancy.univ-lorraine.fr";
         identitiesOnly = true;
@@ -30,6 +38,9 @@
         hostname = "telecomnancy.net";
         identitiesOnly = true;
         user = "leov";
+        setEnv = {
+          TERM = "xterm-256color";
+        };
         identityFile = [
           "~/.ssh/tnnet"
         ];
