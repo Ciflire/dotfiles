@@ -78,7 +78,7 @@
     dockerfile-language-server-nodejs
     eza # ls replacement
     dust # disk usage
-    fancy-cat
+    # fancy-cat
     fd # tree style ls
     findutils # find
     framac
@@ -101,6 +101,10 @@
     playerctl # media player control
     pre-commit # git hooks
     prismlauncher
+    protonmail-desktop
+    proton-pass
+    protonvpn-gui
+    protonvpn-cli
     pulsemixer # audio utility
     ripgrep # better grep
     rofi
