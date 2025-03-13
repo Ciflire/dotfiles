@@ -11,7 +11,8 @@
     pkgs.quartus-prime-lite
     pkgs.tclPackages.tk
     pkgs.vhdl-ls
-    pkgs.ghdl-llvm
+    pkgs.ghdl
+    pkgs.zlib
   ];
 
   services.udev.extraRules = ''

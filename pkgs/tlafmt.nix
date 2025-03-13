@@ -5,18 +5,18 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "tlafmt";
-  version = "0.2.1";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "domodwyer";
     repo = "tlafmt";
-    rev = "v${version}";
-    hash = "sha256-xx77i+GmwD5NicSSit8FMkHS52kMBXnp3kFrjNy57NE=";
+    tag = "v${version}";
+    hash = "sha256-jBY7erB2LuKwCkshVHLV5kFVRJ8lkT63z1gt1Tikei4=";
   };
 
-  cargoDeps = rustPlatform.importCargoLock {
-    lockFile = src + "/Cargo.lock";
-  };
+  useFetchCargoVendor = true;
+
+  cargoHash = "sha256-765tp4wUh7G92vaoViufo6Kk2c/w2d1XjZ3aN5UUAv0=";
 
   meta = with lib; {
     description = "A formatter for TLA+ specs";
