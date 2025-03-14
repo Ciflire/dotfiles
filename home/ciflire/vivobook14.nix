@@ -20,11 +20,12 @@
     common/optional/walker.nix
 
     # Languages
+    common/optional/language_setups/c.nix
     common/optional/language_setups/docker.nix
+    common/optional/language_setups/java.nix
+    common/optional/language_setups/markdown.nix
     common/optional/language_setups/rust.nix
     common/optional/language_setups/typst.nix
-    common/optional/language_setups/c.nix
-    common/optional/language_setups/markdown.nix
-    common/optional/language_setups/java.nix
+    common/optional/language_setups/zig.nix
   ];
 }
