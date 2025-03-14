@@ -3,7 +3,6 @@
   lib,
   stdenv,
   pkgs,
-  pkg-config,
   fetchFromGitHub,
   zig,
 }:
@@ -21,9 +20,10 @@ stdenv.mkDerivation {
   patches = [ ./0001-changes.patch ];
 
   nativeBuildInputs = [
-    pkg-config
-    zig
+    zig.hook
   ];
+
+  zigBuildFlags = [ "--release=fast" ];
 
   buildInputs = with pkgs; [
     mupdf
@@ -37,21 +37,10 @@ stdenv.mkDerivation {
     libz
   ];
 
-  buildPhase = ''
-    # Set Zig's cache directory
-    export ZIG_GLOBAL_CACHE_DIR=$TMPDIR/zig-cache
-
-    zig build --release=fast --system ${callPackage ./deps.nix { }} -Dcpu="skylake"
+  postPatch = ''
+    ln -s ${callPackage ./deps.nix { }} $ZIG_GLOBAL_CACHE_DIR/p
   '';
 
-  installPhase = ''
-    runHook preInstall
-
-    mkdir -p $out/bin
-    cp $TMPDIR/source/zig-out/bin/fancy-cat $out/bin/
-
-    runHook postInstall
-  '';
   meta = with lib; {
     description = "PDF viewer for terminals using the Kitty image protocol";
     homepage = "https://github.com/freref/fancy-cat";
