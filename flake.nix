@@ -64,7 +64,7 @@
     #   review = import nixpkgs-review {
     #     system = "x86_64-linux";
     #     config.allowUnfree = true;
-    #   };
+    #   };nixosConfigurations =
     # };
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
