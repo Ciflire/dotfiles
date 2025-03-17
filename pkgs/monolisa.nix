@@ -1,17 +1,26 @@
 {
   lib,
+  fetchzip,
+  nerd-font-patcher,
+  pkgs,
   stdenvNoCC,
   requireFile,
-  pkgs,
 }:
+let
+  patcher = fetchzip {
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FontPatcher.zip";
+    hash = "sha256-/LbO8+ZPLFIUjtZHeyh6bQuplqRfR6SZRu9qPfVZ0Mw=";
+    stripRoot = false;
+  };
+in
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "monolisa";
-  version = "2.015";
+  version = "2.016";
 
   src = requireFile {
-    name = "MonoLisa-Complete-2.015.zip";
-    sha256 = "0nhllp9w5wsz8hfrwvwkf3mzhaxndk2lgp2z4vnc140ys1nxsnd2";
+    name = "MonoLisa-Complete-${finalAttrs.version}.zip";
+    sha256 = "sha256-2Fj0ocLWnG2eAjHpR04AypHWrS8r6OFsPJsbTJRcvnk=";
     message = "";
   };
 
@@ -19,10 +28,15 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     ${pkgs.unzip}/bin/unzip $src -d MonoLisa
   '';
 
+  buildInputs = [ nerd-font-patcher ];
+
   # only extract the variable font because everything else is a duplicate
   installPhase = ''
     mkdir -vp $out/share/fonts/variable
-    cp -r MonoLisa/MonoLisa-Complete-2.015/ttf/* $out/share/fonts/variable
+    for filename in MonoLisa/ttf/*.ttf; do
+     fontforge -script ${patcher}/font-patcher $filename -c --quiet;
+    done
+    cp -r *.ttf  $out/share/fonts/variable
   '';
 
   meta = with lib; {
