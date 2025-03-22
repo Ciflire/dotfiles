@@ -39,12 +39,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     cp -r *.ttf  $out/share/fonts/variable
   '';
 
-  meta = with lib; {
+  meta = {
     homepage = "https://www.monolisa.dev";
     description = "Monospace font with programming ligatures";
-    longDescription = ''
-      Font follow function
-    '';
-    platforms = platforms.all;
+    platforms = lib.platforms.all;
   };
 })

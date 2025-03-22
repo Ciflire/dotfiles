@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, self, ... }:
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
@@ -7,10 +7,15 @@
   sops = {
     age.keyFile = "/home/ciflire/.config/sops/age/keys.txt";
 
-    defaultSopsFile = ../../../../secrets.yaml;
+    defaultSopsFile = ../../../../secrets/secrets.yaml;
     validateSopsFiles = false;
 
     secrets = {
+      weather_api_key = {
+        format = "json";
+        sopsFile = ../../../../secrets/weatherapi.json;
+        key = "";
+      };
       "private_keys/gitlab" = {
         path = "/home/ciflire/.ssh/gitlab";
       };

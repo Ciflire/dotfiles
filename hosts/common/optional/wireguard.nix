@@ -1,0 +1,4 @@
+{ ... }:
+{
+  networking.wireguard.enable = true;
+}

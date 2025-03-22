@@ -13,7 +13,7 @@
     ./direnv.nix
     ./fonts.nix
     ./nushell.nix
-    # ./starship.nix
+    ./starship.nix
     ./yazi
     ./zellij
     ./zoxide.nix

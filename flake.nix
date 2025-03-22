@@ -52,6 +52,7 @@
       configLib = import ./lib { inherit lib; };
       specialArgs = {
         inherit
+          self
           inputs
           outputs
           configVars
