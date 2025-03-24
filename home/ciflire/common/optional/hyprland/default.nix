@@ -70,6 +70,7 @@ in
         "wl-paste --type image --watch cliphist store #Stores only image data &"
         "systemctl --user start hyprpolkitagent&"
         "$HOME/.local/share/scripts/bitwarden.sh"
+        "hyprsunset"
       ];
       source = [
         "./monitors.conf"
