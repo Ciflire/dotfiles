@@ -10,13 +10,13 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "domodwyer";
     repo = "tlafmt";
-    tag = "v${version}";
-    hash = "sha256-V7KTzjCLOdt31UO01iTHVk2zpPc+GdSpsrEfwwbjZrk=";
+    rev = "569c6b6b1717ad385446361cceb7858fc6133d32";
+    hash = "sha256-e/ImdV5SVRyDMDNs1wmI67xQbH6tTxRlTilGQ6Dqkoc=";
   };
 
   useFetchCargoVendor = true;
 
-  cargoHash = "sha256-KUN7Et3wW5oLu+FK7ySWKSqpo1IL0ggww74IpFX0aSQ=";
+  cargoHash = "sha256-UAYajXmKPg9Ow3iRqcEhT50YP+i4ZKWOHTTrYR1SzhI=";
 
   meta = {
     description = "A formatter for TLA+ specs";
