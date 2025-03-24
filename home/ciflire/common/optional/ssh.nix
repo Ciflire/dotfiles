@@ -19,7 +19,12 @@
         ];
       };
       "agamotto" = {
-        host = "agamotto.telecomnancy.univ-lorraine.fr";
+        host = "agamotto";
+        hostname = "agamotto.telecomnancy.univ-lorraine.fr";
+        user = "mirror";
+        # setEnv = {
+        #   TERM = "xterm-256color";
+        # };
         identitiesOnly = true;
         identityFile = [
           "~/.ssh/agamotto"
