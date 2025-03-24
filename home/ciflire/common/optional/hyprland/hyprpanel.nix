@@ -1,7 +1,14 @@
 # *.nix
-{ config, inputs, ... }:
 {
-  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
+  config,
+  inputs,
+  self,
+  ...
+}:
+{
+  imports = [
+    inputs.hyprpanel.homeManagerModules.hyprpanel
+  ];
 
   programs.hyprpanel = {
     enable = true;
@@ -10,33 +17,32 @@
     overwrite.enable = true;
     overlay.enable = true;
 
-    layout = {
-      "bar.layouts" = {
-        "*" = {
-          "left" = [
-            "dashboard"
-            "workspaces"
-            "windowtitle"
-          ];
-          "middle" = [
-            "media"
-          ];
-          "right" = [
-            "volume"
-            "battery"
-            "clock"
-            "network"
-            "bluetooth"
-            "hypridle"
-            "hyprsunset"
-            "systray"
-            "notifications"
-          ];
+    settings = {
+      layout = {
+        "bar.layouts" = {
+          "*" = {
+            "left" = [
+              "dashboard"
+              "workspaces"
+              "windowtitle"
+            ];
+            "middle" = [
+              "media"
+            ];
+            "right" = [
+              "volume"
+              "battery"
+              "clock"
+              "network"
+              "bluetooth"
+              "hypridle"
+              "hyprsunset"
+              "systray"
+              "notifications"
+            ];
+          };
         };
       };
-    };
-
-    settings = {
       bar = {
         autoHide = "never";
         battery = {
@@ -92,6 +98,15 @@
           showAllActive = true;
           monitorSpecific = false;
           workspaces = 7;
+          workspaceIconMap = {
+            "1" = "";
+            "2" = "";
+            "3" = "";
+            "4" = "";
+            "5" = "󰊴";
+            "6" = "";
+            "7" = "";
+          };
         };
       };
       menus = {
