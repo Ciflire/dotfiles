@@ -1,11 +1,16 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  osConfig,
+  self,
+  ...
+}:
 {
 
   programs.nushell = {
     enable = true;
     shellAliases = {
-      update = "sudo nix flake update --flake /home/ciflire/dotfiles";
-      upgrade = "sudo nixos-rebuild switch --flake /home/ciflire/dotfiles";
+      update = "sudo nix flake update --flake ${self}";
+      upgrade = "sudo nixos-rebuild switch --flake ${self}\#${osConfig.networking.hostName}";
       vi = "hx";
       vim = "hx";
       nano = "hx";
