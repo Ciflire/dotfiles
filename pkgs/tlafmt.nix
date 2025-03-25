@@ -5,13 +5,13 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "tlafmt";
-  version = "0.3.2";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "domodwyer";
     repo = "tlafmt";
-    rev = "569c6b6b1717ad385446361cceb7858fc6133d32";
-    hash = "sha256-e/ImdV5SVRyDMDNs1wmI67xQbH6tTxRlTilGQ6Dqkoc=";
+    tag = "v${version}";
+    hash = "sha256-wZ0irWf9S4abcT1BvODFAQks9E6BO0gr43ibnSAxddo=";
   };
 
   useFetchCargoVendor = true;
