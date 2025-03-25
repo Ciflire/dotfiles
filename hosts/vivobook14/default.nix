@@ -41,6 +41,7 @@
       "hosts/common/optional/scin.nix"
       "hosts/common/optional/steam.nix"
       "hosts/common/optional/stylix"
+      "hosts/common/optional/tni.nix"
       "hosts/common/optional/upower.nix"
       # "hosts/common/optional/wacom.nix"
       "hosts/common/optional/waydroid.nix"
