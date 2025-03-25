@@ -99,6 +99,7 @@
     pciutils
     pfetch # system info
     playerctl # media player control
+    posting
     pre-commit # git hooks
     prismlauncher
     protonmail-desktop
