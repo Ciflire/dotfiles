@@ -12,8 +12,8 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpaper.url = "github:hyprwm/hyprpaper";
-    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    hyprpanel.url = "github:ciflire/hyprpanel";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    # hyprpanel.url = "github:ciflire/hyprpanel";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
@@ -95,7 +95,7 @@
             { home-manager.extraSpecialArgs = specialArgs; }
             {
               nixpkgs.overlays = [
-                inputs.hyprpanel.overlay
+                # inputs.hyprpanel.overlay
                 # unstableOverlay
               ];
             }

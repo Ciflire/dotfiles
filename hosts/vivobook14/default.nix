@@ -35,6 +35,7 @@
       "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/mangohud.nix"
       "hosts/common/optional/mvsi.nix"
+      "hosts/common/optional/nh.nix"
       "hosts/common/optional/pipewire.nix"
       "hosts/common/optional/power-profile.nix"
       # "hosts/common/optional/printing.nix"

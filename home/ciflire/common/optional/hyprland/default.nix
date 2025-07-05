@@ -10,7 +10,7 @@ in
   imports = [
     ./hyprpaper.nix
     ./hypridle.nix
-    # ./hyprpanel.nix
+    ./hyprpanel.nix
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hyprcursor.nix
