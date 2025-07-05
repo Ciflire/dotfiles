@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
 {
   programs.hyprlock = {
     enable = true;
@@ -10,7 +15,7 @@
         hide_cursor = true;
       };
       background = {
-        path = "~/.config/hypr/wallpapers/forrest.png";
+        path = lib.mkForce "~/.config/hypr/wallpapers/forrest.png";
         blur_passes = 3;
         blur_size = 8;
       };
@@ -20,11 +25,11 @@
         monitor = "";
         dots_center = true;
         fade_on_empty = false;
-        font_color = "rgb(202, 211, 245)";
-        inner_color = "rgb(91, 96, 120)";
-        outer_color = "rgb(24, 25, 38)";
+        font_color = lib.mkForce "rgb(202, 211, 245)";
+        inner_color = lib.mkForce "rgb(91, 96, 120)";
+        outer_color = lib.mkForce "rgb(24, 25, 38)";
         outline_thickness = 5;
-        placeholder_text = "\'Password...\' ";
+        placeholder_text = lib.mkForce "\'Password...\' ";
         shadow_passes = 2;
       };
     };

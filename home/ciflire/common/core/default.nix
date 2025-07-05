@@ -68,6 +68,7 @@
   home.packages = with pkgs; [
 
     # Packages that don't have custom configs go here
+    anki
     btop # resource monitor
     brightnessctl # brightness utility
     cliphist # clipboard history
@@ -83,7 +84,7 @@
     findutils # find
     framac
     fzf # fuzzy search
-    grimblast # Bash utility for hyprland screenshots
+    grim
     inputs.ghostty.packages.${pkgs.system}.default
     jq # JSON pretty printer and manipulator
     libreoffice-qt6-fresh
@@ -94,7 +95,7 @@
     nix-tree # nix package tree viewer
     nixd # nix lsp
     nixfmt-rfc-style # nix formatter
-    nodePackages_latest.bash-language-server
+    # nodePackages_latest.bash-language-server
     p7zip # compression & encryption
     pciutils
     pfetch # system info
@@ -111,6 +112,7 @@
     rofi
     satty # screenshot editor
     shfmt
+    slurp
     steam-run # for running non-NixOS-packaged binaries on Nix
     usbutils
     tree # cli dir tree viewer

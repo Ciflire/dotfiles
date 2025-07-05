@@ -2,6 +2,7 @@
 # and may be overwritten by future invocations.  Please make changes
 # to /etc/nixos/configuration.nix instead.
 {
+  inputs,
   config,
   lib,
   pkgs,
@@ -13,6 +14,29 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
+
+  boot = {
+
+    plymouth = {
+      enable = true;
+    };
+
+    # Enable "Silent boot"
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
+    # Hide the OS choice for bootloaders.
+    # It's still possible to open the bootloader list by pressing any key
+    # It will just not appear on screen unless a key is pressed
+    loader.timeout = 0;
+
+  };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 

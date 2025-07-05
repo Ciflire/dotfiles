@@ -11,8 +11,7 @@
   ];
 
   programs.hyprpanel = {
-    enable = true;
-    systemd.enable = true;
+    # enable = true;
     hyprland.enable = true;
     overwrite.enable = true;
     overlay.enable = true;
@@ -130,6 +129,7 @@
       };
 
       theme = {
+        name = "catppuccin_macchiato";
         font = {
           size = "16px";
           name = "MonoLisaVariable Nerd Font";

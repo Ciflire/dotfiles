@@ -10,7 +10,7 @@ in
   imports = [
     ./hyprpaper.nix
     ./hypridle.nix
-    ./hyprpanel.nix
+    # ./hyprpanel.nix
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hyprcursor.nix
@@ -88,7 +88,9 @@ in
         "$mod, F, fullscreen,"
         "$mod, Q, killactive, "
         "$mod, N, exec, nemo"
-        "$mod, W, exec, $menu"
+        "$mod, W, exec, $menu -m windows"
+        "$mod, C, exec, $menu -m calc"
+        "$mod, E, exec, $menu -m emojis"
         "$mod, B, exec, librewolf"
         "$mod SHIFT, V, togglefloating, "
         "SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
@@ -126,8 +128,8 @@ in
         "$mod SHIFT, ccedilla, movetoworkspace, 9"
         "$mod SHIFT, agrave, movetoworkspace, 10"
 
-        ''$mod , print, exec, grimblast --freeze save area - | satty -f -''
-        ''$mod SHIFT, print, exec, grimblast --freeze save active screen - | satty -f -''
+        ''$mod , print, exec, grim -g "$(slurp -d)" - | satty -f -''
+        # ''$mod SHIFT, print, exec, grimblast --freeze save active screen - | satty -f -''
       ];
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -174,6 +176,7 @@ in
     inputs.hyprpolkitagent.packages.${pkgs.system}.default
     # inputs.hyprpanel.packages.${pkgs.system}.default
     inputs.hyprpaper.packages.${pkgs.system}.default
+    inputs.hyprpicker.packages.${pkgs.system}.default
     # nwg-displays
     jq
     socat

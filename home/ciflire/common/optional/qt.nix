@@ -2,8 +2,8 @@
 {
   qt = {
     enable = true;
-    style.name = "adwaita-dark";
-    platformTheme.name = "gtk";
+    style.name = lib.mkForce "adwaita-dark";
+    platformTheme.name = lib.mkForce "gtk";
   };
 
   home.sessionVariables = {

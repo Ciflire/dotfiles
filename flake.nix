@@ -13,7 +13,7 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprpaper.url = "github:hyprwm/hyprpaper";
     # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    hyprpanel.url = "github:ciflire/HyprPanel";
+    hyprpanel.url = "github:ciflire/hyprpanel";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
@@ -23,7 +23,7 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
-    stylix.url = "github:danth/stylix?rev=762c07ee10b381bc8e085be5b6c2ec43139f13b0";
+    stylix.url = "github:danth/stylix";
 
     sops-nix.url = "github:Mic92/sops-nix";
 
