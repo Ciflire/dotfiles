@@ -17,29 +17,27 @@
     # overlay.enable = true;
 
     settings = {
-      layout = {
-        "bar.layouts" = {
-          "*" = {
-            "left" = [
-              "dashboard"
-              "workspaces"
-              "windowtitle"
-            ];
-            "middle" = [
-              "media"
-            ];
-            "right" = [
-              "volume"
-              "battery"
-              "clock"
-              "network"
-              "bluetooth"
-              "hypridle"
-              "hyprsunset"
-              "systray"
-              "notifications"
-            ];
-          };
+      bar.layouts = {
+        "*" = {
+          left = [
+            "dashboard"
+            "workspaces"
+            "windowtitle"
+          ];
+          middle = [
+            "media"
+          ];
+          right = [
+            "volume"
+            "battery"
+            "clock"
+            "network"
+            "bluetooth"
+            "hypridle"
+            "hyprsunset"
+            "systray"
+            "notifications"
+          ];
         };
       };
       bar = {
@@ -74,7 +72,7 @@
           };
         };
         launcher = {
-          icon = "";
+          icon = " ";
         };
         network = {
           label = false;
@@ -98,18 +96,18 @@
           monitorSpecific = false;
           workspaces = 7;
           workspaceIconMap = {
-            "1" = "";
-            "2" = "";
-            "3" = "";
-            "4" = "";
-            "5" = "󰊴";
-            "6" = "";
-            "7" = "";
+            "1" = " ";
+            "2" = " ";
+            "3" = " ";
+            "4" = " ";
+            "5" = "󰊴 ";
+            "6" = " ";
+            "7" = " ";
           };
         };
       };
       menus = {
-        dashboard.powermenu.avatar.image = "~/.face.icon";
+        dashboard.powermenu.avatar.image = config.sops.secrets.classic_square_gradient.path;
         dashboard.shortcuts.left.shortcut1.icon = "󰇩";
         dashboard.shortcuts.left.shortcut1.command = "microsoft-edge-stable";
         dashboard.shortcuts.left.shortcut3.icon = "";
