@@ -42,7 +42,7 @@
 
     pre-commit
 
-    ltex-ls-plus
+    # ltex-ls-plus
   ];
 
 }

@@ -2,7 +2,7 @@
 {
   programs.walker = {
     enable = true;
-    package = inputs.walker.packages.${pkgs.system}.default;
+    package = pkgs.walker;
     # runAsService = true;
 
     # All options from the config.json can be used here.
@@ -28,7 +28,7 @@
 
   };
   home.packages = with pkgs; [
-    inputs.walker.packages.${pkgs.system}.default
+    # inputs.walker.packages.${pkgs.system}.default
     libqalculate
   ];
 }

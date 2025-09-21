@@ -4,13 +4,12 @@
     enable = true;
 
     theme = {
-      package = lib.mkForce pkgs.flat-remix-gtk;
-      name = lib.mkForce "Flat-Remix-GTK-Grey-Darkest";
+      # package = lib.mkForce pkgs.gruvbox-gtk-theme;
     };
 
     iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
+      package = pkgs.gruvbox-gtk-theme;
+      name = "Gruvbox_Dark-2";
     };
 
   };

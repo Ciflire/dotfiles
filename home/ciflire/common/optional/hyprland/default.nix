@@ -19,6 +19,7 @@ in
   ];
 
   wayland.windowManager.hyprland = {
+    systemd.enable = false;
     enable = true;
     package = hyprland;
     xwayland.enable = true;
@@ -64,13 +65,13 @@ in
       "$menu" = "walker";
       "exec-once" = [
         # "hyprpanel &"
-        "systemctl --user start hyprpolkitagent&"
-        "walker --gapplication-service&"
-        "wl-paste --type text --watch cliphist store #Stores only text data&"
-        "wl-paste --type image --watch cliphist store #Stores only image data &"
-        "systemctl --user start hyprpolkitagent&"
-        "$HOME/.local/share/scripts/bitwarden.sh"
-        "hyprsunset"
+        "uwsm app -- systemctl --user start hyprpolkitagent&"
+        "uwsm app -- walker --gapplication-service&"
+        "uwsm app -- wl-paste --type text --watch cliphist store #Stores only text data&"
+        "uwsm app -- wl-paste --type image --watch cliphist store #Stores only image data &"
+        "uwsm app -- systemctl --user start hyprpolkitagent&"
+        "uwsm app -- $HOME/.local/share/scripts/bitwarden.sh"
+        "uwsm app -- hyprsunset"
       ];
       source = [
         "./monitors.conf"
@@ -87,19 +88,19 @@ in
         "$mod, D,exec, $menu"
         "$mod, F, fullscreen,"
         "$mod, Q, killactive, "
-        "$mod, N, exec, nemo"
-        "$mod, W, exec, $menu -m windows"
-        "$mod, C, exec, $menu -m calc"
-        "$mod, E, exec, $menu -m emojis"
-        "$mod, B, exec, librewolf"
+        "$mod, N, exec, uwsm app -- nemo"
+        "$mod, W, exec, uwsm app -- $menu -m windows"
+        "$mod, C, exec, uwsm app -- $menu -m calc"
+        "$mod, E, exec, uwsm app -- $menu -m emojis"
+        "$mod, B, exec, uwsm app -- librewolf"
         "$mod SHIFT, V, togglefloating, "
         "SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
         # "$mod, P, cycleprev"
         # "$mod, J, cyclenext"
-        "$mod SHIFT, L, exec, loginctl lock-session"
-        "$mod, S, exec, spotify"
-        "$mod, T, exec, thunderbird"
-        "$mod, escape, exec, wlogout"
+        "$mod SHIFT, L, exec, uwsm app -- loginctl lock-session"
+        "$mod, S, exec, uwsm app -- spotify"
+        "$mod, T, exec, uwsm app -- thunderbird"
+        "$mod, escape, exec, uwsm app -- wlogout"
 
         "$mod, H, movefocus, l"
         "$mod, L, movefocus, r"

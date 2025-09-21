@@ -7,11 +7,11 @@
 {
   stylix.targets.helix.enable = true;
   programs.helix = {
-    package = inputs.helix.packages.${pkgs.system}.helix;
+    package = inputs.helix.packages.${pkgs.system}.helix.override { enableSteel = true; };
     # package = pkgs.helix;
     enable = true;
     settings = lib.mkForce {
-      theme = "stylix";
+      theme = "gruvbox_dark_hard";
 
       editor = {
         lsp = {

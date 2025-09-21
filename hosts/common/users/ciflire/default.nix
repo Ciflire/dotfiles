@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   config,
   configVars,
   configLib,
@@ -40,7 +41,7 @@
     ];
     packages = with pkgs; [
       git
-      helix
+      # helix
       lazygit
       lsd
       kitty
@@ -48,6 +49,7 @@
       neovim
       openconnect
       thunderbird
+      walker
       wl-clipboard
     ];
     shell = pkgs.nushell;

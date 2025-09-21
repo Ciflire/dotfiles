@@ -82,10 +82,10 @@
     fancy-cat
     fd # tree style ls
     findutils # find
-    framac
     fzf # fuzzy search
     grim
-    inputs.ghostty.packages.${pkgs.system}.default
+    # inputs.ghostty.packages.${pkgs.system}.default
+    ghostty
     jq # JSON pretty printer and manipulator
     libreoffice-qt6-fresh
     mongodb-compass
@@ -100,13 +100,11 @@
     pciutils
     pfetch # system info
     playerctl # media player control
-    posting
+    # posting
     pre-commit # git hooks
-    prismlauncher
+    # prismlauncher
     protonmail-desktop
     proton-pass
-    protonvpn-gui
-    protonvpn-cli
     pulsemixer # audio utility
     ripgrep # better grep
     rofi
@@ -121,7 +119,7 @@
     uv
     xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
     xdg-user-dirs
-    xournalpp
+    # xournalpp
     wev # show wayland events. also handy for detecting keypress codes
     wget # downloader
     zip # zip compression

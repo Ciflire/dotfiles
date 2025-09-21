@@ -1,10 +1,10 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  home.packages = with pkgs; [
+  home.packages = [
     #Music Player
-    spotify
-
-    sioyek
-    vscode
+    pkgs.spotify
+    pkgs.spotify-player
+    pkgs.sioyek
+    pkgs.vscode
   ];
 }

@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   installPhase = ''
     mkdir -vp $out/share/fonts/variable
     for filename in MonoLisa/ttf/*.ttf; do
-     fontforge -script ${patcher}/font-patcher $filename -c --quiet;
+     fontforge -script ${patcher}/font-patcher $filename -c --quiet -s; 
     done
     cp -r *.ttf  $out/share/fonts/variable
   '';

@@ -96,13 +96,13 @@
           monitorSpecific = false;
           workspaces = 7;
           workspaceIconMap = {
-            "1" = " ";
-            "2" = " ";
-            "3" = " ";
-            "4" = " ";
-            "5" = "󰊴 ";
-            "6" = " ";
-            "7" = " ";
+            "1" = "";
+            "2" = "";
+            "3" = "";
+            "4" = "";
+            "5" = "󰊴";
+            "6" = "";
+            "7" = "";
           };
         };
       };
@@ -118,7 +118,7 @@
         dashboard.directories.enabled = true;
         clock.weather.interval = 15000;
         clock.weather.unit = "metric";
-        clock.weather.location = "Nancy";
+        clock.weather.location = "Barcelona";
         clock.weather.key = config.sops.secrets.weather_api_key.path;
         power.lowBatteryThreshold = 20;
         volume.raiseMaximumVolume = true;
@@ -130,7 +130,7 @@
         name = "catppuccin_macchiato";
         font = {
           size = "16px";
-          name = "MonoLisaVariable Nerd Font";
+          name = "MonoLisaVariable Nerd Font Mono";
         };
         bar.transparent = true;
       };

@@ -19,7 +19,9 @@
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
 
-    helix.url = "github:helix-editor/helix";
+    # helix.url = "github:helix-editor/helix";
+    helix.url = "github:ciflire/helix/steel-event-system";
+    steel.url = "github:mattwparas/steel";
 
     ghostty.url = "github:ghostty-org/ghostty";
 
@@ -34,7 +36,8 @@
 
     hardware.url = "github:nixos/nixos-hardware";
 
-    walker.url = "github:abenz1267/walker";
+    # walker.url = "github:abenz1267/walker";
+    # elephant.url = "github:abenz1267/elephant";
   };
 
   outputs =
@@ -97,6 +100,7 @@
               nixpkgs.overlays = [
                 # inputs.hyprpanel.overlay
                 # unstableOverlay
+
               ];
             }
             ./hosts/vivobook14
