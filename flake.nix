@@ -23,7 +23,7 @@
     helix.url = "github:ciflire/helix/steel-event-system";
     steel.url = "github:mattwparas/steel";
 
-    ghostty.url = "github:ghostty-org/ghostty";
+    ghostty.url = "github:ghostty-org/ghostty/v1.1.3";
 
     stylix.url = "github:danth/stylix";
 
@@ -36,7 +36,7 @@
 
     hardware.url = "github:nixos/nixos-hardware";
 
-    # walker.url = "github:abenz1267/walker";
+    walker.url = "github:abenz1267/walker";
     # elephant.url = "github:abenz1267/elephant";
   };
 
@@ -104,6 +104,24 @@
               ];
             }
             ./hosts/vivobook14
+          ];
+        };
+        
+        corsair = nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86_64-linux";
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
+            { home-manager.extraSpecialArgs = specialArgs; }
+            {
+              nixpkgs.overlays = [
+                # inputs.hyprpanel.overlay
+                # unstableOverlay
+              ];
+            }
+            ./hosts/corsair
           ];
         };
       };

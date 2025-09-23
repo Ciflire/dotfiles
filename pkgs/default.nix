@@ -8,7 +8,7 @@
 
   awrit = pkgs.callPackage ./awrit.nix { };
 
-  fancy-cat = pkgs.callPackage ./fancy-cat { };
+  # fancy-cat = pkgs.callPackage ./fancy-cat { };
   fiji = pkgs.callPackage ./fiji.nix { };
   gruvbox-gtk-theme = pkgs.callPackage ./gruvbox-gtk-theme.nix { };
   ltex-ls-plus = pkgs.callPackage ./ltex-ls-plus-nightly.nix { };

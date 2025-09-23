@@ -79,7 +79,7 @@
     dockerfile-language-server-nodejs
     eza # ls replacement
     dust # disk usage
-    fancy-cat
+    # fancy-cat
     fd # tree style ls
     findutils # find
     fzf # fuzzy search
@@ -134,16 +134,16 @@
     };
   };
 
-  nix = {
-    package = lib.mkDefault pkgs.nix;
-    settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      warn-dirty = false;
-    };
-  };
+  # nix = {
+  #   package = lib.mkDefault pkgs.nix;
+  #   settings = {
+  #     experimental-features = [
+  #       "nix-command"
+  #       "flakes"
+  #     ];
+  #     warn-dirty = false;
+  #   };
+  # };
 
   programs = {
     home-manager.enable = true;

@@ -10,8 +10,6 @@
     package = inputs.hyprlock.packages.${pkgs.system}.hyprlock;
     settings = {
       general = {
-        disable_loading_bar = false;
-        grace = 0;
         hide_cursor = true;
       };
       background = {
