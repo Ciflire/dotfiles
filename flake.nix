@@ -10,7 +10,10 @@
     hyprcursor.url = "github:hyprwm/hyprcursor";
     hypridle.url = "github:hyprwm/hypridle";
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprlock.url = "github:hyprwm/hyprlock";
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprpaper.url = "github:hyprwm/hyprpaper";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     # hyprpanel.url = "github:ciflire/hyprpanel";
@@ -106,7 +109,7 @@
             ./hosts/vivobook14
           ];
         };
-        
+
         corsair = nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           system = "x86_64-linux";
