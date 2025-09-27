@@ -41,6 +41,7 @@
       "hosts/common/optional/stylix"
       "hosts/common/optional/tni.nix"
       "hosts/common/optional/upower.nix"
+      "hosts/common/optional/virtmanager.nix"
       # "hosts/common/optional/wacom.nix"
       "hosts/common/optional/waydroid.nix"
       "hosts/common/optional/wireguard.nix"
