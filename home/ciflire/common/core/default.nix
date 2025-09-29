@@ -76,7 +76,7 @@
     copyq # clipboard manager
     coreutils # basic gnu utils
     docker-compose-language-service
-    dockerfile-language-server-nodejs
+    dockerfile-language-server
     eza # ls replacement
     dust # disk usage
     # fancy-cat
