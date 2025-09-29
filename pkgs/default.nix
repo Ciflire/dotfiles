@@ -14,6 +14,7 @@
   ltex-ls-plus = pkgs.callPackage ./ltex-ls-plus-nightly.nix { };
   ltex-ls-plus-release = pkgs.callPackage ./ltex-ls-plus-release.nix { };
   monolisa = pkgs.callPackage ./monolisa.nix { };
+  plantuml-lsp = pkgs.callPackage ./plantuml-lsp.nix { };
   # posting = pkgs.callPackage ./posting.nix { };
   rust_hdl = pkgs.callPackage ./rust_hdl.nix { };
   schemat = pkgs.callPackage ./schemat.nix { };
