@@ -21,9 +21,12 @@
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
-
     # helix.url = "github:helix-editor/helix";
-    helix.url = "github:ciflire/helix/steel-event-system";
+
+    helix = {
+      url = "github:mattwparas/helix/steel-event-system";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     steel.url = "github:mattwparas/steel";
 
     ghostty.url = "github:ghostty-org/ghostty/v1.1.3";

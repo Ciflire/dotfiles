@@ -5,9 +5,16 @@
   ...
 }:
 {
+  # packages needed to build forge plugin
+  home.packages = with pkgs; [
+    openssl
+  ];
+
   stylix.targets.helix.enable = true;
   programs.helix = {
-    package = inputs.helix.packages.${pkgs.system}.helix.override { enableSteel = true; };
+    package = inputs.helix.packages.${pkgs.system}.helix.overrideAttrs (oa: {
+      cargoBuildFeatures = (oa.cargoBuildFeatures or [ ]) ++ [ "steel" ];
+    });
     # package = pkgs.helix;
     enable = true;
     settings = lib.mkForce {
