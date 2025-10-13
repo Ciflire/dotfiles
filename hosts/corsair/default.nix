@@ -22,6 +22,7 @@
       "hosts/common/core"
 
       #################### Host-specific Optional Configs ####################
+      "hosts/common/optional/am_iot.nix"
       "hosts/common/optional/bluetooth.nix"
       "hosts/common/optional/docker.nix"
       "hosts/common/optional/gamemode.nix"

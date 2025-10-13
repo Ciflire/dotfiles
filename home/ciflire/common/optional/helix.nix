@@ -7,7 +7,7 @@
 {
   # packages needed to build forge plugin
   home.packages = with pkgs; [
-    openssl
+    steel
   ];
 
   stylix.targets.helix.enable = true;
