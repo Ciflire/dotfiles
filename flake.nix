@@ -43,7 +43,7 @@
     hardware.url = "github:nixos/nixos-hardware";
 
     walker.url = "github:abenz1267/walker";
-    # elephant.url = "github:abenz1267/elephant";
+    elephant.url = "github:abenz1267/elephant";
   };
 
   outputs =

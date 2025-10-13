@@ -50,7 +50,7 @@
       neovim
       openconnect
       thunderbird
-      walker
+      # walker
       wl-clipboard
     ];
     shell = pkgs.nushell;

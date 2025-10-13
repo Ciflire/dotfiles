@@ -17,7 +17,7 @@
     common/optional/ssh.nix
     common/optional/tools
     common/optional/vesktop.nix
-    # common/optional/walker.nix
+    common/optional/walker.nix
 
     # Languages
     common/optional/language_setups/c.nix

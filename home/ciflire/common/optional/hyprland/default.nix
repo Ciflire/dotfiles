@@ -66,6 +66,7 @@ in
       "exec-once" = [
         # "hyprpanel &"
         "uwsm app -- systemctl --user start hyprpolkitagent&"
+        "elephant&"
         "uwsm app -- walker --gapplication-service&"
         "uwsm app -- wl-paste --type text --watch cliphist store #Stores only text data&"
         "uwsm app -- wl-paste --type image --watch cliphist store #Stores only image data &"
@@ -94,7 +95,7 @@ in
         "$mod, E, exec, uwsm app -- $menu -m emojis"
         "$mod, B, exec, uwsm app -- librewolf"
         "$mod SHIFT, V, togglefloating, "
-        "SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+        "SUPER, V, exec, uwsm app -- $menu -m clipboard"
         # "$mod, P, cycleprev"
         # "$mod, J, cyclenext"
         "$mod SHIFT, L, exec, uwsm app -- loginctl lock-session"
@@ -173,7 +174,7 @@ in
 
   home.packages = with pkgs; [
     inputs.hyprsunset.packages.${pkgs.system}.default
-    inputs.hyprsysteminfo.packages.${pkgs.system}.default
+    # inputs.hyprsysteminfo.packages.${pkgs.system}.default
     inputs.hyprpolkitagent.packages.${pkgs.system}.default
     # inputs.hyprpanel.packages.${pkgs.system}.default
     inputs.hyprpaper.packages.${pkgs.system}.default
