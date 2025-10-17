@@ -1,4 +1,3 @@
-
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -16,13 +15,12 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-
     (map configLib.relativeToRoot [
       #################### Required Configs ####################
       "hosts/common/core"
 
       #################### Host-specific Optional Configs ####################
-      "hosts/common/optional/am_iot.nix"
+      # "hosts/common/optional/am_iot.nix"
       "hosts/common/optional/bluetooth.nix"
       "hosts/common/optional/docker.nix"
       "hosts/common/optional/gamemode.nix"

@@ -34,5 +34,6 @@
   home.packages = with pkgs; [
     inputs.walker.packages.${pkgs.system}.default
     libqalculate
+    inputs.elephant.packages.${pkgs.system}.default
   ];
 }
