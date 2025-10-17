@@ -93,6 +93,7 @@ in
         "$mod, W, exec, uwsm app -- $menu -m windows"
         "$mod, C, exec, uwsm app -- $menu -m calc"
         "$mod, E, exec, uwsm app -- $menu -m emojis"
+        "$mod SHIFT, T, exec, uwsm app -- $menu -m todo"
         "$mod, B, exec, uwsm app -- librewolf"
         "$mod SHIFT, V, togglefloating, "
         "SUPER, V, exec, uwsm app -- $menu -m clipboard"

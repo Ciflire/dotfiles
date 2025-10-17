@@ -1,5 +1,6 @@
 { inputs, pkgs, ... }:
 {
+  imports = [ inputs.elephant.homeManagerModules.default ];
   # programs.walker = {
   #   enable = true;
   #   package = pkgs.walker;
@@ -27,9 +28,11 @@
   #   };
 
   # };
+  programs.elephant = {
+    enable = true;
+  };
   home.packages = with pkgs; [
     inputs.walker.packages.${pkgs.system}.default
     libqalculate
-    inputs.elephant.packages.${pkgs.system}.elephant
   ];
 }

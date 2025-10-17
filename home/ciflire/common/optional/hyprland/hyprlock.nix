@@ -12,24 +12,49 @@
       general = {
         hide_cursor = true;
       };
-      background = {
-        path = lib.mkForce "~/.config/hypr/wallpapers/forrest.png";
-        blur_passes = 3;
-        blur_size = 8;
-      };
-      input-field = {
-        size = "200, 50";
-        position = "0, -80";
-        monitor = "";
-        dots_center = true;
-        fade_on_empty = false;
-        font_color = lib.mkForce "rgb(202, 211, 245)";
-        inner_color = lib.mkForce "rgb(91, 96, 120)";
-        outer_color = lib.mkForce "rgb(24, 25, 38)";
-        outline_thickness = 5;
-        placeholder_text = lib.mkForce "\'Password...\' ";
-        shadow_passes = 2;
-      };
+
+      background = lib.mkForce [
+        {
+          path = "screenshot";
+          blur_passes = 3;
+        }
+      ];
+
+      image = lib.mkForce [
+        {
+          path = "/home/ciflire/Pictures/pp/classic_circle.png";
+          # position = 0,-200
+          zindex = 1;
+        }
+      ];
+
+      input-field = lib.mkForce [
+        {
+          outline_thickness = 10;
+          size = "160, 160";
+          hide_input = true;
+          placeholder_text = "";
+          fail_text = "";
+        }
+      ];
+
+      label = lib.mkForce [
+        {
+          text = "$TIME";
+          halign = "center";
+          valign = "center";
+          position = "0,-110";
+          font_family = "MonoLisaVariable Nerd Font Mono";
+          font_size = 20;
+        }
+        {
+          text = "$USER";
+          position = "0, 110";
+          font_family = "MonoLisaVariable Nerd Font Mono";
+          font_size = 20;
+
+        }
+      ];
     };
   };
 }
