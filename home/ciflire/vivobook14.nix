@@ -16,6 +16,7 @@
     common/optional/sops.nix
     common/optional/ssh.nix
     common/optional/tools
+    common/optional/udiskie.nix
     common/optional/vesktop.nix
     common/optional/walker.nix
 

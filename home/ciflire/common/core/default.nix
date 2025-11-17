@@ -118,12 +118,13 @@
     unzip # zip extraction
     unrar # rar extraction
     uv
+    vlc
     xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
     xdg-user-dirs
     # xournalpp
     wev # show wayland events. also handy for detecting keypress codes
     wget # downloader
-    winboat
+    # winboat
     zip # zip compression
   ];
 
