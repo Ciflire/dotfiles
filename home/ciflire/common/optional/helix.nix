@@ -102,7 +102,7 @@
           down = "no_op";
           left = "no_op";
           right = "no_op";
-
+          C-p = '':lsp-workspace-command tinymist.pinMain "%sh{pwd}/%{buffer_name}"'';
         };
         insert = {
           C-backspace = "delete_word_backward";

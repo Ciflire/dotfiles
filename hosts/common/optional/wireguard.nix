@@ -5,7 +5,6 @@
   environment.systemPackages = with pkgs; [
     wireguard-tools
     protonvpn-gui
-    # protonvpn-cli
   ];
   services.protonmail-bridge = {
     enable = true;
