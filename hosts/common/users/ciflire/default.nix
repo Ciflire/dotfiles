@@ -50,6 +50,9 @@
       neovim
       openconnect
       thunderbird
+
+      solaar
+      logitech-udev-rules
       # walker
       wl-clipboard
     ];

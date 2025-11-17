@@ -24,6 +24,9 @@ in
     package = hyprland;
     xwayland.enable = true;
     settings = {
+      # ecosystem = {
+      #   enforce_permissions = true;
+      # };
       animation = [
         "windowsIn, 1,2,windowIn, slide bottom"
         "windowsOut,1,2,windowOut, slide bottom"
@@ -161,6 +164,7 @@ in
 
       input = {
         kb_layout = "fr";
+        # kb_options = "grp:win_space_toggle";
       };
 
       windowrulev2 = [
@@ -170,6 +174,10 @@ in
         "opacity 0.9 override 0.8 override 0.95 override,class:^(kitty)$"
       ];
       layerrule = [ "blur, top-bar" ];
+
+      permission = [
+        "${pkgs.discord}/bin/discord, screencopy, allow"
+      ];
     };
   };
 
@@ -180,6 +188,7 @@ in
     # inputs.hyprpanel.packages.${pkgs.system}.default
     inputs.hyprpaper.packages.${pkgs.system}.default
     inputs.hyprpicker.packages.${pkgs.system}.default
+    inputs.hyprpwcenter.packages.${pkgs.system}.default
     # nwg-displays
     jq
     socat

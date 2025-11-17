@@ -51,7 +51,7 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
   boot.extraModprobeConfig = ''
-    options bluetooth disable_ertm=Y
+    options bluetooth disable_ertm=Y config_ntsync=y
   '';
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/ecb4c2df-e839-4896-8cca-9f0f28df83aa";

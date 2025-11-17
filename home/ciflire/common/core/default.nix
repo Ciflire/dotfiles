@@ -73,7 +73,7 @@
     brightnessctl # brightness utility
     cliphist # clipboard history
     comma
-    copyq # clipboard manager
+    # copyq # clipboard manager
     coreutils # basic gnu utils
     docker-compose-language-service
     dockerfile-language-server
@@ -108,6 +108,7 @@
     pulsemixer # audio utility
     ripgrep # better grep
     rofi
+    ryubing
     satty # screenshot editor
     shfmt
     slurp
@@ -122,6 +123,7 @@
     # xournalpp
     wev # show wayland events. also handy for detecting keypress codes
     wget # downloader
+    winboat
     zip # zip compression
   ];
 

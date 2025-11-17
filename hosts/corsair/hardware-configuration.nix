@@ -23,8 +23,15 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelModules = [
+    "kvm-amd"
+    "ntsync"
+  ];
   boot.extraModulePackages = [ ];
+  boot.extraModprobeConfig = ''
+    options ntsync config_ntsync=y
+  '';
 
   boot.plymouth.enable = true;
 
@@ -45,8 +52,9 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-
   };
+
+  services.lact.enable = true;
 
   swapDevices = [ ];
 

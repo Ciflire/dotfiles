@@ -8,8 +8,8 @@
     };
 
     iconTheme = {
-      package = pkgs.gruvbox-gtk-theme;
-      name = "Gruvbox_Dark-2";
+      package = pkgs.adwaita-icon-theme;
+      name = "adwaita-icon-theme";
     };
 
   };

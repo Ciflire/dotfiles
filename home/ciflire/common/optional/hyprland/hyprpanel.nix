@@ -1,6 +1,8 @@
 # *.nix
 {
   config,
+  osConfig,
+  pkgs,
   # inputs,
   # self,
   ...
@@ -29,7 +31,7 @@
           ];
           right = [
             "volume"
-            "battery"
+            (if osConfig.networking.hostName == "vivobook14" then "battery" else "")
             "clock"
             "network"
             "bluetooth"

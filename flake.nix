@@ -21,6 +21,7 @@
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
+    hyprpwcenter.url = "github:ciflire/hyprpwcenter";
     # helix.url = "github:helix-editor/helix";
 
     helix = {
