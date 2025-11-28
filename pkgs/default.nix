@@ -7,6 +7,7 @@
   #################### Packages with external source ####################
 
   awrit = pkgs.callPackage ./awrit.nix { };
+  cheddar = pkgs.callPackage ./cheddar.nix { };
   cooja = pkgs.callPackage ./cooja/default.nix { };
   # fancy-cat = pkgs.callPackage ./fancy-cat { };
   fiji = pkgs.callPackage ./fiji.nix { };
