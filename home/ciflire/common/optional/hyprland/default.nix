@@ -92,7 +92,7 @@ in
         "$mod, D,exec, $menu"
         "$mod, F, fullscreen,"
         "$mod, Q, killactive, "
-        "$mod, N, exec, uwsm app -- nemo"
+        "$mod, N, exec, uwsm app -- dolphin"
         "$mod, W, exec, uwsm app -- $menu -m windows"
         "$mod, C, exec, uwsm app -- $menu -m calc"
         "$mod, E, exec, uwsm app -- $menu -m emojis"

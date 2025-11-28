@@ -39,6 +39,7 @@
       "plugdev"
       "gamemode"
       "libvirtd"
+      "hbase"
     ];
     packages = with pkgs; [
       git
