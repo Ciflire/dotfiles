@@ -39,6 +39,7 @@
       "hosts/common/optional/nh.nix"
       "hosts/common/optional/nosql.nix"
       "hosts/common/optional/pipewire.nix"
+      "hosts/common/optional/platformio.nix"
       "hosts/common/optional/power-profile.nix"
       # "hosts/common/optional/printing.nix"
       # "hosts/common/optional/scin.nix"

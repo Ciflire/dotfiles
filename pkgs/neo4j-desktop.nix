@@ -9,7 +9,7 @@ let
 
   src = fetchurl {
     url = "https://neo4j.com/artifact.php?name=neo4j-desktop-${version}-x86_64.AppImage";
-    hash = "";
+    hash = "sha256-afru67/OLW5xLPpXG7hjDn2vzb3XiBTAPmvVLXZKUPQ=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
