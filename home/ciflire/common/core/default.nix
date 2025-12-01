@@ -77,8 +77,9 @@
     coreutils # basic gnu utils
     docker-compose-language-service
     dockerfile-language-server
-    eza # ls replacement
+    kdePackages.dolphin
     dust # disk usage
+    eza # ls replacement
     # fancy-cat
     fd # tree style ls
     findutils # find
@@ -90,7 +91,6 @@
     libreoffice-qt6-fresh
     mongodb-compass
     ncdu # TUI disk usage
-    nemo
     neofetch # fancier system info than pfetch
     nix-tree # nix package tree viewer
     nixd # nix lsp

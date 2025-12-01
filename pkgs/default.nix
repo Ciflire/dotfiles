@@ -17,6 +17,7 @@
   ltex-ls-plus-release = pkgs.callPackage ./ltex-ls-plus-release.nix { };
   monolisa = pkgs.callPackage ./monolisa.nix { };
   msp430-toolchain = pkgs.callPackage ./msp430-toolchain.nix { };
+  neo4j-desktop = pkgs.callPackage ./neo4j-desktop.nix { };
   plantuml-lsp = pkgs.callPackage ./plantuml-lsp.nix { };
   # posting = pkgs.callPackage ./posting.nix { };
   rust_hdl = pkgs.callPackage ./rust_hdl.nix { };

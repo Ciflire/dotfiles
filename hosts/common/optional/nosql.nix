@@ -8,4 +8,8 @@
     rest.enable = true;
     package = pkgs.hbase3;
   };
+
+  environment.systemPackages = with pkgs; [
+    jetbrains.idea-community
+  ];
 }
