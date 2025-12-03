@@ -14,42 +14,31 @@
   imports = lib.flatten [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../common/core
 
-    (map configLib.relativeToRoot [
-      #################### Required Configs ####################
-      "hosts/common/core"
-
-      #################### Host-specific Optional Configs ####################
-      "hosts/common/optional/am_iot.nix"
-      "hosts/common/optional/bluetooth.nix"
-      "hosts/common/optional/docker.nix"
-      "hosts/common/optional/gamemode.nix"
-      "hosts/common/optional/gmd.nix"
-      "hosts/common/optional/gpg.nix"
-      "hosts/common/optional/heroic.nix"
-      "hosts/common/optional/hyprland.nix"
-      "hosts/common/optional/mangohud.nix"
-      # "hosts/common/optional/mvsi.nix"
-      "hosts/common/optional/nh.nix"
-      "hosts/common/optional/pipewire.nix"
-      "hosts/common/optional/power-profile.nix"
-      # "hosts/common/optional/printing.nix"
-      "hosts/common/optional/openrgb.nix"
-      # "hosts/common/optional/scin.nix"
-      "hosts/common/optional/steam.nix"
-      "hosts/common/optional/stylix"
-      # "hosts/common/optional/tni.nix"
-      "hosts/common/optional/udisks.nix"
-      "hosts/common/optional/upower.nix"
-      "hosts/common/optional/virtmanager.nix"
-      # "hosts/common/optional/wacom.nix"
-      "hosts/common/optional/waydroid.nix"
-      "hosts/common/optional/wireguard.nix"
-      "hosts/common/optional/xbox.nix"
-      "hosts/common/optional/zsa.nix"
-
-      #################### Desktop ####################
-    ])
+    ../common/optional/am_iot.nix
+    ../common/optional/bluetooth.nix
+    ../common/optional/docker.nix
+    ../common/optional/gamemode.nix
+    ../common/optional/gmd.nix
+    ../common/optional/gpg.nix
+    ../common/optional/heroic.nix
+    ../common/optional/hyprland.nix
+    ../common/optional/mangohud.nix
+    ../common/optional/nh.nix
+    ../common/optional/nosql.nix
+    ../common/optional/pipewire.nix
+    ../common/optional/power-profile.nix
+    ../common/optional/openrgb.nix
+    ../common/optional/steam.nix
+    ../common/optional/stylix
+    ../common/optional/udisks.nix
+    ../common/optional/upower.nix
+    ../common/optional/virtmanager.nix
+    ../common/optional/waydroid.nix
+    ../common/optional/wireguard.nix
+    ../common/optional/xbox.nix
+    ../common/optional/zsa.nix
 
   ];
 

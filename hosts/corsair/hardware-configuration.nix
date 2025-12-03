@@ -49,6 +49,11 @@
     ];
   };
 
+  fileSystems."/home/ciflire/Steam" = {
+    device = "/dev/disk/by-uuid/5e65bc7c-7060-4724-8706-ffa264706d6c";
+    fsType = "ext4";
+  };
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
