@@ -5,15 +5,17 @@
   ...
 }:
 let
-  hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  hyprland = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 in
 {
   services.hypridle = {
     enable = true;
-    package = inputs.hypridle.packages.${pkgs.system}.hypridle;
+    package = inputs.hypridle.packages.${pkgs.stdenv.hostPlatform.system}.hypridle;
     settings = {
       general = {
-        lock_cmd = "pidof hyprlock || ${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
+        lock_cmd = "pidof hyprlock || ${
+          inputs.hyprlock.packages.${pkgs.stdenv.hostPlatform.system}.hyprlock
+        }/bin/hyprlock";
         before_sleep_cmd = "loginctl lock-session";
         after_sleep_cmd = "${hyprland}/bin/hyprctl dispatch dpms on";
       };

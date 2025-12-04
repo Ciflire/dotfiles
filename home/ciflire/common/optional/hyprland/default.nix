@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  hyprland = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 in
 {
 
@@ -70,6 +70,7 @@ in
         # "hyprpanel &"
         "uwsm app -- systemctl --user start hyprpolkitagent&"
         "elephant&"
+        "hyprctl setcursor rose-pine-hyprcursor 28"
         "uwsm app -- walker --gapplication-service&"
         "uwsm app -- wl-paste --type text --watch cliphist store #Stores only text data&"
         "uwsm app -- wl-paste --type image --watch cliphist store #Stores only image data &"
@@ -83,7 +84,7 @@ in
         "./hyprland_test.conf"
       ];
       env = [
-        "HYPRCURSOR_THEME, rose-pine-cursor"
+        "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 28"
       ];
       debug.disable_logs = false;
@@ -173,7 +174,6 @@ in
         "float, class:^(satty)$"
         "opacity 0.9 override 0.8 override 0.95 override,class:^(kitty)$"
       ];
-      layerrule = [ "blur, top-bar" ];
 
       permission = [
         "${pkgs.discord}/bin/discord, screencopy, allow"
@@ -182,13 +182,16 @@ in
   };
 
   home.packages = with pkgs; [
-    inputs.hyprsunset.packages.${pkgs.system}.default
+    inputs.hyprsunset.packages.${pkgs.stdenv.hostPlatform.system}.default
     # inputs.hyprsysteminfo.packages.${pkgs.system}.default
-    inputs.hyprpolkitagent.packages.${pkgs.system}.default
+    inputs.hyprpolkitagent.packages.${pkgs.stdenv.hostPlatform.system}.default
     # inputs.hyprpanel.packages.${pkgs.system}.default
-    inputs.hyprpaper.packages.${pkgs.system}.default
-    inputs.hyprpicker.packages.${pkgs.system}.default
-    inputs.hyprpwcenter.packages.${pkgs.system}.default
+    inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.hyprpicker.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.hyprpwcenter.packages.${pkgs.stdenv.hostPlatform.system}.default
+    hyprcursor
+    inputs.hyprqt6engine.packages.${pkgs.stdenv.hostPlatform.system}.default
+    rose-pine-hyprcursor
     # nwg-displays
     jq
     socat

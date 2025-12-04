@@ -19,6 +19,7 @@
     # hyprpanel.url = "github:ciflire/hyprpanel";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
+    hyprqt6engine.url = "github:hyprwm/hyprqt6engine";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprpwcenter.url = "github:ciflire/hyprpwcenter";

@@ -2,8 +2,8 @@
 {
   qt = {
     enable = true;
-    style.package = pkgs.adwaita-qt;
-    style.name = lib.mkForce "Adwaita-dark";
+    style.package = pkgs.kdePackages.breeze;
+    style.name = "Breeze";
     # platformTheme.name = lib.mkForce "gtk";
   };
 

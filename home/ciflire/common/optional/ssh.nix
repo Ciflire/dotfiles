@@ -3,6 +3,8 @@
   programs.ssh = {
     enable = true;
 
+    enableDefaultConfig = false;
+
     matchBlocks = {
       "github" = {
         host = "github.com";

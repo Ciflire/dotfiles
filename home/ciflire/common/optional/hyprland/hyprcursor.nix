@@ -1,10 +1,10 @@
 { inputs, pkgs, ... }:
 {
   home.sessionVariables = {
-    HYPRCURSOR_THEME = "catppuccin-mocha-dark";
-    HYPRCURSOR_SIZE = 24;
+    HYPRCURSOR_THEME = "BreezeX-RosePine-Linux";
+    HYPRCURSOR_SIZE = 28;
   };
   home.packages = with pkgs; [
-    catppuccin-cursors.mochaDark
+    rose-pine-cursor
   ];
 }

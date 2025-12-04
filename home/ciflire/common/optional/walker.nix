@@ -32,8 +32,8 @@
     enable = true;
   };
   home.packages = with pkgs; [
-    inputs.walker.packages.${pkgs.system}.default
+    inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default
     libqalculate
-    inputs.elephant.packages.${pkgs.system}.default
+    inputs.elephant.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

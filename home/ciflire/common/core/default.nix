@@ -88,7 +88,9 @@
     # inputs.ghostty.packages.${pkgs.system}.default
     ghostty
     jq # JSON pretty printer and manipulator
-    libreoffice-qt6-fresh
+    (libreoffice-qt6-fresh.overrideAttrs (oa: {
+      kdeIntegration = true;
+    }))
     # mongodb-compass
     ncdu # TUI disk usage
     neofetch # fancier system info than pfetch

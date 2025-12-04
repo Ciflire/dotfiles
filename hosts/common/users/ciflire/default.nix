@@ -25,8 +25,7 @@
     MANPAGER = "batman"; # see ./cli/bat.nix
     NIXOS_OZONE_WL = "1";
     # QT_STYLE_OVERRIDE = "adwaita-dark";
-    # QT_QPA_PLATFORMTHEME = lib.mkForce "gtk";
-
+    # QT_QPA_PLATFORMTHEME = "hyprqt6engine";
   };
 
   users.users.ciflire = {

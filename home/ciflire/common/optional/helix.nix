@@ -10,9 +10,9 @@
     steel
   ];
 
-  stylix.targets.helix.enable = true;
+  # stylix.targets.helix.enable = true;
   programs.helix = {
-    package = inputs.helix.packages.${pkgs.system}.helix.overrideAttrs (oa: {
+    package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.helix.overrideAttrs (oa: {
       cargoBuildFeatures = (oa.cargoBuildFeatures or [ ]) ++ [ "steel" ];
     });
     # package = pkgs.helix;
