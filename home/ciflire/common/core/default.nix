@@ -89,7 +89,7 @@
     ghostty
     jq # JSON pretty printer and manipulator
     libreoffice-qt6-fresh
-    mongodb-compass
+    # mongodb-compass
     ncdu # TUI disk usage
     neofetch # fancier system info than pfetch
     nix-tree # nix package tree viewer

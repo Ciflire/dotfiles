@@ -30,7 +30,7 @@
       "hosts/common/optional/bluetooth.nix"
       "hosts/common/optional/docker.nix"
       "hosts/common/optional/gamemode.nix"
-      # "hosts/common/optional/gmd.nix"
+      "hosts/common/optional/gmd.nix"
       "hosts/common/optional/gpg.nix"
       "hosts/common/optional/heroic.nix"
       "hosts/common/optional/hyprland.nix"
