@@ -31,6 +31,7 @@ in
   '';
 
   security.polkit.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;
@@ -39,7 +40,7 @@ in
   nixpkgs = {
     # you can add global overlays here
     overlays = builtins.attrValues outputs.overlays;
-    
+
     config = {
       allowUnfree = true;
     };

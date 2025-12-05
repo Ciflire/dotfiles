@@ -65,7 +65,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
 
   networking.hostName = "vivobook14"; # Define your hostname.
 
