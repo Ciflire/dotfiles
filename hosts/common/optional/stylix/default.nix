@@ -37,12 +37,9 @@
     };
 
     targets = {
-      qt = {
-        enable = true;
-      };
-      gtk = {
-        enable = true;
-      };
+      gtk.enable = true;
+      qt.enable = true;
+
     };
 
   };

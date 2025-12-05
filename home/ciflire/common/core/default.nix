@@ -88,6 +88,7 @@
     # inputs.ghostty.packages.${pkgs.system}.default
     ghostty
     jq # JSON pretty printer and manipulator
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     (libreoffice-qt6-fresh.overrideAttrs (oa: {
       kdeIntegration = true;
     }))

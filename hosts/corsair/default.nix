@@ -31,7 +31,7 @@
     ../common/optional/power-profile.nix
     ../common/optional/openrgb.nix
     ../common/optional/steam.nix
-    # ../common/optional/stylix
+    ../common/optional/stylix
     ../common/optional/udisks.nix
     ../common/optional/upower.nix
     ../common/optional/virtmanager.nix

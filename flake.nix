@@ -46,6 +46,11 @@
 
     walker.url = "github:abenz1267/walker";
     elephant.url = "github:abenz1267/elephant";
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

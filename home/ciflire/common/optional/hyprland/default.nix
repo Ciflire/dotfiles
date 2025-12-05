@@ -7,6 +7,8 @@ in
   # Import bitwarden fix script
   xdg.dataFile."scripts/bitwarden.sh".source = (import ./scripts/bitwarden.nix pkgs);
 
+  stylix.targets.hyprland.enable = true;
+
   imports = [
     ./hyprpaper.nix
     ./hypridle.nix
