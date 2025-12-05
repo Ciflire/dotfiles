@@ -29,6 +29,7 @@
       "hosts/common/optional/am_iot.nix"
       "hosts/common/optional/bluetooth.nix"
       "hosts/common/optional/docker.nix"
+      "hosts/common/optional/flatpak.nix"
       "hosts/common/optional/gamemode.nix"
       "hosts/common/optional/gmd.nix"
       "hosts/common/optional/gpg.nix"
