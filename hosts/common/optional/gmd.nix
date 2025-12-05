@@ -12,7 +12,7 @@
 
   environment.systemPackages = with pkgs; [
     # mysql-shell
-    # mongosh
+    mongosh
     mongodb-compass
   ];
 }
