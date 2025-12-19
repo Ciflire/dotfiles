@@ -6,7 +6,7 @@
     package = inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.hyprpaper;
     settings = {
       ipc = "on";
-      splash = false;
+      splash = true;
       splash_offset = 2.0;
       preload = [ "~/.config/hypr/wallpapers/forrest.png" ];
       # preload = [ "/home/ciflire/nixFlake/home/hyprland/wallpapers/2825710.gif" ];

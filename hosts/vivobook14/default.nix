@@ -34,7 +34,7 @@
       "hosts/common/optional/gmd.nix"
       "hosts/common/optional/gpg.nix"
       "hosts/common/optional/heroic.nix"
-      "hosts/common/optional/hyprland.nix"
+      # "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/mangohud.nix"
       # "hosts/common/optional/mvsi.nix"
       "hosts/common/optional/nh.nix"

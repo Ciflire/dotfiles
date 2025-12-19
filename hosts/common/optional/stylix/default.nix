@@ -27,7 +27,7 @@
 
       monospace = {
         package = pkgs.monolisa;
-        name = "DejaVu Sans Mono";
+        name = "MonoLisaVariable Nerd Font Mono";
       };
 
       emoji = {

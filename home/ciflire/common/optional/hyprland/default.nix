@@ -21,7 +21,7 @@ in
   ];
 
   wayland.windowManager.hyprland = {
-    systemd.enable = false;
+    systemd.enable = true;
     enable = true;
     package = hyprland;
     xwayland.enable = true;
@@ -70,15 +70,15 @@ in
       "$menu" = "walker";
       "exec-once" = [
         # "hyprpanel &"
-        "uwsm app -- systemctl --user start hyprpolkitagent&"
+        "systemctl --user start hyprpolkitagent&"
         "elephant&"
         "hyprctl setcursor rose-pine-hyprcursor 28"
-        "uwsm app -- walker --gapplication-service&"
-        "uwsm app -- wl-paste --type text --watch cliphist store #Stores only text data&"
-        "uwsm app -- wl-paste --type image --watch cliphist store #Stores only image data &"
-        "uwsm app -- systemctl --user start hyprpolkitagent&"
-        "uwsm app -- $HOME/.local/share/scripts/bitwarden.sh"
-        "uwsm app -- hyprsunset"
+        "walker --gapplication-service&"
+        "wl-paste --type text --watch cliphist store #Stores only text data&"
+        "wl-paste --type image --watch cliphist store #Stores only image data &"
+        "systemctl --user start hyprpolkitagent&"
+        "$HOME/.local/share/scripts/bitwarden.sh"
+        "hyprsunset"
       ];
       source = [
         "./monitors.conf"
@@ -95,20 +95,20 @@ in
         "$mod, D,exec, $menu"
         "$mod, F, fullscreen,"
         "$mod, Q, killactive, "
-        "$mod, N, exec, uwsm app -- dolphin"
-        "$mod, W, exec, uwsm app -- $menu -m windows"
-        "$mod, C, exec, uwsm app -- $menu -m calc"
-        "$mod, E, exec, uwsm app -- $menu -m emojis"
-        "$mod SHIFT, T, exec, uwsm app -- $menu -m todo"
-        "$mod, B, exec, uwsm app -- librewolf"
+        "$mod, N, exec, dolphin"
+        "$mod, W, exec, $menu -m windows"
+        "$mod, C, exec, $menu -m calc"
+        "$mod, E, exec, $menu -m emojis"
+        "$mod SHIFT, T, exec, $menu -m todo"
+        "$mod, B, exec, librewolf"
         "$mod SHIFT, V, togglefloating, "
-        "SUPER, V, exec, uwsm app -- $menu -m clipboard"
+        "SUPER, V, exec, $menu -m clipboard"
         # "$mod, P, cycleprev"
         # "$mod, J, cyclenext"
-        "$mod SHIFT, L, exec, uwsm app -- loginctl lock-session"
-        "$mod, S, exec, uwsm app -- spotify"
-        "$mod, T, exec, uwsm app -- thunderbird"
-        "$mod, escape, exec, uwsm app -- wlogout"
+        "$mod SHIFT, L, exec, loginctl lock-session"
+        "$mod, S, exec, spotify"
+        "$mod, T, exec, thunderbird"
+        "$mod, escape, exec, wlogout"
 
         "$mod, H, movefocus, l"
         "$mod, L, movefocus, r"
