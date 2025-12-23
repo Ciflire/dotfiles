@@ -46,7 +46,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
 
   networking.hostName = "corsair"; # Define your hostname.
 

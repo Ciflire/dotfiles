@@ -116,10 +116,11 @@
     shfmt
     slurp
     steam-run # for running non-NixOS-packaged binaries on Nix
-    usbutils
+    tidal-hifi
     tree # cli dir tree viewer
     unzip # zip extraction
     unrar # rar extraction
+    usbutils
     uv
     vlc
     xdg-utils # provide cli tools such as `xdg-mime` and `xdg-open`
