@@ -24,6 +24,7 @@
     hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprpwcenter.url = "github:ciflire/hyprpwcenter";
     # helix.url = "github:helix-editor/helix";
+
     helix = {
       url = "github:mattwparas/helix/steel-event-system";
       inputs.nixpkgs.follows = "nixpkgs";
