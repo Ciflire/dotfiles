@@ -1,7 +1,6 @@
 { ... }:
 {
   programs.git = {
-
     enable = true;
     config = {
       user.email = "leo.vesse@pm.me";
