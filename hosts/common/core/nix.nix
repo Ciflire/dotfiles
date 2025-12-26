@@ -23,6 +23,7 @@
         "walker.cachix.org-1:fG8q+uAaMqhsMxWjwvk0IMb4mFPFLqHjuvfwQxE4oJM="
       ];
       download-buffer-size = 524288000;
+      warn-dirty = false;
     };
     extraOptions = "!include ${config.sops.secrets."github_token".path}";
   };
