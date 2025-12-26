@@ -36,6 +36,22 @@
       "private_keys/agamotto" = {
         path = "/home/ciflire/.ssh/agamotto";
       };
+
+      "private_keys/gitlab_yubikey" = {
+        path = "/home/ciflire/.ssh/gitlab_yubikey";
+      };
+      "private_keys/github_yubikey" = {
+        path = "/home/ciflire/.ssh/github_yubikey";
+      };
+      "private_keys/gibson_yubikey" = {
+        path = "/home/ciflire/.ssh/gibson_yubikey";
+      };
+      "private_keys/tnnet_yubikey" = {
+        path = "/home/ciflire/.ssh/tnnet_yubikey";
+      };
+      "private_keys/agamotto_yubikey" = {
+        path = "/home/ciflire/.ssh/agamotto_yubikey";
+      };
       classic_circle = {
         path = "${config.xdg.userDirs.pictures}/pp/classic_circle.svg";
         sopsFile = ../../../../secrets/classic_circle.svg;
