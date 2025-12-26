@@ -31,6 +31,7 @@
       "hosts/common/optional/docker.nix"
       "hosts/common/optional/flatpak.nix"
       "hosts/common/optional/gamemode.nix"
+      "hosts/common/optional/git.nix"
       "hosts/common/optional/gmd.nix"
       "hosts/common/optional/gpg.nix"
       "hosts/common/optional/heroic.nix"
