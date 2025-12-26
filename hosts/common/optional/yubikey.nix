@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
-  services.udev.packages = [ pkgs.yubikey-personalization ];
+  services.udev.packages = with pkgs; [
+    yubikey-personalization
+  ];
 
   programs.gnupg.agent = {
     enable = true;
@@ -18,5 +20,12 @@
     mode = "challenge-response";
     id = [ "34347397" ];
   };
+
+  services.pcscd.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    yubikey-manager
+    yubioath-flutter
+  ];
 
 }
