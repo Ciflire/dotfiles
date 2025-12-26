@@ -17,7 +17,7 @@
         host = "gitlab.com";
         identitiesOnly = true;
         identityFile = [
-          "~/.ssh/gitlab"
+          "~/.ssh/gitlab_yubikey"
         ];
       };
       "agamotto" = {
@@ -29,7 +29,7 @@
         # };
         identitiesOnly = true;
         identityFile = [
-          "~/.ssh/agamotto"
+          "~/.ssh/agamotto_yubikey"
         ];
       };
 
@@ -37,7 +37,7 @@
         host = "gibson.telecomnancy.univ-lorraine.fr";
         identitiesOnly = true;
         identityFile = [
-          "~/.ssh/gibson"
+          "~/.ssh/gibson_yubikey"
         ];
       };
       "tnnet" = {
@@ -49,7 +49,7 @@
           TERM = "xterm-256color";
         };
         identityFile = [
-          "~/.ssh/tnnet"
+          "~/.ssh/tnnet_yubikey"
         ];
       };
 
