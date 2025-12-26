@@ -55,6 +55,7 @@
       "hosts/common/optional/waydroid.nix"
       "hosts/common/optional/wireguard.nix"
       "hosts/common/optional/xbox.nix"
+      "hosts/common/optional/yubikey.nix"
       "hosts/common/optional/zsa.nix"
 
       #################### Desktop ####################
