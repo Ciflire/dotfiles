@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    vesktop
+    # vesktop
     discover-overlay
-    overlayed
+    # overlayed
   ];
   # services.arrpc.enable = true;
 }

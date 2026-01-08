@@ -122,7 +122,7 @@
         dashboard.directories.enabled = true;
         clock.weather.interval = 15000;
         clock.weather.unit = "metric";
-        clock.weather.location = "Barcelona";
+        clock.weather.location = "Nancy";
         clock.weather.key = config.sops.secrets.weather_api_key.path;
         power.lowBatteryThreshold = 20;
         volume.raiseMaximumVolume = true;

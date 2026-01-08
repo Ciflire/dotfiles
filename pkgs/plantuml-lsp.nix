@@ -20,10 +20,6 @@ buildGoModule {
 
   subPackages = [ "main.go" ];
 
-  GOFLAGS = [
-    ''-o=./plantuml-lsp''
-  ];
-
   installPhase = ''
     runHook preInstall
 

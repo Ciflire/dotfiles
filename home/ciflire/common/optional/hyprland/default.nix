@@ -71,14 +71,11 @@ in
       "exec-once" = [
         # "hyprpanel &"
         "systemctl --user start hyprpolkitagent&"
-        "elephant&"
         "hyprctl setcursor rose-pine-hyprcursor 28"
-        "walker --gapplication-service&"
-        "wl-paste --type text --watch cliphist store #Stores only text data&"
-        "wl-paste --type image --watch cliphist store #Stores only image data &"
-        "systemctl --user start hyprpolkitagent&"
-        "$HOME/.local/share/scripts/bitwarden.sh"
         "hyprsunset"
+        "hyprpaper"
+        "elephant"
+        "walker --gapplication-service"
       ];
       source = [
         "./monitors.conf"
@@ -170,11 +167,39 @@ in
         # kb_options = "grp:win_space_toggle";
       };
 
-      windowrulev2 = [
-        "float, class:^(xdg-desktop-portal)"
-        "idleinhibit, class:(steam_app)"
-        "float, class:^(satty)$"
-        "opacity 0.9 override 0.8 override 0.95 override,class:^(kitty)$"
+      windowrule = [
+        {
+          name = "float and center";
+          float = "on";
+          center = "on";
+          size = "900 600";
+          "match:initial_title" = ''
+            ^(xdg-desktop-portal|satty|Discord\sPopout|Create\sNew\sCalendar|Write:.*|Calendar\sReminders|Edit\sCalendar|An\serror\shas\soccured|Steam\sSettings)$";
+          '';
+        }
+        {
+          name = "idle inhibit";
+          idle_inhibit = "on";
+          "match:class" = ''^(steam_app_\d+)$'';
+        }
+        {
+          name = "Steam friends list";
+          float = "on";
+          size = "500 900";
+          "match:initial_title" = ''^(Friends List)$'';
+        }
+        {
+          name = "Pin Summonners War";
+          "match:initial_class" = ''^(steam_app_2426960)$'';
+          pin = "on";
+          render_unfocused = "on";
+        }
+        {
+          name = "Librewolf";
+          "match:class" = ''^(librewolf)$'';
+          opaque = "on";
+        }
+
       ];
 
       permission = [

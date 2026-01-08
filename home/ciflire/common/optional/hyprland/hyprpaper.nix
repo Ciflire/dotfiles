@@ -7,11 +7,14 @@
     settings = {
       ipc = "on";
       splash = true;
-      splash_offset = 2.0;
-      preload = [ "~/.config/hypr/wallpapers/forrest.png" ];
-      # preload = [ "/home/ciflire/nixFlake/home/hyprland/wallpapers/2825710.gif" ];
-
-      wallpaper = [ ",~/.config/hypr/wallpapers/forrest.png" ];
+      splash_offset = 2;
+      wallpaper = [
+        {
+          monitor = "";
+          path = "/home/ciflire/.config/hypr/wallpapers";
+          timeout = 60;
+        }
+      ];
 
     };
   };

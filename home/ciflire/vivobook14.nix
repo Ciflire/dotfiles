@@ -26,6 +26,7 @@
     common/optional/language_setups/java.nix
     common/optional/language_setups/markdown.nix
     common/optional/language_setups/plantuml.nix
+    common/optional/language_setups/python.nix
     common/optional/language_setups/rust.nix
     common/optional/language_setups/steel.nix
     common/optional/language_setups/svelte.nix
