@@ -28,7 +28,7 @@
       #################### Host-specific Optional Configs ####################
       "hosts/common/optional/am_iot.nix"
       "hosts/common/optional/bluetooth.nix"
-      "hosts/common/optional/docker.nix"
+      # "hosts/common/optional/docker.nix"
       "hosts/common/optional/flatpak.nix"
       "hosts/common/optional/gamemode.nix"
       "hosts/common/optional/git.nix"
@@ -52,6 +52,7 @@
       "hosts/common/optional/udisks.nix"
       "hosts/common/optional/upower.nix"
       # "hosts/common/optional/uwsm.nix"
+      "hosts/common/optional/virtualbox.nix"
       # "hosts/common/optional/wacom.nix"
       "hosts/common/optional/waydroid.nix"
       "hosts/common/optional/wireguard.nix"

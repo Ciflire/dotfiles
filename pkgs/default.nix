@@ -20,6 +20,7 @@
   neo4j-desktop = pkgs.callPackage ./neo4j-desktop.nix { };
   plantuml-lsp = pkgs.callPackage ./plantuml-lsp.nix { };
   # posting = pkgs.callPackage ./posting.nix { };
+  pygad = pkgs.callPackage ./pygad.nix { };
   rust_hdl = pkgs.callPackage ./rust_hdl.nix { };
   schemat = pkgs.callPackage ./schemat.nix { };
   textual-autocomplete = pkgs.callPackage ./textual-autocomplete.nix { };

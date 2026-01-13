@@ -12,7 +12,7 @@
         {
           monitor = "";
           path = "/home/ciflire/.config/hypr/wallpapers";
-          timeout = 60;
+          timeout = 3600;
         }
       ];
 

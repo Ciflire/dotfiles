@@ -78,6 +78,7 @@
     docker-compose-language-service
     dockerfile-language-server
     kdePackages.dolphin
+    kdePackages.kde-cli-tools
     dust # disk usage
     eza # ls replacement
     # fancy-cat
