@@ -129,7 +129,7 @@
     # xournalpp
     wev # show wayland events. also handy for detecting keypress codes
     wget # downloader
-    # winboat
+    winboat
     zip # zip compression
   ];
 

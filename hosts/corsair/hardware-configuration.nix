@@ -28,6 +28,10 @@
     "kvm-amd"
     "ntsync"
   ];
+  boot.kernelParams = [
+    "video=DP-2:2560x1440@165"
+    "video=HDMI-A-2:1920x1080@60"
+  ];
   boot.extraModulePackages = [ ];
   boot.extraModprobeConfig = ''
     options ntsync config_ntsync=y

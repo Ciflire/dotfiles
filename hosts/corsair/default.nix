@@ -30,6 +30,7 @@
     ../common/optional/pipewire.nix
     ../common/optional/power-profile.nix
     ../common/optional/openrgb.nix
+    ../common/optional/sddm.nix
     ../common/optional/steam.nix
     ../common/optional/stylix
     ../common/optional/udisks.nix
@@ -38,6 +39,7 @@
     ../common/optional/waydroid.nix
     ../common/optional/wireguard.nix
     ../common/optional/xbox.nix
+    ../common/optional/yubikey.nix
     ../common/optional/zsa.nix
 
   ];
