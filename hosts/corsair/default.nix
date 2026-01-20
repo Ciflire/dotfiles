@@ -20,11 +20,13 @@
     ../common/optional/bluetooth.nix
     ../common/optional/docker.nix
     ../common/optional/gamemode.nix
+    ../common/optional/git.nix
     ../common/optional/gmd.nix
     ../common/optional/gpg.nix
     ../common/optional/heroic.nix
     ../common/optional/hyprland.nix
     ../common/optional/mangohud.nix
+    ../common/optional/mime.nix
     ../common/optional/nh.nix
     ../common/optional/nosql.nix
     ../common/optional/pipewire.nix
