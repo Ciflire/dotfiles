@@ -9,6 +9,7 @@
   awrit = pkgs.callPackage ./awrit.nix { };
   cheddar = pkgs.callPackage ./cheddar.nix { };
   cooja = pkgs.callPackage ./cooja/default.nix { };
+  betterdiscord-installer = pkgs.callPackage ./betterdiscord-installer.nix { };
   # fancy-cat = pkgs.callPackage ./fancy-cat { };
   fiji = pkgs.callPackage ./fiji.nix { };
   gruvbox-gtk-theme = pkgs.callPackage ./gruvbox-gtk-theme.nix { };

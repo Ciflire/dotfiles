@@ -103,7 +103,7 @@ in
         # "$mod, P, cycleprev"
         # "$mod, J, cyclenext"
         "$mod SHIFT, L, exec, loginctl lock-session"
-        "$mod, S, exec, spotify"
+        "$mod, S, exec, tidal-hifi"
         "$mod, T, exec, thunderbird"
         "$mod, escape, exec, wlogout"
 
