@@ -33,7 +33,7 @@
 
     ghostty.url = "github:ghostty-org/ghostty/v1.1.3";
 
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:nix-community/stylix";
 
     sops-nix.url = "github:Mic92/sops-nix";
 
