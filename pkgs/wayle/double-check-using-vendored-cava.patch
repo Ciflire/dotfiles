@@ -1,0 +1,21 @@
+diff --git a/crates/wayle-cava/build.rs b/crates/wayle-cava/build.rs
+index 1f2f855..7481e85 100644
+--- a/crates/wayle-cava/build.rs
++++ b/crates/wayle-cava/build.rs
+@@ -25,7 +25,7 @@ fn main() {
+ #[cfg(not(feature = "vendored"))]
+ fn build_system() -> Vec<PathBuf> {
+     let lib =
+-        pkg_config::probe_library("libcava").unwrap_or_else(|e| panic!("libcava not found: {e}"));
++        pkg_config::probe_library("cava").unwrap_or_else(|e| panic!("libcava not found: {e}"));
+ 
+     println!("cargo:rustc-env=LIBCAVA_VERSION={}", lib.version);
+     println!("cargo:rustc-link-lib=cava");
+@@ -35,6 +35,7 @@ fn build_system() -> Vec<PathBuf> {
+ 
+ #[cfg(feature = "vendored")]
+ fn build_vendored() -> Vec<PathBuf> {
++    panic!("it is not vendored");
+     use std::path::Path;
+ 
+     let cava_dir = Path::new("cava");

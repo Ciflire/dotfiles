@@ -24,6 +24,7 @@
     EDITOR = "hx";
     MANPAGER = "batman"; # see ./cli/bat.nix
     NIXOS_OZONE_WL = "1";
+    GRIMBLAST_EDITOR = "satty";
     # QT_STYLE_OVERRIDE = "adwaita-dark";
     # QT_QPA_PLATFORMTHEME = "hyprqt6engine";
   };

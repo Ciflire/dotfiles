@@ -12,7 +12,7 @@ in
   imports = [
     ./hyprpaper.nix
     ./hypridle.nix
-    ./hyprpanel.nix
+    # ./hyprpanel.nix
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hyprcursor.nix
@@ -70,8 +70,9 @@ in
       "$menu" = "walker";
       "exec-once" = [
         # "hyprpanel &"
-        "systemctl --user start hyprpolkitagent&"
+        # "systemctl --user start hyprpolkitagent"
         "hyprctl setcursor rose-pine-hyprcursor 28"
+        "wayle-shell"
         "hyprsunset"
         "hyprpaper"
         "elephant"
@@ -135,7 +136,7 @@ in
         "$mod SHIFT, agrave, movetoworkspace, 10"
 
         ''$mod , print, exec, grim -g "$(slurp -d)" - | satty -f -''
-        # ''$mod SHIFT, print, exec, grimblast --freeze save active screen - | satty -f -''
+        "$mod SHIFT, print, exec, grimblast --freeze save active screen - | satty -f -"
       ];
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -186,17 +187,17 @@ in
           name = "Steam friends list";
           float = "on";
           size = "500 900";
-          "match:initial_title" = ''^(Friends List)$'';
+          "match:initial_title" = "^(Friends List)$";
         }
         {
           name = "Pin Summonners War";
-          "match:initial_class" = ''^(steam_app_2426960)$'';
+          "match:initial_class" = "^(steam_app_2426960)$";
           pin = "on";
           render_unfocused = "on";
         }
         {
           name = "Librewolf";
-          "match:class" = ''^(librewolf)$'';
+          "match:class" = "^(librewolf)$";
           opaque = "on";
         }
 
@@ -222,5 +223,7 @@ in
     # nwg-displays
     jq
     socat
+    wayle
+    grimblast
   ];
 }

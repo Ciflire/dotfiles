@@ -93,7 +93,6 @@
     }))
     # mongodb-compass
     ncdu # TUI disk usage
-    neofetch # fancier system info than pfetch
     nix-tree # nix package tree viewer
     nixd # nix lsp
     nixfmt-rfc-style # nix formatter
@@ -127,7 +126,7 @@
     # xournalpp
     wev # show wayland events. also handy for detecting keypress codes
     wget # downloader
-    winboat
+    # winboat
     zip # zip compression
   ];
 

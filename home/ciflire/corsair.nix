@@ -11,7 +11,8 @@
     common/optional/helix.nix
     common/optional/hyprland
     common/optional/kitty.nix
-    common/optional/obs.nix
+    common/optional/minecraft.nix
+    # common/optional/obs.nix
     # common/optional/qt.nix
     common/optional/sops.nix
     common/optional/sound.nix

@@ -1,6 +1,6 @@
 {
   pkgs ? import <nixpkgs> { },
-# master-pkgs ? import <nixpkgs> { },
+  # master-pkgs ? import <nixpkgs> { },
 }:
 {
 
@@ -26,5 +26,5 @@
   schemat = pkgs.callPackage ./schemat.nix { };
   textual-autocomplete = pkgs.callPackage ./textual-autocomplete.nix { };
   tlafmt = pkgs.callPackage ./tlafmt.nix { };
-
+  wayle = pkgs.callPackage ./wayle/default.nix { };
 }

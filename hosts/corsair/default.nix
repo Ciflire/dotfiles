@@ -31,6 +31,8 @@
     ../common/optional/nosql.nix
     ../common/optional/pipewire.nix
     ../common/optional/power-profile.nix
+    ../common/optional/obs.nix
+    ../common/optional/polychromatic.nix
     ../common/optional/openrgb.nix
     ../common/optional/sddm.nix
     ../common/optional/steam.nix
@@ -53,6 +55,12 @@
   # programs.ssh.startAgent = true;
 
   networking.hostName = "corsair"; # Define your hostname.
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 25565 ];
+    allowedUDPPorts = [ 25565 ];
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
