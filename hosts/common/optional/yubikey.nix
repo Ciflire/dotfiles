@@ -1,13 +1,13 @@
 { pkgs, ... }:
 {
-  services.udev.packages = with pkgs; [
-    yubikey-personalization
-  ];
 
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-curses;
   };
+
+  hardware.gpgSmartcards.enable = true;
 
   security.pam.services = {
     login.u2fAuth = true;
@@ -21,11 +21,23 @@
     id = [ "34347397" ];
   };
 
-  services.pcscd.enable = true;
-
+  # YubiKey
   environment.systemPackages = with pkgs; [
-    yubikey-manager
+    yubikey-personalization # CLI tools for configuring YubiKey
+    yubikey-manager # Manage YubiKey settings
     yubioath-flutter
+    yubikey-agent
+    libfido2 # Support for FIDO2/WebAuthn
+    opensc # Smart card support
+    gnupg # If using GPG with YubiKey
+    pcsclite
   ];
+
+  services = {
+    udev.packages = with pkgs; [ yubikey-personalization ];
+    pcscd.enable = true;
+    yubikey-agent.enable = true;
+
+  };
 
 }

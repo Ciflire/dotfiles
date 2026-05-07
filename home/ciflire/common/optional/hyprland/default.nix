@@ -67,6 +67,7 @@ in
         gaps_out = 7;
       };
       "$mod" = "SUPER";
+      "$modshift" = "SUPER_SHIFT";
       "$menu" = "walker";
       "exec-once" = [
         # "hyprpanel &"
@@ -89,7 +90,7 @@ in
       ];
       debug.disable_logs = false;
       bind = [
-        "$mod, Return, exec, ghostty"
+        "$mod, Return, exec, GTK_IM_MODULE=simple ghostty"
         "$mod, D,exec, $menu"
         "$mod, F, fullscreen,"
         "$mod, Q, killactive, "
@@ -124,19 +125,19 @@ in
         "$mod, ccedilla, workspace, 9"
         "$mod, agrave, workspace, 10"
 
-        "$mod SHIFT, ampersand, movetoworkspace, 1"
-        "$mod SHIFT, eacute, movetoworkspace, 2"
-        "$mod SHIFT, quotedbl, movetoworkspace, 3"
-        "$mod SHIFT, apostrophe, movetoworkspace, 4"
-        "$mod SHIFT, parenleft, movetoworkspace, 5"
-        "$mod SHIFT, minus, movetoworkspace, 6"
-        "$mod SHIFT, egrave, movetoworkspace, 7"
-        "$mod SHIFT, underscore, movetoworkspace, 8"
-        "$mod SHIFT, ccedilla, movetoworkspace, 9"
-        "$mod SHIFT, agrave, movetoworkspace, 10"
+        "$modshift, ampersand, movetoworkspace, 1"
+        "$modshift, eacute, movetoworkspace, 2"
+        "$modshift, quotedbl, movetoworkspace, 3"
+        "$modshift, apostrophe, movetoworkspace, 4"
+        "$modshift, parenleft, movetoworkspace, 5"
+        "$modshift, minus, movetoworkspace, 6"
+        "$modshift, egrave, movetoworkspace, 7"
+        "$modshift, underscore, movetoworkspace, 8"
+        "$modshift, ccedilla, movetoworkspace, 9"
+        "$modshift, agrave, movetoworkspace, 10"
 
         ''$mod , print, exec, grim -g "$(slurp -d)" - | satty -f -''
-        "$mod SHIFT, print, exec, grimblast --freeze save active screen - | satty -f -"
+        "$modshift, print, exec, grimblast --freeze save active screen - | satty -f -"
       ];
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -175,7 +176,7 @@ in
           center = "on";
           size = "900 600";
           "match:initial_title" = ''
-            ^(xdg-desktop-portal|satty|Discord\sPopout|Create\sNew\sCalendar|Write:.*|Calendar\sReminders|Edit\sCalendar|An\serror\shas\soccured|Steam\sSettings)$";
+            ^(xdg-desktop-portal|Discord\sPopout|Create\sNew\sCalendar|Write:.*|Calendar\sReminders|Edit\sCalendar|An\serror\shas\soccured|Steam\sSettings)$
           '';
         }
         {
@@ -199,6 +200,13 @@ in
           name = "Librewolf";
           "match:class" = "^(librewolf)$";
           opaque = "on";
+        }
+        {
+          name = "satty pinned float center";
+          float = "on";
+          center = "on";
+          pin = "on";
+          "match:initial_title" = "^(satty)$";
         }
 
       ];

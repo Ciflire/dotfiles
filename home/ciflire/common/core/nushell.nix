@@ -9,7 +9,7 @@
   programs.nushell = {
     enable = true;
     shellAliases = {
-      update = "nh os switch /home/ciflire/dotfiles";
+      update = "nh os switch /home/ciflire/dotfiles -u";
       upgrade = "nh os switch /home/ciflire/dotfiles";
       vi = "hx";
       vim = "hx";

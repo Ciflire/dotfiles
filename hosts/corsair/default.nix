@@ -25,6 +25,7 @@
     ../common/optional/gpg.nix
     ../common/optional/heroic.nix
     ../common/optional/hyprland.nix
+    ../common/optional/i18n.nix
     ../common/optional/mangohud.nix
     ../common/optional/mime.nix
     ../common/optional/nh.nix

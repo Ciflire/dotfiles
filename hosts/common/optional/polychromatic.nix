@@ -1,4 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  hardware.openrazer.enable = true;
+  hardware.openrazer = {
+    enable = true;
+    users = [ "ciflire" ];
+  };
+  environment.systemPackages = with pkgs; [ polychromatic ];
 }
