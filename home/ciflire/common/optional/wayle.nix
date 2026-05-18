@@ -66,7 +66,7 @@
           scroll-down = "";
           left-click = "dropdown:dashboard";
           dropdown-lock-command = "loginctl lock-session";
-          dropdown-logout-command = "hyprctl dispatch exit";
+          dropdown-logout-command = ''hyprctl eval "hl.dispatch(hl.dsp.exit())"'';
           dropdown-reboot-command = "systemctl reboot";
           dropdown-poweroff-command = "systemctl poweroff";
         };

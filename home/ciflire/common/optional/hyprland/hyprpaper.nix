@@ -2,7 +2,7 @@
 {
 
   services.hyprpaper = {
-    enable = true;
+    enable = false;
     package = inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.hyprpaper;
     settings = {
       ipc = "on";

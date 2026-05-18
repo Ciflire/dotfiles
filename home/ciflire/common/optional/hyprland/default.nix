@@ -233,5 +233,6 @@ in
     socat
     wayle
     grimblast
+    mpvpaper
   ];
 }

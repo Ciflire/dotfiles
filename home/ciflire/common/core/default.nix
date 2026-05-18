@@ -107,6 +107,7 @@
     protonmail-desktop
     proton-pass
     pulsemixer # audio utility
+    qbittorrent-enhanced
     ripgrep # better grep
     rofi
     ryubing
