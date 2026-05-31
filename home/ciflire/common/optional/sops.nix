@@ -52,6 +52,9 @@
       "private_keys/agamotto_yubikey" = {
         path = "/home/ciflire/.ssh/agamotto_yubikey";
       };
+      "private_keys/homelab" = {
+        path = "/home/ciflire/.ssh/homelab";
+      };
       classic_circle = {
         path = "${config.xdg.userDirs.pictures}/pp/classic_circle.svg";
         sopsFile = ../../../../secrets/classic_circle.svg;

@@ -58,7 +58,15 @@
         identityFile = [
           "~/.ssh/id_ed25519"
         ];
+      };
 
+      "homelab" = {
+        host = "homelab";
+        hostname = "192.168.1.83";
+        user = "homelab";
+        identityFile = [
+          "~/.ssh/homelab"
+        ];
       };
 
     };
