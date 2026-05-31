@@ -21,49 +21,40 @@
     inputs.hardware.nixosModules.common-cpu-amd-raphael-igpu
     inputs.hardware.nixosModules.common-cpu-amd
 
-    (map configLib.relativeToRoot [
-      #################### Required Configs ####################
-      "hosts/common/core"
+    ../common/core
 
-      #################### Host-specific Optional Configs ####################
-      "hosts/common/optional/am_iot.nix"
-      "hosts/common/optional/bluetooth.nix"
-      # "hosts/common/optional/docker.nix"
-      "hosts/common/optional/flatpak.nix"
-      "hosts/common/optional/gamemode.nix"
-      "hosts/common/optional/git.nix"
-      "hosts/common/optional/gmd.nix"
-      "hosts/common/optional/gpg.nix"
-      "hosts/common/optional/heroic.nix"
-      "hosts/common/optional/hyprland.nix"
-      "hosts/common/optional/mangohud.nix"
-      "hosts/common/optional/mime.nix"
-      # "hosts/common/optional/mvsi.nix"
-      "hosts/common/optional/nh.nix"
-      "hosts/common/optional/nosql.nix"
-      "hosts/common/optional/pipewire.nix"
-      "hosts/common/optional/platformio.nix"
-      "hosts/common/optional/power-profile.nix"
-      # "hosts/common/optional/printing.nix"
-      # "hosts/common/optional/scin.nix"
-      "hosts/common/optional/sddm.nix"
-      "hosts/common/optional/steam.nix"
-      "hosts/common/optional/stylix"
-      # "hosts/common/optional/tni.nix"
-      "hosts/common/optional/udisks.nix"
-      "hosts/common/optional/upower.nix"
-      # "hosts/common/optional/uwsm.nix"
-      # "hosts/common/optional/virtmanager.nix"
-      "hosts/common/optional/virtualbox.nix"
-      # "hosts/common/optional/wacom.nix"
-      "hosts/common/optional/waydroid.nix"
-      "hosts/common/optional/wireguard.nix"
-      "hosts/common/optional/xbox.nix"
-      "hosts/common/optional/yubikey.nix"
-      "hosts/common/optional/zsa.nix"
-
-      #################### Desktop ####################
-    ])
+    ../common/optional/bluetooth.nix
+    ../common/optional/caddy.nix
+    ../common/optional/forgejo.nix
+    ../common/optional/git.nix
+    ../common/optional/gpg.nix
+    ../common/optional/heroic.nix
+    ../common/optional/hyprland.nix
+    ../common/optional/i18n.nix
+    ../common/optional/jellyfin.nix
+    ../common/optional/lidarr.nix
+    ../common/optional/mangohud.nix
+    ../common/optional/mime.nix
+    # ../common/optional/nextcloud.nix
+    ../common/optional/nh.nix
+    ../common/optional/pipewire.nix
+    ../common/optional/power-profile.nix
+    ../common/optional/prowlarr.nix
+    ../common/optional/qbittorrent.nix
+    ../common/optional/radarr.nix
+    ../common/optional/sddm.nix
+    ../common/optional/seerr.nix
+    ../common/optional/sonarr.nix
+    ../common/optional/steam.nix
+    ../common/optional/stylix
+    ../common/optional/udisks.nix
+    ../common/optional/upower.nix
+    ../common/optional/vaultwarden.nix
+    ../common/optional/virtualbox.nix
+    ../common/optional/wireguard.nix
+    ../common/optional/xbox.nix
+    ../common/optional/yubikey.nix
+    ../common/optional/zsa.nix
 
   ];
 

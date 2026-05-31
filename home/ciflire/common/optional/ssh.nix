@@ -53,6 +53,14 @@
         ];
       };
 
+      "forgejo" = {
+        host = "git.craplume.fr";
+        identityFile = [
+          "~/.ssh/id_ed25519"
+        ];
+
+      };
+
     };
 
   };

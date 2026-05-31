@@ -137,6 +137,13 @@
             ./hosts/corsair
           ];
         };
+        homelab = nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/homelab
+          ];
+        };
       };
       devShells.${system}.default =
         let
