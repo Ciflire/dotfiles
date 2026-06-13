@@ -43,6 +43,7 @@
     ../common/optional/virtmanager.nix
     ../common/optional/waydroid.nix
     ../common/optional/wireguard.nix
+    # ../common/optional/wireless.nix
     ../common/optional/xbox.nix
     ../common/optional/yubikey.nix
     ../common/optional/zsa.nix
