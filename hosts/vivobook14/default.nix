@@ -23,6 +23,7 @@
 
     ../common/core
 
+    ../common/optional/bash.nix
     ../common/optional/bluetooth.nix
     ../common/optional/git.nix
     ../common/optional/nh.nix
