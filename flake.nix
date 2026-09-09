@@ -77,13 +77,27 @@
           nixpkgs
           ;
       };
+      mkHost =
+        {
+          hostname,
+          system ? "x86_64-linux",
+          users ? [ ],
+        }:
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+
+          modules = [
+            ./hosts/${hostname}
+
+            { imports = map (u: ./hosts/common/users/${u}) users; }
+
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
+            { home-manager.extraSpecialArgs = specialArgs; }
+          ];
+        };
     in
-    # unstableOverlay = final: prev: {
-    #   review = import nixpkgs-review {
-    #     system = "x86_64-linux";
-    #     config.allowUnfree = true;
-    #   };nixosConfigurations =
-    # };
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
       packages.${system} =
@@ -101,48 +115,17 @@
       homeManagerModules = import ./modules/home-manager;
       overlays = import ./overlays { inherit inputs outputs; };
       nixosConfigurations = {
-        vivobook14 = nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
-            inputs.sops-nix.nixosModules.sops
-            { home-manager.extraSpecialArgs = specialArgs; }
-            {
-              nixpkgs.overlays = [
-                # inputs.hyprpanel.overlay
-                # unstableOverlay
-
-              ];
-            }
-            ./hosts/vivobook14
-          ];
+        vivobook14 = mkHost {
+          hostname = "vivobook14";
+          users = [ "ciflire" ];
         };
-
-        corsair = nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
-            inputs.sops-nix.nixosModules.sops
-            { home-manager.extraSpecialArgs = specialArgs; }
-            {
-              nixpkgs.overlays = [
-                # inputs.hyprpanel.overlay
-                # unstableOverlay
-              ];
-            }
-            ./hosts/corsair
-          ];
+        aorus = mkHost {
+          hostname = "aorus";
+          users = [ "ciflire" ];
         };
-        homelab = nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/homelab
-          ];
+        homelab = mkHost {
+          hostname = "homelab";
+          users = [ "homelab" ];
         };
       };
       devShells.${system}.default =

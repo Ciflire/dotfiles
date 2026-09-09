@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  fonts.fontconfig.enable = true;
   home.packages = [
     pkgs.monolisa
     pkgs.font-awesome

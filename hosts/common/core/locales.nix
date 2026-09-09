@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -17,4 +17,16 @@
     LC_TELEPHONE = "fr_FR.UTF-8";
     LC_TIME = "fr_FR.UTF-8";
   };
+
+  i18n = {
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5 = {
+        addons = with pkgs; [
+          fcitx5-gtk
+        ];
+      };
+    };
+  };
+
 }

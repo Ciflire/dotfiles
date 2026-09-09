@@ -1,23 +1,23 @@
 {
-  lib,
   pkgs,
-  inputs,
   config,
-  configVars,
   configLib,
   ...
 }:
 {
-  home-manager.users.${configVars.username} = import (
-    configLib.relativeToRoot "home/${configVars.username}/${config.networking.hostName}.nix"
+  home-manager.users."ciflire" = import (
+    configLib.relativeToRoot "home/ciflire/${config.networking.hostName}.nix"
   );
 
-  sops.secrets.ciflire_password.neededForUsers = true;
-  users.mutableUsers = false;
+  imports = [
+
+  ];
+
+  # sops.secrets.ciflire_password.neededForUsers = true;
+  # users.mutableUsers = false;
 
   environment.sessionVariables = {
     FLAKE = "$HOME/dotfiles";
-    SHELL = "nu";
     TERM = "kitty";
     TERMINAL = "kitty";
     VISUAL = "hx";
@@ -31,7 +31,7 @@
 
   users.users.ciflire = {
     isNormalUser = true;
-    hashedPasswordFile = config.sops.secrets.ciflire_password.path;
+    # hashedPasswordFile = config.sops.secrets.ciflire_password.path;
     description = "Léo VESSE";
     extraGroups = [
       "networkmanager"
@@ -43,21 +43,9 @@
     ];
     packages = with pkgs; [
       git
-      # helix
-      lazygit
-      lsd
-      kitty
-      discord
-      neovim
       openconnect
-      thunderbird
-
-      solaar
       logitech-udev-rules
-      # walker
-      wl-clipboard
     ];
-    shell = pkgs.nushell;
   };
 
 }

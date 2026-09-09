@@ -3,22 +3,19 @@
   lib,
   inputs,
   outputs,
-  configLib,
-  configVars,
   ...
 }:
-let
-
-  #FIXME:(configLib) switch this and other instances to configLib function
-  homeDirectory =
-    if pkgs.stdenv.isLinux then "/home/${configVars.username}" else "/Users/${configVars.username}";
-in
 {
   imports = lib.flatten [
-    (configLib.scanPaths ./.)
-    (configLib.relativeToRoot "hosts/common/users/${configVars.username}")
-    inputs.home-manager.nixosModules.home-manager
-    (builtins.attrValues outputs.nixosModules)
+    # (configLib.scanPaths ./.)
+    # (configLib.relativeToRoot "hosts/common/users/${configVars.username}")
+    # inputs.home-manager.nixosModules.home-manager
+    # (builtins.attrValues outputs.nixosModules)
+    ./firmware.nix
+    ./locales.nix
+    ./networking.nix
+    ./nix.nix
+    ./sops.nix
   ];
 
   # This should be handled by config.security.pam.sshAgentAuth.enable

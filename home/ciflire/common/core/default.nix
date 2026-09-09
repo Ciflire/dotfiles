@@ -4,19 +4,14 @@
   lib,
   pkgs,
   outputs,
-  configLib,
   ...
 }:
 {
   imports = [
-    ./carapace.nix
     ./direnv.nix
     ./fonts.nix
-    ./nushell.nix
-    ./starship.nix
-    ./yazi
-    ./zellij
-    ./zoxide.nix
+    # ./nushell.nix
+    ./term_tools.nix
   ];
   services.ssh-agent.enable = true;
 
@@ -30,7 +25,7 @@
     ];
     sessionVariables = {
       FLAKE = "$HOME/dotfiles";
-      SHELL = "nu";
+      SHELL = "bash";
       TERM = "kitty";
       TERMINAL = "kitty";
       VISUAL = "hx";
@@ -53,6 +48,7 @@
       download = "${config.home.homeDirectory}/Downloads";
       music = "${config.home.homeDirectory}/Musics";
       pictures = "${config.home.homeDirectory}/Pictures";
+      projects = "${config.home.homeDirectory}/Projects";
       videos = "${config.home.homeDirectory}/Videos";
       # publicshare = "/var/empty"; #using this option with null or "/var/empty" barfs so it is set properly in extraConfig below
       # templates = "/var/empty"; #using this option with null or "/var/empty" barfs so it is set properly in extraConfig below
@@ -67,40 +63,15 @@
 
   home.packages = with pkgs; [
 
-    # Packages that don't have custom configs go here
-    anki
-    btop # resource monitor
-    brightnessctl # brightness utility
-    cliphist # clipboard history
-    comma
-    # copyq # clipboard manager
-    coreutils # basic gnu utils
-    docker-compose-language-service
-    dockerfile-language-server
-    dust # disk usage
-    eza # ls replacement
-    # fancy-cat
-    fd # tree style ls
-    findutils # find
-    fzf # fuzzy search
-    grim
-    # inputs.ghostty.packages.${pkgs.system}.default
     ghostty
-    jq # JSON pretty printer and manipulator
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     (libreoffice-qt6-fresh.overrideAttrs (oa: {
       kdeIntegration = true;
     }))
-    # mongodb-compass
     ncdu # TUI disk usage
     nix-tree # nix package tree viewer
     nixd # nix lsp
     nixfmt-rfc-style # nix formatter
-    # nodePackages_latest.bash-language-server
-    p7zip # compression & encryption
-    pciutils
     pfetch # system info
-    playerctl # media player control
     # posting
     pre-commit # git hooks
     # prismlauncher
@@ -116,9 +87,6 @@
     slurp
     steam-run # for running non-NixOS-packaged binaries on Nix
     tidal-hifi
-    tree # cli dir tree viewer
-    unzip # zip extraction
-    unrar # rar extraction
     usbutils
     uv
     vlc
@@ -126,9 +94,7 @@
     xdg-user-dirs
     # xournalpp
     wev # show wayland events. also handy for detecting keypress codes
-    wget # downloader
     winboat
-    zip # zip compression
   ];
 
   nixpkgs = {

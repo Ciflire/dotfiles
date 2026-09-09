@@ -19,9 +19,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   version = "2.016";
 
   src = requireFile {
-    name = "MonoLisa-Complete-${finalAttrs.version}.zip";
-    sha256 = "sha256-2Fj0ocLWnG2eAjHpR04AypHWrS8r6OFsPJsbTJRcvnk=";
-    message = "";
+    name = "MonoLisa.zip";
+    sha256 = "sha256-8mzPFX84EBN2tSpBJ1Sh0PEsAG1vb1txkpw4iCqkY1s=";
+    message = "Could not requireFile";
   };
 
   unpackPhase = ''
@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   installPhase = ''
     mkdir -vp $out/share/fonts/variable
     for filename in MonoLisa/ttf/*.ttf; do
-     fontforge -script ${patcher}/font-patcher $filename -c --quiet -s; 
+     fontforge -script ${patcher}/font-patcher $filename -c --quiet -s;
     done
     cp -r *.ttf  $out/share/fonts/variable
   '';
