@@ -24,37 +24,13 @@
     ../common/core
 
     ../common/optional/bluetooth.nix
-    ../common/optional/caddy.nix
-    ../common/optional/forgejo.nix
     ../common/optional/git.nix
-    ../common/optional/gpg.nix
-    ../common/optional/heroic.nix
-    ../common/optional/hyprland.nix
-    ../common/optional/i18n.nix
-    ../common/optional/jellyfin.nix
-    ../common/optional/lidarr.nix
-    ../common/optional/mangohud.nix
-    ../common/optional/mime.nix
-    # ../common/optional/nextcloud.nix
     ../common/optional/nh.nix
     ../common/optional/pipewire.nix
-    ../common/optional/power-profile.nix
-    ../common/optional/prowlarr.nix
-    ../common/optional/qbittorrent.nix
-    ../common/optional/radarr.nix
-    ../common/optional/sddm.nix
-    ../common/optional/seerr.nix
-    ../common/optional/sonarr.nix
     ../common/optional/steam.nix
-    ../common/optional/stylix
-    ../common/optional/udisks.nix
-    ../common/optional/upower.nix
-    ../common/optional/vaultwarden.nix
-    ../common/optional/virtualbox.nix
+    ../common/optional/term_tools.nix
     ../common/optional/wireguard.nix
-    ../common/optional/xbox.nix
     ../common/optional/yubikey.nix
-    ../common/optional/zsa.nix
 
   ];
 
@@ -62,9 +38,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable the X11 windowing system.
+  # You can disable this if you're only using the Wayland session.
+  services.xserver.enable = true;
+
+  # Enable the KDE Plasma Desktop Environment.
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   # programs.ssh.startAgent = true;
 
   networking.hostName = "vivobook14"; # Define your hostname.
+
+  programs.firefox.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -75,10 +60,6 @@
   # Configure console keymap
   console.keyMap = "fr";
 
-  environment.systemPackages = with pkgs; [
-    cachix
-  ];
-
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 
 }

@@ -2,7 +2,6 @@
 # and may be overwritten by future invocations.  Please make changes
 # to /etc/nixos/configuration.nix instead.
 {
-  inputs,
   config,
   lib,
   pkgs,
@@ -15,62 +14,36 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot = {
-
-    plymouth = {
-      enable = true;
-    };
-
-    # Enable "Silent boot"
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    kernelParams = [
-      "quiet"
-      "splash"
-      "boot.shell_on_fail"
-      "udev.log_priority=3"
-      "rd.systemd.show_status=auto"
-    ];
-    # Hide the OS choice for bootloaders.
-    # It's still possible to open the bootloader list by pressing any key
-    # It will just not appear on screen unless a key is pressed
-    loader.timeout = 0;
-
-  };
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   boot.initrd.availableKernelModules = [
     "nvme"
     "xhci_pci"
-    "usbhid"
     "usb_storage"
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  # boot.kernelModules = [ "kvm-amd" ];
-  # boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
-  boot.extraModprobeConfig = ''
-    options bluetooth disable_ertm=Y config_ntsync=y
-  '';
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
+
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/ecb4c2df-e839-4896-8cca-9f0f28df83aa";
+    device = "/dev/mapper/luks-d3d58b11-aab6-48ca-9a1f-91cffb962c9c";
     fsType = "ext4";
   };
 
+  boot.initrd.luks.devices."luks-d3d58b11-aab6-48ca-9a1f-91cffb962c9c".device =
+    "/dev/disk/by-uuid/d3d58b11-aab6-48ca-9a1f-91cffb962c9c";
+
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/05F6-3A3F";
+    device = "/dev/disk/by-uuid/2B6A-D469";
     fsType = "vfat";
+    options = [
+      "fmask=0077"
+      "dmask=0077"
+    ];
   };
 
-  swapDevices = [ { device = "/dev/disk/by-uuid/aa1324ee-8395-4323-ab46-c5dec9ac92ca"; } ];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
+  swapDevices = [
+    { device = "/dev/mapper/luks-4afbcf82-b71b-4208-a2de-732ecf36f404"; }
+  ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
